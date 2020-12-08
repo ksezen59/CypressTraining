@@ -14,7 +14,7 @@ Feature: End2End E-Commerce Validation
     Scenario: Filling the form to shop
         Given I open e-commerce page
         When I fill the form details
-            | name  | gender       |
-            | Canan | Femaleasdasf |
+            | name   | gender       |
+            | Mahmut | Femaleasdasf |
         Then Validate the form behaviour
         And Select the shop page
