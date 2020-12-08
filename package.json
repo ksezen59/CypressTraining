@@ -1,0 +1,27 @@
+{
+  "name": "cypress-training",
+  "version": "1.0.0",
+  "description": "Cypress Training",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "cypress run"
+  },
+  "author": "Kerem Sezen",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.3.0",
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "cypress-iframe": "^1.0.1",
+    "mocha": "^5.2.0",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0"
+  },
+  "dependencies": {
+    "@types/core-js": "^2.5.4",
+    "@types/jasmine": "^3.6.2"
+  },
+  "stepDefinitions": [
+    "../integration/examples/BDD/**/*.js"
+  ]
+}
