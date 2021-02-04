@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
+    "tests": 2,
     "passes": 0,
     "pending": 0,
-    "failures": 1,
-    "start": "2020-12-07T20:59:04.876Z",
-    "end": "2020-12-07T20:59:05.900Z",
-    "duration": 1024,
-    "testsRegistered": 1,
+    "failures": 2,
+    "start": "2020-12-09T21:08:28.314Z",
+    "end": "2020-12-09T21:08:29.150Z",
+    "duration": 836,
+    "testsRegistered": 2,
     "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "6e8ed189-20b5-4400-a094-d3a7c709a096",
+      "uuid": "18846b82-b5f7-4eb9-b68e-3a7d3dd21231",
       "title": "",
-      "fullFile": "cypress/integration/examples/BDD/ecommerce/ecommerce.feature",
-      "file": "cypress/integration/examples/BDD/ecommerce/ecommerce.feature",
+      "fullFile": "cypress/integration/examples/BDD/ecommerce/ecommerce/ecommerce.feature",
+      "file": "cypress/integration/examples/BDD/ecommerce/ecommerce/ecommerce.feature",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "f6ba0b5c-f54c-416a-8b16-9dded6fb0faa",
+          "uuid": "7a949f72-dff7-4c8e-9106-c6cc8749c544",
           "title": "End2End E-Commerce Validation",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "E-Commerce Products Delivery",
               "fullTitle": "End2End E-Commerce Validation E-Commerce Products Delivery",
               "timedOut": null,
-              "duration": 941,
+              "duration": 404,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -48,11 +48,33 @@
               "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
               "err": {
                 "message": "Error: Step implementation missing for: I open e-commerce page",
-                "estack": "Error: Step implementation missing for: I open e-commerce page\n    at Context.resolveAndRunStepDefinition (http://localhost:59873/__cypress/tests?p=cypress/integration/examples/BDD/ecommerce/ecommerce.feature:13435:11)\n    at Context.eval (http://localhost:59873/__cypress/tests?p=cypress/integration/examples/BDD/ecommerce/ecommerce.feature:12773:35)",
+                "estack": "Error: Step implementation missing for: I open e-commerce page\n    at Context.resolveAndRunStepDefinition (http://localhost:59269/__cypress/tests?p=cypress/integration/examples/BDD/ecommerce/ecommerce/ecommerce.feature:13435:11)\n    at Context.eval (http://localhost:59269/__cypress/tests?p=cypress/integration/examples/BDD/ecommerce/ecommerce/ecommerce.feature:12773:35)",
                 "diff": null
               },
-              "uuid": "6261df29-b77d-429f-ad5d-69fdcac7d65b",
-              "parentUUID": "f6ba0b5c-f54c-416a-8b16-9dded6fb0faa",
+              "uuid": "ed13e8b8-fa1f-49b2-bc8e-4cbf23cad906",
+              "parentUUID": "7a949f72-dff7-4c8e-9106-c6cc8749c544",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Filling the form to shop",
+              "fullTitle": "End2End E-Commerce Validation Filling the form to shop",
+              "timedOut": null,
+              "duration": 380,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "Error: Step implementation missing for: I open e-commerce page",
+                "estack": "Error: Step implementation missing for: I open e-commerce page\n    at Context.resolveAndRunStepDefinition (http://localhost:59269/__cypress/tests?p=cypress/integration/examples/BDD/ecommerce/ecommerce/ecommerce.feature:13435:11)\n    at Context.eval (http://localhost:59269/__cypress/tests?p=cypress/integration/examples/BDD/ecommerce/ecommerce/ecommerce.feature:12773:35)",
+                "diff": null
+              },
+              "uuid": "15995a51-56ab-4f8f-8d70-02d43d3a9a86",
+              "parentUUID": "7a949f72-dff7-4c8e-9106-c6cc8749c544",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +82,12 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "6261df29-b77d-429f-ad5d-69fdcac7d65b"
+            "ed13e8b8-fa1f-49b2-bc8e-4cbf23cad906",
+            "15995a51-56ab-4f8f-8d70-02d43d3a9a86"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 941,
+          "duration": 784,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

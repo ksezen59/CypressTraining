@@ -1,14 +1,14 @@
 {
-    "defaultCommandTimeout": 10000,
-    "env": {
-        "url": "https://www.rahulshettyacademy.com/"
-    },
-    "projectId": "ax1shi",
-    "reporter": "mochawesome",
-    "reporterOptions": {
-        "overwrite": true,
-        "html": true,
-        "json": true
-    },
-    "testFiles": "**/*.feature"
+  "defaultCommandTimeout": 10000,
+  "env": {
+    "url": "https://www.rahulshettyacademy.com/"
+  },
+  "projectId": "ax1shi",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "overwrite": true,
+    "html": true,
+    "json": true
+  },
+  "testFiles": "**"
 }

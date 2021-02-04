@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/07-ci#/1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>GitPitch Markdown</title>
+    <meta name="description" content="Slide Decks for Tech Conferences, Training, Developer Advocates, and Educators">
+    <meta name="keywords" content="Markdown, Presentation, Slides, Developer">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <meta name="”robots”" content="”noindex,nofollow”">
+    
+    
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gitpitch">
+<meta name="twitter:title" content="GitPitch Markdown">
+<meta name="twitter:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta name="twitter:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+
+
+    
+
+<meta property="og:site_name" content="GitPitch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitPitch Markdown">
+<meta property="og:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta property="og:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+<meta property="og:url" content="https://gitpitch.com/cypress-io/testing-workshop-cypress/master?grs=github&amp;t=template&amp;p=slides%2F07-ci">
+
+
+    
+
+<link rel="alternate" type="application/json+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F07-ci&amp;format=json" title="GitPitch - Markdown Presentations for Everyone on Git">
+<link rel="alternate" type="text/xml+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F07-ci&amp;format=xml" title="GitPitch - Markdown Presentations for Everyone on Git">
+
+
+    
+    
+    <link rel="apple-touch-icon" sizes="120x120" href="https://gitpitch.com/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gitpitch.com/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gitpitch.com/assets/img/favicon/favicon-16x16.png">
+    
+    
+    
+<link href="./Setting up E2E tests on CI_files/reveal.css" rel="stylesheet" type="text/css">
+
+<link href="./Setting up E2E tests on CI_files/moon.css" rel="stylesheet" type="text/css" id="theme">
+<link href="./Setting up E2E tests on CI_files/future.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Setting up E2E tests on CI_files/title-footer-mod.css" rel="stylesheet" type="text/css" id="theme">
+
+<link href="./Setting up E2E tests on CI_files/paper.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Setting up E2E tests on CI_files/atom-one-light.css" rel="stylesheet" type="text/css">
+<link href="./Setting up E2E tests on CI_files/octicons.css" rel="stylesheet" type="text/css">
+<link href="./Setting up E2E tests on CI_files/fa-all.min.css" rel="stylesheet" type="text/css">
+<link href="./Setting up E2E tests on CI_files/fa-v4-shims.min.css" rel="stylesheet" type="text/css">
+
+<link href="./Setting up E2E tests on CI_files/pitchcore.css" rel="stylesheet" type="text/css">
+
+
+
+
+<link href="./Setting up E2E tests on CI_files/pitch.css" rel="stylesheet" type="text/css">
+
+<link href="./Setting up E2E tests on CI_files/pitchmenu.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Setting up E2E tests on CI_files/menu.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Setting up E2E tests on CI_files/pitchbardark.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Setting up E2E tests on CI_files/pitchcode.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Setting up E2E tests on CI_files/css" rel="stylesheet">
+
+
+
+    
+    
+
+<style>
+.half-image img {
+  width: 40%;
+}
+
+</style>
+
+
+    <link href="./Setting up E2E tests on CI_files/pitchpost.css" rel="stylesheet" type="text/css">
+    
+
+    
+        
+            
+
+<script async="" src="./Setting up E2E tests on CI_files/analytics.js"></script><script async="" src="./Setting up E2E tests on CI_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-80973712-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+
+
+        
+        
+            
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-59606812-9', 'auto', 'gpu');
+  ga('gpu.send', 'pageview');
+  
+</script><script type="text/javascript" src="./Setting up E2E tests on CI_files/marked.js"></script><script type="text/javascript" src="./Setting up E2E tests on CI_files/markdown.js"></script><script type="text/javascript" src="./Setting up E2E tests on CI_files/menu.js"></script><script type="text/javascript" src="./Setting up E2E tests on CI_files/highlight.js"></script><script type="text/javascript" src="./Setting up E2E tests on CI_files/reveal-code-focus-30.js"></script>
+
+
+        
+    
+
+
+</head>
+<body>
+    
+
+
+    <div class="reveal none center has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="none" style="">
+        <div class="slides" style="width: 960px; height: 700px; zoom: 1.13143;">
+            
+            <section data-charset="utf-8" style="top: 241px; display: block;" data-markdown="" data-markdown-parsed="true" data-background="white" class="has-light-background past" hidden="" aria-hidden="true"><!-- -->
+<div style="padding-top: 0px; font-size: 36px;" class="font-ubuntu-heavy text-pink text-bold">
+<p style="color: #5289F7; font-weight: bold;">GitPitch.com is shutting down.<br>This slide deck will no longer<br>be available from March 1, 2021. </p></div>
+</section><section data-charset="utf-8" style="top: 0px; display: block;" class="stack present"><section data-markdown="" data-markdown-parsed="true" style="top: 94.5px; display: block;" class="present"><h2 id="-part-7-continuous-integration">☀️ Part 7: Continuous integration</h2>
+<h3 id="-you-will-learn">📚 You will learn</h3>
+<ul>
+<li>Cypress Docker images for dependencies</li>
+<li>Installing and caching Cypress itself</li>
+<li>How to start server and run Cypress tests</li>
+<li>CircleCI Orb example</li>
+<li>GitHub Actions example</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 115px; display: block;" hidden=""><h2 id="todo-if-possible">Todo if possible</h2>
+<ul>
+<li>sign up for free account on CircleCI</li>
+<li>use specs from folder <code>cypress/integration/07-ci</code><ul>
+<li>UI spec</li>
+<li>Data store spec</li>
+<li>API calls spec</li>
+</ul>
+</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 137px; display: block;" hidden=""><h2 id="questions">Questions</h2>
+<ul>
+<li>look at the scripts in <code>package.json</code></li>
+<li>run the specs in the interactive mode with <code>cypress open</code></li>
+<li>run the specs in the headless mode with <code>cypress run</code></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="set-up-ci">Set up CI</h2>
+<ul>
+<li>sign up for CircleCI</li>
+<li>fork this repo <a href="https://github.com/cypress-io/testing-workshop-cypress" rel="noopener noreferrer" target="_blank">cypress-io/testing-workshop-cypress</a></li>
+<li>add project to CircleCI</li>
+</ul>
+<p><img src="./Setting up E2E tests on CI_files/add-project.png" title="" alt="Add project" class="Add project" style="width: auto;height: auto;" data-image-key="6265524426593077898"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="continuous-integration-documentation">Continuous integration documentation</h2>
+<ul>
+<li><a href="https://on.cypress.io/continuous-integration" rel="noopener noreferrer" target="_blank">https://on.cypress.io/continuous-integration</a></li>
+<li><a href="https://on.cypress.io/ci" rel="noopener noreferrer" target="_blank">https://on.cypress.io/ci</a> (alias)</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo">Todo</h2>
+<p>Read file <code>.circleci/circle.yml</code></p>
+<ul>
+<li>uses CircleCI V2 <a href="https://circleci.com/docs/2.0/sample-config/" rel="noopener noreferrer" target="_blank">https://circleci.com/docs/2.0/sample-config/</a></li>
+<li>Docker file from <a href="https://github.com/cypress-io/cypress-docker-images" rel="noopener noreferrer" target="_blank">https://github.com/cypress-io/cypress-docker-images</a><ul>
+<li><code>cypress/base:8</code>, <code>cypress/base:10</code>, <code>cypress/base:12.x.y</code> are good choices</li>
+</ul>
+</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="on-ci-">On CI:</h2>
+<ul>
+<li>install and cache dependencies</li>
+<li>start <code>todomvc</code> server in the background</li>
+<li>run spec files from <code>cypress/integration/07-ci</code></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><pre><code class="hljs lang- yaml"><span class="line"><span class="line-number"></span><span class="hljs-attr">version:</span> <span class="hljs-number">2</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">jobs:</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">  build:</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">    docker:</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">      - image:</span> <span class="hljs-string">cypress/base:8</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">    working_directory:</span> <span class="hljs-string">~/repo</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">    steps:</span></span><span class="line"><span class="line-number"></span><span class="hljs-bullet">      -</span> <span class="hljs-string">checkout</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">      - restore_cache:</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">          keys:</span></span><span class="line"><span class="line-number"></span><span class="hljs-bullet">          -</span> <span class="hljs-string">dependencies-{{</span> <span class="hljs-string">checksum</span> <span class="hljs-string">"package.json"</span> <span class="hljs-string">}}</span></span><span class="line"><span class="line-number"></span>          <span class="hljs-comment"># fallback to using the latest cache if no exact match is found</span></span><span class="line"><span class="line-number"></span><span class="hljs-bullet">          -</span> <span class="hljs-string">dependencies-</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">      - run:</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">          name:</span> <span class="hljs-string">Install</span> <span class="hljs-string">dependencies</span></span><span class="line"><span class="line-number"></span>          <span class="hljs-comment"># https://docs.npmjs.com/cli/ci</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">          command:</span> <span class="hljs-string">npm</span> <span class="hljs-string">ci</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">      - save_cache:</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">          paths:</span></span><span class="line"><span class="line-number"></span><span class="hljs-bullet">            -</span> <span class="hljs-string">~/.npm</span></span><span class="line"><span class="line-number"></span><span class="hljs-bullet">            -</span> <span class="hljs-string">~/.cache</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">          key:</span> <span class="hljs-string">dependencies-{{</span> <span class="hljs-string">checksum</span> <span class="hljs-string">"package.json"</span> <span class="hljs-string">}}</span></span></code></pre>
+
+
+<p><span class="code-presenting-annotation fragment current-only" data-code-focus="4-5" data-fragment-index="0">Use Cypress Docker image with Node 8</span>
+<span class="code-presenting-annotation fragment current-only" data-code-focus="9-13" data-fragment-index="1">Restore previously cached dependencies</span>
+<span class="code-presenting-annotation fragment current-only" data-code-focus="14-17" data-fragment-index="2">Install NPM dependencies</span>
+<span class="code-presenting-annotation fragment current-only" data-code-focus="18-22" data-fragment-index="3">Save dependencies, including Cypress binary in ~/.cache</span></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><pre><code class="hljs lang- routeros"><span class="line"><span class="line-number"></span><span class="hljs-comment"># two commands: start server, run tests</span></span><span class="line"><span class="line-number"></span>- run:</span><span class="line"><span class="line-number"></span>    name: Start TodoMVC<span class="hljs-built_in"> server</span></span><span class="line"><span class="line-number"></span><span class="hljs-built_in"></span>    command: npm start</span><span class="line"><span class="line-number"></span>    working_directory: todomvc</span><span class="line"><span class="line-number"></span>    background: <span class="hljs-literal">true</span></span><span class="line"><span class="line-number"></span>- run:</span><span class="line"><span class="line-number"></span>    name: <span class="hljs-builtin-name">Run</span> Cypress tests</span><span class="line"><span class="line-number"></span>    command: npm test</span></code></pre>
+
+
+<p><span class="code-presenting-annotation fragment current-only" data-code-focus="2-6" data-fragment-index="0">Start application server</span>
+<span class="code-presenting-annotation fragment current-only" data-code-focus="7-9" data-fragment-index="1">Run Cypress tests</span></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>Alternative: use <a href="https://github.com/bahmutov/start-server-and-test" rel="noopener noreferrer" target="_blank">start-server-and-test</a></p>
+<pre><code class="hljs lang- stata"><span class="line"><span class="line-number"></span>- <span class="hljs-keyword">run</span>:</span><span class="line"><span class="line-number"></span>  name: Start and <span class="hljs-keyword">test</span></span><span class="line"><span class="line-number"></span>  command: npm <span class="hljs-keyword">run</span> <span class="hljs-keyword">ci</span></span></code></pre>
+
+
+<pre><code class="hljs lang- json"><span class="line"><span class="line-number"></span>{</span><span class="line"><span class="line-number"></span>  <span class="hljs-attr">"scripts"</span>: {</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"start"</span>: <span class="hljs-string">"cd todomvc; npm start -- --quiet"</span>,</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"test"</span>: <span class="hljs-string">"cypress run --spec 'cypress/integration/07-ci/*'"</span>,</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"ci"</span>: <span class="hljs-string">"start-test 3000"</span></span><span class="line"><span class="line-number"></span>  }</span><span class="line"><span class="line-number"></span>}</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="circleci-cypress-orb">CircleCI Cypress Orb</h2>
+<p>A <em>much simpler</em> CI configuration.</p>
+<pre><code class="hljs lang- less"><span class="line"><span class="line-number"></span><span class="hljs-attribute">version</span>: <span class="hljs-number">2.1</span></span><span class="line"><span class="line-number"></span><span class="hljs-attribute">orbs</span>:</span><span class="line"><span class="line-number"></span>  # import Cypress orb by specifying an exact version x.y.z</span><span class="line"><span class="line-number"></span>  # or the latest version <span class="hljs-number">1</span>.x.x using <span class="hljs-string">"@1"</span> syntax</span><span class="line"><span class="line-number"></span>  <span class="hljs-attribute">cypress</span>: cypress-io/cypress<span class="hljs-variable">@1</span></span><span class="line"><span class="line-number"></span><span class="hljs-attribute">workflows</span>:</span><span class="line"><span class="line-number"></span>  <span class="hljs-attribute">build</span>:</span><span class="line"><span class="line-number"></span>    <span class="hljs-attribute">jobs</span>:</span><span class="line"><span class="line-number"></span>      # <span class="hljs-string">"cypress"</span> is the name of the imported orb</span><span class="line"><span class="line-number"></span>      # <span class="hljs-string">"run"</span> is the name of the job defined in Cypress orb</span><span class="line"><span class="line-number"></span>      - cypress/run</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo">Todo</h2>
+<p>Look how tests are run on Firefox in <a href="https://gitpitch.com/cypress-io/.circleci/config.yml">.circleci/config.yml</a> using <a href="https://github.com/cypress-io/circleci-orb" rel="noopener noreferrer" target="_blank">cypress-io/circleci-orb</a>.</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="record-on-dashboard">Record on Dashboard</h2>
+<pre><code class="hljs lang- less"><span class="line"><span class="line-number"></span><span class="hljs-attribute">version</span>: <span class="hljs-number">2.1</span></span><span class="line"><span class="line-number"></span><span class="hljs-attribute">orbs</span>:</span><span class="line"><span class="line-number"></span>  <span class="hljs-attribute">cypress</span>: cypress-io/cypress<span class="hljs-variable">@1</span></span><span class="line"><span class="line-number"></span><span class="hljs-attribute">workflows</span>:</span><span class="line"><span class="line-number"></span>  <span class="hljs-attribute">build</span>:</span><span class="line"><span class="line-number"></span>    <span class="hljs-attribute">jobs</span>:</span><span class="line"><span class="line-number"></span>      - cypress/<span class="hljs-attribute">run</span>:</span><span class="line"><span class="line-number"></span>          <span class="hljs-attribute">record</span>: true</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="parallel-builds">Parallel builds</h2>
+<pre><code class="hljs lang- less"><span class="line"><span class="line-number"></span><span class="hljs-attribute">version</span>: <span class="hljs-number">2.1</span></span><span class="line"><span class="line-number"></span><span class="hljs-attribute">orbs</span>:</span><span class="line"><span class="line-number"></span>  <span class="hljs-attribute">cypress</span>: cypress-io/cypress<span class="hljs-variable">@1</span></span><span class="line"><span class="line-number"></span><span class="hljs-attribute">workflows</span>:</span><span class="line"><span class="line-number"></span>  <span class="hljs-attribute">build</span>:</span><span class="line"><span class="line-number"></span>    <span class="hljs-attribute">jobs</span>:</span><span class="line"><span class="line-number"></span>      - cypress/install</span><span class="line"><span class="line-number"></span>      - cypress/<span class="hljs-attribute">run</span>:</span><span class="line"><span class="line-number"></span>          <span class="hljs-attribute">requires</span>:</span><span class="line"><span class="line-number"></span>            - cypress/install</span><span class="line"><span class="line-number"></span>          <span class="hljs-attribute">record</span>: true # record results on Cypress Dashboard</span><span class="line"><span class="line-number"></span>          <span class="hljs-attribute">parallel</span>: true # split all specs across machines</span><span class="line"><span class="line-number"></span>          <span class="hljs-attribute">parallelism</span>: <span class="hljs-number">4</span> # use <span class="hljs-number">4</span> CircleCI machines</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="circleci-cypress-orb">CircleCI Cypress Orb</h2>
+<p>Never struggle with CI config 👍</p>
+<ul>
+<li><a href="https://github.com/cypress-io/circleci-orb" rel="noopener noreferrer" target="_blank">github.com/cypress-io/circleci-orb</a></li>
+<li><a href="https://circleci.com/orbs/registry/orb/cypress-io/cypress" rel="noopener noreferrer" target="_blank">circleci.com/orbs/registry/orb/cypress-io/cypress</a></li>
+<li>📺 <a href="https://youtu.be/J-xbNtKgXfY" rel="noopener noreferrer" target="_blank">CircleCI + Cypress webinar</a></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="github-actions">GitHub Actions</h2>
+<ul>
+<li>cross-platform CI built on top of Azure CI + MacStadium</li>
+<li>Linux, Windows, and Mac</li>
+<li>We wrote <a href="https://github.com/cypress-io/github-action" rel="noopener noreferrer" target="_blank">cypress-io/github-action</a></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><pre><code class="hljs lang- less"><span class="line"><span class="line-number"></span><span class="hljs-attribute">jobs</span>:</span><span class="line"><span class="line-number"></span>  <span class="hljs-attribute">cypress-run</span>:</span><span class="line"><span class="line-number"></span>    <span class="hljs-attribute">runs-on</span>: ubuntu-latest</span><span class="line"><span class="line-number"></span>    <span class="hljs-attribute">steps</span>:</span><span class="line"><span class="line-number"></span>      - <span class="hljs-attribute">uses</span>: actions/checkout<span class="hljs-variable">@v1</span></span><span class="line"><span class="line-number"></span>      - <span class="hljs-attribute">uses</span>: cypress-io/github-action<span class="hljs-variable">@v1</span></span><span class="line"><span class="line-number"></span>        <span class="hljs-attribute">with</span>:</span><span class="line"><span class="line-number"></span>          <span class="hljs-attribute">start</span>: npm start</span><span class="line"><span class="line-number"></span>          <span class="hljs-attribute">wait-on</span>: <span class="hljs-string">'http://localhost:3000'</span></span><span class="line"><span class="line-number"></span>          <span class="hljs-attribute">spec</span>: <span class="hljs-string">'cypress/integration/07-ci/*'</span></span></code></pre>
+
+
+<p><span class="code-presenting-annotation fragment current-only" data-code-focus="5" data-fragment-index="0">Checkout GitHub repo</span>
+<span class="code-presenting-annotation fragment current-only" data-code-focus="6-10" data-fragment-index="1">Run Cypress tests</span></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="take-away">Take away</h2>
+<ul>
+<li>use <code>npm ci</code> command instead of <code>npm install</code></li>
+<li>cache <code>~/.npm</code> and <code>~/.cache</code> folders</li>
+<li>use <a href="https://github.com/bahmutov/start-server-and-test" rel="noopener noreferrer" target="_blank">start-server-and-test</a> for simplicity</li>
+<li>store video as artifact with <a href="https://circleci.com/docs/2.0/configuration-reference/#store_artifacts" rel="noopener noreferrer" target="_blank">store_artifacts</a></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo">Todo</h2>
+<p>Find the CI you use on <a href="https://on.cypress.io/continuous-integration" rel="noopener noreferrer" target="_blank">https://on.cypress.io/continuous-integration</a> and <a href="https://github.com/cypress-io/cypress-example-kitchensink#ci-status" rel="noopener noreferrer" target="_blank">https://github.com/cypress-io/cypress-example-kitchensink#ci-status</a></p>
+</section></section>
+            
+        </div>
+        
+
+<footer id="title-footer" class="footer-visible"><p id="notification" class="footer-fade"> </p></footer>
+
+
+    <div class="backgrounds"><div class="slide-background past" data-background-hash="whitenullnullnullnullnullnullnullnullnull" data-loaded="true" style="background: white; display: block;"><div class="slide-background-content"></div></div><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div></div><div class="progress" style="display: block;"><span style="width: 88.4211px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button><button class="navigate-right highlight" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down enabled highlight" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><a href="https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/07-ci#/1"><span class="slide-number-a">2</span><span class="slide-number-delimiter">/</span><span class="slide-number-b">20</span></a></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">☀️ Part 7: Continuous integration
+📚 You will learn
+
+Cypress Docker images for dependencies
+Installing and caching Cypress itself
+How to start server and run Cypress tests
+CircleCI Orb example
+GitHub Actions example
+
+</div></div>
+    
+    
+    <div class="gp-menu">
+      <div class="slide-menu-button">
+        
+        <a class="reveal" onclick="goHome(); return false;" title="Go Home" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-home" aria-hidden="true"> </i>
+        </a>
+        
+        
+        <a class="reveal" onclick="toggleMenu(); return false;" title="Slide Table-of-Contents, Key=M" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-bars" aria-hidden="true"> </i>
+        </a>
+        
+      </div>
+    <nav class="slide-menu slide-menu--left"><ol class="slide-menu-toolbar"><li data-button="0" class="toolbar-panel-button" data-panel="Slides"><i class="fa fa-list"></i></li><li id="close"><i class="fa fa-times"></i></li></ol><div data-panel="Slides" class="slide-menu-panel active-menu-panel"><div class="toc-title"><hr class="fade-away"></div><ul class="slide-menu-items"><li class="slide-menu-item no-title past" data-item="0" data-slide-h="0" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 0</span></li><li class="slide-menu-item active" data-item="1" data-slide-h="1" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">☀️ Part 7: Continuous integration</span></li><li class="slide-menu-item-vertical future" data-item="2" data-slide-h="1" data-slide-v="1"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo if possible</span></li><li class="slide-menu-item-vertical future" data-item="3" data-slide-h="1" data-slide-v="2"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Questions</span></li><li class="slide-menu-item-vertical future" data-item="4" data-slide-h="1" data-slide-v="3"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Set up CI</span></li><li class="slide-menu-item-vertical future" data-item="5" data-slide-h="1" data-slide-v="4"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Continuous integration documentation</span></li><li class="slide-menu-item-vertical future" data-item="6" data-slide-h="1" data-slide-v="5"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo</span></li><li class="slide-menu-item-vertical future" data-item="7" data-slide-h="1" data-slide-v="6"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">On CI:</span></li><li class="slide-menu-item-vertical no-title future" data-item="8" data-slide-h="1" data-slide-v="7"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 8</span></li><li class="slide-menu-item-vertical no-title future" data-item="9" data-slide-h="1" data-slide-v="8"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 9</span></li><li class="slide-menu-item-vertical no-title future" data-item="10" data-slide-h="1" data-slide-v="9"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 10</span></li><li class="slide-menu-item-vertical future" data-item="11" data-slide-h="1" data-slide-v="10"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">CircleCI Cypress Orb</span></li><li class="slide-menu-item-vertical future" data-item="12" data-slide-h="1" data-slide-v="11"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo</span></li><li class="slide-menu-item-vertical future" data-item="13" data-slide-h="1" data-slide-v="12"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Record on Dashboard</span></li><li class="slide-menu-item-vertical future" data-item="14" data-slide-h="1" data-slide-v="13"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Parallel builds</span></li><li class="slide-menu-item-vertical future" data-item="15" data-slide-h="1" data-slide-v="14"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">CircleCI Cypress Orb</span></li><li class="slide-menu-item-vertical future" data-item="16" data-slide-h="1" data-slide-v="15"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">GitHub Actions</span></li><li class="slide-menu-item-vertical no-title future" data-item="17" data-slide-h="1" data-slide-v="16"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 17</span></li><li class="slide-menu-item-vertical future" data-item="18" data-slide-h="1" data-slide-v="17"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Take away</span></li><li class="slide-menu-item-vertical future" data-item="19" data-slide-h="1" data-slide-v="18"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo</span></li></ul></div></nav><div class="slide-menu-overlay"></div></div>
+    
+    
+    <script src="./Setting up E2E tests on CI_files/reveal.js"></script>
+    <script src="./Setting up E2E tests on CI_files/jquery.min.js"></script>
+    
+    
+    
+
+    <script>
+        Reveal.initialize({
+            
+            controls: true,
+            
+            controlsLayout: 'bottom-right',
+            progress: true,
+            embedded: true,
+            margin: 0.0,
+            
+            
+            showNotes: false,
+            transition: 'none',
+            backgroundTransition: 'none',
+            autoSlide: 0,
+            loop: false,
+            center: true,
+            rtl: false,
+            shuffle: false,
+            mouseWheel: false,
+            
+            controlsTutorial: true,
+            
+            
+            
+              slideNumber: 'c/t', // slideNumber: false,
+            
+            history: true,
+            
+            
+            menu: {
+              custom: [],
+              path : "/assets/libs/slides/plugin/menu",
+              themes : false,
+              transitions:  false,
+              markers: true,
+              sticky: true,
+              autoOpen: true
+            },
+            
+            
+            dependencies: [
+                { src: "/assets/libs/slides/plugin/markdown/marked.js",
+                  condition: function() {
+                    return !!document.querySelector( '[data-markdown]' );
+                  }},
+                { src: "/assets/libs/slides/plugin/markdown/markdown.js",
+                condition: function() {
+                  return !!document.querySelector( '[data-markdown]' );
+                }},
+                
+                { src:"/assets/libs/slides/plugin/menu/menu.js",
+                  async: true},
+                
+                
+                
+                
+                { src: '/assets/libs/highlight.js/9.15.8/highlight.js', async: true },
+                
+                { src: '/assets/libs/highlight.js/9.15.8/reveal-code-focus-30.js',
+                  async: true,
+                  callback: function() {
+                    RevealCodeFocus();
+                  }
+                },
+                
+                
+                
+                
+                
+            ]
+        });
+
+        Reveal.addEventListener('ready', function(evt) {
+
+          if(typeof twtter !== "undefined") {
+              twttr.widgets.load();
+          }
+
+          upgradeAnchors();
+          pushFootnoteNotification();
+
+          // Force refresh to workaround Reveal.js 3.8.0
+          // first render problem re. scrollHeight calc
+          // for slides with non-text (image) content.
+          setTimeout(Reveal.layout, 500);
+        });
+
+        
+        Reveal.addEventListener('menu-ready', function(evt) {
+            toggleMenuOff();
+        });
+        
+
+        Reveal.addEventListener('slidechanged', function(evt) {
+          /*
+          if (evt.indexh === 0 && evt.indexv === 0) {
+            pushHelpNotification();
+          } else {
+            pushFootnoteNotification();
+          }
+          */
+          pushFootnoteNotification();
+        });
+
+        Reveal.configure({
+            keyboard: {
+                88: function() { // bind "x" key to "select" code block content
+
+                    var currentSlide = Reveal.getCurrentSlide();
+                    var preBlock = $(currentSlide).find("pre");
+
+                    if(preBlock.length > 0) {
+
+                        if (window.getSelection) {
+                            var range = document.createRange();
+                            range.selectNodeContents(preBlock[0]);
+                            var selection = window.getSelection();
+                            selection.removeAllRanges();
+                            selection.addRange(range);
+                        }
+                    }
+                }
+            }
+        });
+
+        function goHome() {
+            window.location.href = "https://gitpitch.com";
+        }
+
+        function enterFullscreen() {
+            Reveal.triggerKey(70);
+        };
+
+        function enterOverview() {
+            Reveal.toggleOverview();
+        };
+
+        function enterBlackout() {
+            Reveal.togglePause();
+        };
+
+        function toggleHelp() {
+          Reveal.toggleHelp();
+        }
+
+        function enableEvents() {
+            Reveal.addEventListeners();
+        };
+
+        function disableEvents() {
+            Reveal.removeEventListeners();
+        };
+
+        function toggleMenuOff() {
+            if(RevealMenu && RevealMenu.isOpen()) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function toggleMenu() {
+            if(RevealMenu) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function upgradeAnchors() {
+            Array.from(document.getElementsByTagName('a')).forEach($link => {
+              if ($link.hostname !== window.location.hostname) {
+                $link.setAttribute('rel', 'noopener noreferrer');
+                $link.setAttribute('target', '_blank');
+              }
+            });
+        }
+
+    </script>
+
+    
+
+    
+
+<script>
+    function pushNotification(msg, fade) {
+      var footer = document.getElementById('title-footer')
+      var notification = document.getElementById('notification')
+      if(window.innerWidth < 700) {
+        footer.className = "footer-hidden";
+      } else {
+          footer.className = "footer-visible";
+          if(fade) {
+            notification.className = "footer-fade";
+            notification.innerHTML = msg;
+          } else {
+            notification.className = "footer-hard";
+            notification.innerHTML = msg;
+          }
+      }
+    };
+
+    function pushHelpNotification() {
+      if(window.innerWidth < 700)
+        pushNotification("<a href='#' onclick='RevealMenu.toggle()'>Menu</a> | <a href='#' onclick='enterFullscreen()'>Fullscreen</a> | <a href='#' onclick='enterOverview()'>Overview</a> | <a href='#' onclick='enterBlackout()'>Blackout</a> | <a href='#' onclick='RevealNotes.open()'>Speaker</a> | <a href='#' onclick='enterHelp()'>Help</a>");
+      else
+        pushNotification("Navigate : Space / Arrow Keys | <a href='#' onclick='RevealMenu.toggle()'>M</a> - Menu | <a href='#' onclick='enterFullscreen()'>F</a> - Fullscreen | <a href='#' onclick='enterOverview()'>O</a> - Overview | <a href='#' onclick='enterBlackout()'>B</a> - Blackout | <a href='#' onclick='RevealNotes.open()'>S</a> - Speaker | <a href='#' onclick='enterHelp()'>?</a> - Help");
+    }
+
+    function pushFootnoteNotification() {
+      
+        pushNotification(" ", true);
+      
+    }
+
+    function pushCodePresentingStepNotification(step, frags) {
+      // pushNotification("Code Presenting - Step " + step + " / " + frags, true);
+    }
+</script>
+
+
+
+
+
+</body></html>

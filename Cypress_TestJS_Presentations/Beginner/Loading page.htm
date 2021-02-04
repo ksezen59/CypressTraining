@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/00-start#/1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>GitPitch Markdown</title>
+    <meta name="description" content="Slide Decks for Tech Conferences, Training, Developer Advocates, and Educators">
+    <meta name="keywords" content="Markdown, Presentation, Slides, Developer">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <meta name="”robots”" content="”noindex,nofollow”">
+    
+    
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gitpitch">
+<meta name="twitter:title" content="GitPitch Markdown">
+<meta name="twitter:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta name="twitter:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+
+
+    
+
+<meta property="og:site_name" content="GitPitch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitPitch Markdown">
+<meta property="og:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta property="og:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+<meta property="og:url" content="https://gitpitch.com/cypress-io/testing-workshop-cypress/master?grs=github&amp;t=template&amp;p=slides%2F00-start">
+
+
+    
+
+<link rel="alternate" type="application/json+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F00-start&amp;format=json" title="GitPitch - Markdown Presentations for Everyone on Git">
+<link rel="alternate" type="text/xml+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F00-start&amp;format=xml" title="GitPitch - Markdown Presentations for Everyone on Git">
+
+
+    
+    
+    <link rel="apple-touch-icon" sizes="120x120" href="https://gitpitch.com/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gitpitch.com/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gitpitch.com/assets/img/favicon/favicon-16x16.png">
+    
+    
+    
+<link href="./Loading page_files/reveal.css" rel="stylesheet" type="text/css">
+
+<link href="./Loading page_files/moon.css" rel="stylesheet" type="text/css" id="theme">
+<link href="./Loading page_files/future.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Loading page_files/title-footer-mod.css" rel="stylesheet" type="text/css" id="theme">
+
+<link href="./Loading page_files/paper.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Loading page_files/atom-one-light.css" rel="stylesheet" type="text/css">
+<link href="./Loading page_files/octicons.css" rel="stylesheet" type="text/css">
+<link href="./Loading page_files/fa-all.min.css" rel="stylesheet" type="text/css">
+<link href="./Loading page_files/fa-v4-shims.min.css" rel="stylesheet" type="text/css">
+
+<link href="./Loading page_files/pitchcore.css" rel="stylesheet" type="text/css">
+
+
+
+
+<link href="./Loading page_files/pitch.css" rel="stylesheet" type="text/css">
+
+<link href="./Loading page_files/pitchmenu.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Loading page_files/menu.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Loading page_files/pitchbardark.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Loading page_files/pitchcode.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Loading page_files/css" rel="stylesheet">
+
+
+
+    
+    
+
+<style>
+.half-image img {
+  width: 40%;
+}
+
+</style>
+
+
+    <link href="./Loading page_files/pitchpost.css" rel="stylesheet" type="text/css">
+    
+
+    
+        
+            
+
+<script async="" src="./Loading page_files/analytics.js"></script><script async="" src="./Loading page_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-80973712-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+
+
+        
+        
+            
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-59606812-9', 'auto', 'gpu');
+  ga('gpu.send', 'pageview');
+  
+</script><script type="text/javascript" src="./Loading page_files/marked.js"></script><script type="text/javascript" src="./Loading page_files/markdown.js"></script><script type="text/javascript" src="./Loading page_files/menu.js"></script><script type="text/javascript" src="./Loading page_files/highlight.js"></script><script type="text/javascript" src="./Loading page_files/reveal-code-focus-30.js"></script>
+
+
+        
+    
+
+
+</head>
+<body>
+    
+
+
+    <div class="reveal none center has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="none" style="">
+        <div class="slides" style="width: 960px; height: 700px; zoom: 1.13143;">
+            
+            <section data-charset="utf-8" style="top: 241px; display: block;" data-markdown="" data-markdown-parsed="true" data-background="white" class="has-light-background past" hidden="" aria-hidden="true"><!-- -->
+<div style="padding-top: 0px; font-size: 36px;" class="font-ubuntu-heavy text-pink text-bold">
+<p style="color: #5289F7; font-weight: bold;">GitPitch.com is shutting down.<br>This slide deck will no longer<br>be available from March 1, 2021. </p></div>
+</section><section data-charset="utf-8" style="top: 0px; display: block;" class="stack present"><section data-markdown="" data-markdown-parsed="true" style="top: 120px; display: block;" class="present"><h2 id="-starting-new-projects">☀️ Starting new projects</h2>
+<h3 id="-you-will-learn">📚 You will learn</h3>
+<ul>
+<li>Cypress folder structure</li>
+<li>Writing first test</li>
+<li>Setting up intelligent code completion</li>
+<li>Cypress documentation</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 51px; display: block;" hidden=""><h2 id="todo-make-a-new-project-and-add-cypress">Todo: make a new project and add Cypress</h2>
+<p>Create a new folder</p>
+<ul>
+<li><code>cd /tmp</code></li>
+<li><code>mkdir example</code></li>
+<li><code>cd example</code></li>
+<li><code>npm init --yes</code></li>
+<li><code>npm install -D cypress</code></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 229.5px; display: block;" hidden=""><h3 id="how-to-open-cypress">How to open Cypress</h3>
+<pre><code class="hljs lang- reasonml"><span class="line"><span class="line-number"></span>npx cypress <span class="hljs-keyword">open</span></span><span class="line"><span class="line-number"></span><span class="hljs-constructor">$(<span class="hljs-params">npm</span> <span class="hljs-params">bin</span>)</span>/cypress <span class="hljs-keyword">open</span></span><span class="line"><span class="line-number"></span>./node_modules/.bin/cypress <span class="hljs-keyword">open</span></span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>In <code>package.json</code> I usually have</p>
+<pre><code class="hljs lang- json"><span class="line"><span class="line-number"></span>{</span><span class="line"><span class="line-number"></span>  <span class="hljs-attr">"scripts"</span>: {</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"cy:open"</span>: <span class="hljs-string">"cypress open"</span>,</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"cy:run"</span>: <span class="hljs-string">"cypress run"</span></span><span class="line"><span class="line-number"></span>  }</span><span class="line"><span class="line-number"></span>}</span></code></pre>
+
+
+<p>And I use <code>npm run cy:open</code></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p><img src="./Loading page_files/cypress-scaffold.png" title="" alt="First time you open Cypress" class="First time you open Cypress" style="width: auto;height: auto;" data-image-key="5973878933885428595"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><ul>
+<li>"cypress.json" - all Cypress settings</li>
+<li>"cypress/integration" - test files (specs)</li>
+<li>"cypress/fixtures" - mock data</li>
+<li>"cypress/plugins" - extending Cypress</li>
+<li>"cypress/support" - shared commands, utilities</li>
+</ul>
+<aside class="notes"><p>This section shows how Cypress scaffolds its files and folders. Then the students can ignore this folder. This is only done once to show the scaffolding.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>Look at the scaffolded example test files (specs).</p>
+<p>Run specs for topics that look interesting</p>
+<p>Hint: you can find latest examples in <a href="https://github.com/cypress-io/cypress-example-kitchensink" rel="noopener noreferrer" target="_blank">https://github.com/cypress-io/cypress-example-kitchensink</a></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="-pro-tip">💡 Pro tip</h2>
+<pre><code class="hljs lang- nginx"><span class="line"><span class="line-number"></span><span class="hljs-attribute">npx</span> <span class="hljs-variable">@bahmutov</span>/cly init</span><span class="line"><span class="line-number"></span><span class="hljs-comment"># quickly scaffolds Cypress folders</span></span></code></pre>
+
+
+<p>Repo <a href="https://github.com/bahmutov/cly" rel="noopener noreferrer" target="_blank">github.com/bahmutov/cly</a></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="cypress-example-kitchen-sink">Cypress example kitchen sink</h2>
+<ul>
+<li>repo <a href="https://github.com/cypress-io/cypress-example-kitchensink" rel="noopener noreferrer" target="_blank">github.com/cypress-io/cypress-example-kitchensink</a></li>
+<li>site <a href="https://example.cypress.io/" rel="noopener noreferrer" target="_blank">example.cypress.io</a></li>
+<li><strong>Tip:</strong> also use <a href="https://glebbahmutov.com/cypress-examples" rel="noopener noreferrer" target="_blank">glebbahmutov.com/cypress-examples</a></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="first-spec">First spec</h2>
+<p>Create a new file</p>
+<ul>
+<li><code>cypress/integration/spec.js</code></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>Type into the <code>spec.js</code></p>
+<pre><code class="hljs lang- moonscript"><span class="line"><span class="line-number"></span>it(<span class="hljs-string">'loads'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  cy.visit(<span class="hljs-string">'localhost:3000'</span>)</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><ul>
+<li>make sure you have started TodoMVC in another terminal with <code>npm start</code></li>
+<li>click on "spec.js" in Cypress GUI</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="questions">Questions</h2>
+<ul>
+<li>what does Cypress do?</li>
+<li>what happens when the server is down?<ul>
+<li>stop the application server running in folder <code>todomvc</code></li>
+<li>reload the tests</li>
+</ul>
+</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="switch-browser">Switch browser</h2>
+<p><img src="./Loading page_files/switch-browser.png" title="" alt="Switch browser" class="Switch browser" style="width: auto;height: auto;" data-image-key="-1555878798191768542"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><pre><code class="hljs lang- moonscript"><span class="line"><span class="line-number"></span>/// &lt;reference types=<span class="hljs-string">"cypress"</span> /&gt;</span><span class="line"><span class="line-number"></span>it(<span class="hljs-string">'loads'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  cy.visit(<span class="hljs-string">'localhost:3000'</span>)</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+<ul>
+<li>why do we need <code>reference types ...</code> line?</li>
+</ul>
+<aside class="notes"><p>By having "reference" line we tell editors that support it (VSCode, WebStorm) to use TypeScript definitions included in Cypress to provide intelligent code completion. Hovering over any <code>cy</code> command brings helpful tooltips.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="intellisense">IntelliSense</h2>
+<p><img src="./Loading page_files/cy-get-intellisense.jpeg" title="" alt="IntelliSense in VSCode" class="IntelliSense in VSCode" style="width: auto;height: auto;" data-image-key="-2712087684053547968"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>Every Cypress command and every assertion</p>
+<p><img src="./Loading page_files/should-intellisense.jpeg" title="" alt="Should IntelliSense" class="Should IntelliSense" style="width: auto;height: auto;" data-image-key="-8244007182854675908"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>Using <code>ts-check</code></p>
+<pre><code class="hljs lang- moonscript"><span class="line"><span class="line-number"></span>/// &lt;reference types=<span class="hljs-string">"cypress"</span> /&gt;</span><span class="line"><span class="line-number"></span>// @ts-check</span><span class="line"><span class="line-number"></span>it(<span class="hljs-string">'loads'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  cy.visit(<span class="hljs-string">'localhost:3000'</span>)</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+<ul>
+<li>what happens if you add <code>ts-check</code> line and misspell <code>cy.visit</code>?</li>
+</ul>
+<aside class="notes"><p>The check works really well in VSCode editor. I am not sure how well other editors support Cypress type checks right out of the box.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="docs">Docs</h2>
+<p>Your best friend is <a href="https://docs.cypress.io/" rel="noopener noreferrer" target="_blank">https://docs.cypress.io/</a></p>
+<p><img src="./Loading page_files/docs-search.png" title="" alt="Doc search" class="Doc search" style="width: auto;height: auto;" data-image-key="-7665020727135065948"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="find-at-docs-cypress-io">Find at docs.cypress.io</h2>
+<ul class="">
+<li class="fragment" data-fragment-index="0">Cypress main features and how it works docs</li>
+<li class="fragment" data-fragment-index="1">core concepts</li>
+<li class="fragment" data-fragment-index="2">command API
+<ul class="">
+<li class="fragment" data-fragment-index="3">how many commands are there?</li>
+</ul>
+</li>
+</ul>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="-pro-tip">💡 Pro tip</h2>
+<pre><code class="hljs lang- vim"><span class="line"><span class="line-number"></span>http<span class="hljs-variable">s:</span>//<span class="hljs-keyword">on</span>.cypress.io/<span class="hljs-symbol">&lt;command&gt;</span></span></code></pre>
+
+
+<p>goes right to the documentation for that command.</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="find-at-docs-cypress-io">Find at docs.cypress.io</h2>
+<ul class="">
+<li class="fragment" data-fragment-index="0">examples
+<ul class="">
+<li class="fragment" data-fragment-index="1">recipes</li>
+<li class="fragment" data-fragment-index="2">tutorial videos</li>
+<li class="fragment" data-fragment-index="3">example applications</li>
+<li class="fragment" data-fragment-index="4">blogs</li>
+<li class="fragment" data-fragment-index="5">FAQ</li>
+</ul>
+</li>
+<li class="fragment" data-fragment-index="6">Cypress changelog and roadmap</li>
+</ul>
+
+
+<aside class="notes"><p>Students should know where to find information later on. Main resources is the api page <a href="https://on.cypress.io/api" rel="noopener noreferrer" target="_blank">https://on.cypress.io/api</a></p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><div class="west">
+
+<img src="./Loading page_files/vscode-icons.png" title="" alt="VSCode icons" class="VSCode icons" style="width: auto;height: auto;" data-image-key="-9167874032793076952">
+
+</div>
+
+<div class="east">
+
+Bonus: extension <a href="https://github.com/vscode-icons/vscode-icons" rel="noopener noreferrer" target="_blank">vscode-icons</a>
+
+</div>
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="-conclusions">🏁 Conclusions</h2>
+<ul>
+<li>use IntelliSense</li>
+<li>use Docs are <a href="https://docs.cypress.io/" rel="noopener noreferrer" target="_blank">https://docs.cypress.io/</a></li>
+</ul>
+<p>➡️ Pick the <a href="https://github.com/cypress-io/testing-workshop-cypress#content-" rel="noopener noreferrer" target="_blank">next section</a></p>
+</section></section>
+            
+        </div>
+        
+
+<footer id="title-footer" class="footer-visible"><p id="notification" class="footer-fade"> </p></footer>
+
+
+    <div class="backgrounds"><div class="slide-background past" data-background-hash="whitenullnullnullnullnullnullnullnullnull" data-loaded="true" style="background: white; display: block;"><div class="slide-background-content"></div></div><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div></div><div class="progress" style="display: block;"><span style="width: 70px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button><button class="navigate-right highlight" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down enabled highlight" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><a href="https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/00-start#/1"><span class="slide-number-a">2</span><span class="slide-number-delimiter">/</span><span class="slide-number-b">25</span></a></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">☀️ Starting new projects
+📚 You will learn
+
+Cypress folder structure
+Writing first test
+Setting up intelligent code completion
+Cypress documentation
+
+</div></div>
+    
+    
+    <div class="gp-menu">
+      <div class="slide-menu-button">
+        
+        <a class="reveal" onclick="goHome(); return false;" title="Go Home" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-home" aria-hidden="true"> </i>
+        </a>
+        
+        
+        <a class="reveal" onclick="toggleMenu(); return false;" title="Slide Table-of-Contents, Key=M" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-bars" aria-hidden="true"> </i>
+        </a>
+        
+      </div>
+    <nav class="slide-menu slide-menu--left"><ol class="slide-menu-toolbar"><li data-button="0" class="toolbar-panel-button" data-panel="Slides"><i class="fa fa-list"></i></li><li id="close"><i class="fa fa-times"></i></li></ol><div data-panel="Slides" class="slide-menu-panel active-menu-panel"><div class="toc-title"><hr class="fade-away"></div><ul class="slide-menu-items"><li class="slide-menu-item no-title past" data-item="0" data-slide-h="0" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 0</span></li><li class="slide-menu-item active" data-item="1" data-slide-h="1" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">☀️ Starting new projects</span></li><li class="slide-menu-item-vertical future" data-item="2" data-slide-h="1" data-slide-v="1"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: make a new project and add Cypress</span></li><li class="slide-menu-item-vertical future" data-item="3" data-slide-h="1" data-slide-v="2"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">How to open Cypress</span></li><li class="slide-menu-item-vertical no-title future" data-item="4" data-slide-h="1" data-slide-v="3"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 4</span></li><li class="slide-menu-item-vertical no-title future" data-item="5" data-slide-h="1" data-slide-v="4"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 5</span></li><li class="slide-menu-item-vertical no-title future" data-item="6" data-slide-h="1" data-slide-v="5"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 6</span></li><li class="slide-menu-item-vertical no-title future" data-item="7" data-slide-h="1" data-slide-v="6"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 7</span></li><li class="slide-menu-item-vertical future" data-item="8" data-slide-h="1" data-slide-v="7"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">💡 Pro tip</span></li><li class="slide-menu-item-vertical future" data-item="9" data-slide-h="1" data-slide-v="8"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Cypress example kitchen sink</span></li><li class="slide-menu-item-vertical future" data-item="10" data-slide-h="1" data-slide-v="9"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">First spec</span></li><li class="slide-menu-item-vertical no-title future" data-item="11" data-slide-h="1" data-slide-v="10"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 11</span></li><li class="slide-menu-item-vertical no-title future" data-item="12" data-slide-h="1" data-slide-v="11"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 12</span></li><li class="slide-menu-item-vertical future" data-item="13" data-slide-h="1" data-slide-v="12"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Questions</span></li><li class="slide-menu-item-vertical future" data-item="14" data-slide-h="1" data-slide-v="13"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Switch browser</span></li><li class="slide-menu-item-vertical no-title future" data-item="15" data-slide-h="1" data-slide-v="14"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 15</span></li><li class="slide-menu-item-vertical future" data-item="16" data-slide-h="1" data-slide-v="15"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">IntelliSense</span></li><li class="slide-menu-item-vertical no-title future" data-item="17" data-slide-h="1" data-slide-v="16"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 17</span></li><li class="slide-menu-item-vertical no-title future" data-item="18" data-slide-h="1" data-slide-v="17"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 18</span></li><li class="slide-menu-item-vertical future" data-item="19" data-slide-h="1" data-slide-v="18"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Docs</span></li><li class="slide-menu-item-vertical future" data-item="20" data-slide-h="1" data-slide-v="19"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Find at docs.cypress.io</span></li><li class="slide-menu-item-vertical future" data-item="21" data-slide-h="1" data-slide-v="20"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">💡 Pro tip</span></li><li class="slide-menu-item-vertical future" data-item="22" data-slide-h="1" data-slide-v="21"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Find at docs.cypress.io</span></li><li class="slide-menu-item-vertical no-title future" data-item="23" data-slide-h="1" data-slide-v="22"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 23</span></li><li class="slide-menu-item-vertical future" data-item="24" data-slide-h="1" data-slide-v="23"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">🏁 Conclusions</span></li></ul></div></nav><div class="slide-menu-overlay"></div></div>
+    
+    
+    <script src="./Loading page_files/reveal.js"></script>
+    <script src="./Loading page_files/jquery.min.js"></script>
+    
+    
+    
+
+    <script>
+        Reveal.initialize({
+            
+            controls: true,
+            
+            controlsLayout: 'bottom-right',
+            progress: true,
+            embedded: true,
+            margin: 0.0,
+            
+            
+            showNotes: false,
+            transition: 'none',
+            backgroundTransition: 'none',
+            autoSlide: 0,
+            loop: false,
+            center: true,
+            rtl: false,
+            shuffle: false,
+            mouseWheel: false,
+            
+            controlsTutorial: true,
+            
+            
+            
+              slideNumber: 'c/t', // slideNumber: false,
+            
+            history: true,
+            
+            
+            menu: {
+              custom: [],
+              path : "/assets/libs/slides/plugin/menu",
+              themes : false,
+              transitions:  false,
+              markers: true,
+              sticky: true,
+              autoOpen: true
+            },
+            
+            
+            dependencies: [
+                { src: "/assets/libs/slides/plugin/markdown/marked.js",
+                  condition: function() {
+                    return !!document.querySelector( '[data-markdown]' );
+                  }},
+                { src: "/assets/libs/slides/plugin/markdown/markdown.js",
+                condition: function() {
+                  return !!document.querySelector( '[data-markdown]' );
+                }},
+                
+                { src:"/assets/libs/slides/plugin/menu/menu.js",
+                  async: true},
+                
+                
+                
+                
+                { src: '/assets/libs/highlight.js/9.15.8/highlight.js', async: true },
+                
+                { src: '/assets/libs/highlight.js/9.15.8/reveal-code-focus-30.js',
+                  async: true,
+                  callback: function() {
+                    RevealCodeFocus();
+                  }
+                },
+                
+                
+                
+                
+                
+            ]
+        });
+
+        Reveal.addEventListener('ready', function(evt) {
+
+          if(typeof twtter !== "undefined") {
+              twttr.widgets.load();
+          }
+
+          upgradeAnchors();
+          pushFootnoteNotification();
+
+          // Force refresh to workaround Reveal.js 3.8.0
+          // first render problem re. scrollHeight calc
+          // for slides with non-text (image) content.
+          setTimeout(Reveal.layout, 500);
+        });
+
+        
+        Reveal.addEventListener('menu-ready', function(evt) {
+            toggleMenuOff();
+        });
+        
+
+        Reveal.addEventListener('slidechanged', function(evt) {
+          /*
+          if (evt.indexh === 0 && evt.indexv === 0) {
+            pushHelpNotification();
+          } else {
+            pushFootnoteNotification();
+          }
+          */
+          pushFootnoteNotification();
+        });
+
+        Reveal.configure({
+            keyboard: {
+                88: function() { // bind "x" key to "select" code block content
+
+                    var currentSlide = Reveal.getCurrentSlide();
+                    var preBlock = $(currentSlide).find("pre");
+
+                    if(preBlock.length > 0) {
+
+                        if (window.getSelection) {
+                            var range = document.createRange();
+                            range.selectNodeContents(preBlock[0]);
+                            var selection = window.getSelection();
+                            selection.removeAllRanges();
+                            selection.addRange(range);
+                        }
+                    }
+                }
+            }
+        });
+
+        function goHome() {
+            window.location.href = "https://gitpitch.com";
+        }
+
+        function enterFullscreen() {
+            Reveal.triggerKey(70);
+        };
+
+        function enterOverview() {
+            Reveal.toggleOverview();
+        };
+
+        function enterBlackout() {
+            Reveal.togglePause();
+        };
+
+        function toggleHelp() {
+          Reveal.toggleHelp();
+        }
+
+        function enableEvents() {
+            Reveal.addEventListeners();
+        };
+
+        function disableEvents() {
+            Reveal.removeEventListeners();
+        };
+
+        function toggleMenuOff() {
+            if(RevealMenu && RevealMenu.isOpen()) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function toggleMenu() {
+            if(RevealMenu) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function upgradeAnchors() {
+            Array.from(document.getElementsByTagName('a')).forEach($link => {
+              if ($link.hostname !== window.location.hostname) {
+                $link.setAttribute('rel', 'noopener noreferrer');
+                $link.setAttribute('target', '_blank');
+              }
+            });
+        }
+
+    </script>
+
+    
+
+    
+
+<script>
+    function pushNotification(msg, fade) {
+      var footer = document.getElementById('title-footer')
+      var notification = document.getElementById('notification')
+      if(window.innerWidth < 700) {
+        footer.className = "footer-hidden";
+      } else {
+          footer.className = "footer-visible";
+          if(fade) {
+            notification.className = "footer-fade";
+            notification.innerHTML = msg;
+          } else {
+            notification.className = "footer-hard";
+            notification.innerHTML = msg;
+          }
+      }
+    };
+
+    function pushHelpNotification() {
+      if(window.innerWidth < 700)
+        pushNotification("<a href='#' onclick='RevealMenu.toggle()'>Menu</a> | <a href='#' onclick='enterFullscreen()'>Fullscreen</a> | <a href='#' onclick='enterOverview()'>Overview</a> | <a href='#' onclick='enterBlackout()'>Blackout</a> | <a href='#' onclick='RevealNotes.open()'>Speaker</a> | <a href='#' onclick='enterHelp()'>Help</a>");
+      else
+        pushNotification("Navigate : Space / Arrow Keys | <a href='#' onclick='RevealMenu.toggle()'>M</a> - Menu | <a href='#' onclick='enterFullscreen()'>F</a> - Fullscreen | <a href='#' onclick='enterOverview()'>O</a> - Overview | <a href='#' onclick='enterBlackout()'>B</a> - Blackout | <a href='#' onclick='RevealNotes.open()'>S</a> - Speaker | <a href='#' onclick='enterHelp()'>?</a> - Help");
+    }
+
+    function pushFootnoteNotification() {
+      
+        pushNotification(" ", true);
+      
+    }
+
+    function pushCodePresentingStepNotification(step, frags) {
+      // pushNotification("Code Presenting - Step " + step + " / " + frags, true);
+    }
+</script>
+
+
+
+
+
+</body></html>

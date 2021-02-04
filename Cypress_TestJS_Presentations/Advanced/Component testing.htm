@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/17-component-testing#/1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>GitPitch Markdown</title>
+    <meta name="description" content="Slide Decks for Tech Conferences, Training, Developer Advocates, and Educators">
+    <meta name="keywords" content="Markdown, Presentation, Slides, Developer">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <meta name="”robots”" content="”noindex,nofollow”">
+    
+    
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gitpitch">
+<meta name="twitter:title" content="GitPitch Markdown">
+<meta name="twitter:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta name="twitter:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+
+
+    
+
+<meta property="og:site_name" content="GitPitch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitPitch Markdown">
+<meta property="og:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta property="og:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+<meta property="og:url" content="https://gitpitch.com/cypress-io/testing-workshop-cypress/master?grs=github&amp;t=template&amp;p=slides%2F17-component-testing">
+
+
+    
+
+<link rel="alternate" type="application/json+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F17-component-testing&amp;format=json" title="GitPitch - Markdown Presentations for Everyone on Git">
+<link rel="alternate" type="text/xml+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F17-component-testing&amp;format=xml" title="GitPitch - Markdown Presentations for Everyone on Git">
+
+
+    
+    
+    <link rel="apple-touch-icon" sizes="120x120" href="https://gitpitch.com/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gitpitch.com/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gitpitch.com/assets/img/favicon/favicon-16x16.png">
+    
+    
+    
+<link href="./Component testing_files/reveal.css" rel="stylesheet" type="text/css">
+
+<link href="./Component testing_files/moon.css" rel="stylesheet" type="text/css" id="theme">
+<link href="./Component testing_files/future.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Component testing_files/title-footer-mod.css" rel="stylesheet" type="text/css" id="theme">
+
+<link href="./Component testing_files/paper.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Component testing_files/atom-one-light.css" rel="stylesheet" type="text/css">
+<link href="./Component testing_files/octicons.css" rel="stylesheet" type="text/css">
+<link href="./Component testing_files/fa-all.min.css" rel="stylesheet" type="text/css">
+<link href="./Component testing_files/fa-v4-shims.min.css" rel="stylesheet" type="text/css">
+
+<link href="./Component testing_files/pitchcore.css" rel="stylesheet" type="text/css">
+
+
+
+
+<link href="./Component testing_files/pitch.css" rel="stylesheet" type="text/css">
+
+<link href="./Component testing_files/pitchmenu.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Component testing_files/menu.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Component testing_files/pitchbardark.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Component testing_files/pitchcode.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Component testing_files/css" rel="stylesheet">
+
+
+
+    
+    
+
+<style>
+.half-image img {
+  width: 40%;
+}
+
+</style>
+
+
+    <link href="./Component testing_files/pitchpost.css" rel="stylesheet" type="text/css">
+    
+
+    
+        
+            
+
+<script async="" src="./Component testing_files/analytics.js"></script><script async="" src="./Component testing_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-80973712-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+
+
+        
+        
+            
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-59606812-9', 'auto', 'gpu');
+  ga('gpu.send', 'pageview');
+  
+</script><script type="text/javascript" src="./Component testing_files/marked.js"></script><script type="text/javascript" src="./Component testing_files/markdown.js"></script><script type="text/javascript" src="./Component testing_files/menu.js"></script><script type="text/javascript" src="./Component testing_files/highlight.js"></script><script type="text/javascript" src="./Component testing_files/reveal-code-focus-30.js"></script>
+
+
+        
+    
+
+
+</head>
+<body>
+    
+
+
+    <div class="reveal none center has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="none" style="">
+        <div class="slides" style="width: 960px; height: 700px; zoom: 1.13143;">
+            
+            <section data-charset="utf-8" style="top: 241px; display: block;" data-markdown="" data-markdown-parsed="true" data-background="white" class="has-light-background past" hidden="" aria-hidden="true"><!-- -->
+<div style="padding-top: 0px; font-size: 36px;" class="font-ubuntu-heavy text-pink text-bold">
+<p style="color: #5289F7; font-weight: bold;">GitPitch.com is shutting down.<br>This slide deck will no longer<br>be available from March 1, 2021. </p></div>
+</section><section data-charset="utf-8" style="top: 0px; display: block;" class="stack present"><section data-markdown="" data-markdown-parsed="true" style="top: 197px; display: block;" class="present"><h2 id="-part-17-component-testing">☀️ Part 17: Component Testing</h2>
+<h3 id="-you-will-learn">📚 You will learn</h3>
+<ul>
+<li>how to test React components in isolation</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 44.5px; display: block;" hidden=""><h2 id="component-testing">Component testing</h2>
+<ul>
+<li><a href="https://github.com/bahmutov/cypress-react-unit-test" rel="noopener noreferrer" target="_blank">cypress-react-unit-test</a></li>
+<li><a href="https://github.com/bahmutov/cypress-vue-unit-test" rel="noopener noreferrer" target="_blank">cypress-vue-unit-test</a></li>
+<li><a href="https://github.com/bahmutov/cypress-cycle-unit-test" rel="noopener noreferrer" target="_blank">cypress-cycle-unit-test</a></li>
+<li><a href="https://github.com/bahmutov/cypress-svelte-unit-test" rel="noopener noreferrer" target="_blank">cypress-svelte-unit-test</a></li>
+<li><a href="https://github.com/bahmutov/cypress-angular-unit-test" rel="noopener noreferrer" target="_blank">cypress-angular-unit-test</a></li>
+<li><a href="https://github.com/bahmutov/cypress-hyperapp-unit-test" rel="noopener noreferrer" target="_blank">cypress-hyperapp-unit-test</a></li>
+<li><a href="https://github.com/bahmutov/cypress-angularjs-unit-test" rel="noopener noreferrer" target="_blank">cypress-angularjs-unit-test</a></li>
+</ul>
+<p><a href="http://on.cypress.io/plugins#component-testing" rel="noopener noreferrer" target="_blank">on.cypress.io/plugins#component-testing</a></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 208px; display: block;" hidden=""><h2 id="-idea">💡 Idea</h2>
+<p>Instead of loading an HTML page, create an empty page and mount a component X</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><pre><code class="hljs lang- moonscript"><span class="line"><span class="line-number"></span><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span></span><span class="line"><span class="line-number"></span>const HelloWorld = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> &lt;p&gt;Hello World!&lt;/p&gt;</span><span class="line"><span class="line-number"></span>describe(<span class="hljs-string">'HelloWorld component'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  it(<span class="hljs-string">'works'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>    cy.mount(&lt;HelloWorld /&gt;)</span><span class="line"><span class="line-number"></span>    cy.contains(<span class="hljs-string">'Hello World!'</span>)</span><span class="line"><span class="line-number"></span>  })</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+<p><strong>⚠️ note:</strong> component testing API is likely to change</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p><img src="./Component testing_files/hello-world.png" title="" alt="Hello World component test" class="Hello World component test" style="width: auto;height: auto;" data-image-key="-8725851285038012040"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="first-component-test">First component test</h2>
+<ul>
+<li><strong>stop</strong> TodoMVC application</li>
+<li>open <code>cypress/integration/17-component-testing/footer-spec.js</code></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><pre><code class="hljs lang- pgsql"><span class="line"><span class="line-number"></span>/// &lt;reference <span class="hljs-keyword">types</span>="cypress" /&gt;</span><span class="line"><span class="line-number"></span><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span></span><span class="line"><span class="line-number"></span><span class="hljs-keyword">import</span> Footer <span class="hljs-keyword">from</span> <span class="hljs-string">'./Footer'</span></span><span class="line"><span class="line-number"></span>// adds custom command "cy.mount"</span><span class="line"><span class="line-number"></span><span class="hljs-keyword">import</span> <span class="hljs-string">'cypress-react-unit-test'</span></span><span class="line"><span class="line-number"></span><span class="hljs-keyword">import</span> { filters } <span class="hljs-keyword">from</span> <span class="hljs-string">'./filters'</span></span></code></pre>
+
+<p>Note how we are loading React components and application code directly from the spec file</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-first-component-test">Todo: first component test</h2>
+<p>⌨️ test "shows Footer"</p>
+<ul>
+<li>mount component</li>
+<li>link "all" should have selected class</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p><img src="./Component testing_files/footer-component-test.png" title="" alt="Footer component test" class="Footer component test" style="width: auto;height: auto;" data-image-key="-6923586493755618188"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-test-on-click">Todo: test on click</h2>
+<p>⌨️ test "clears completed on click"</p>
+<ul>
+<li>mount component</li>
+<li>pass stub to "onClearCompleted" prop</li>
+<li>check if "clear completed" button is visible and click</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p><img src="./Component testing_files/on-click.png" title="" alt="on click test" class="on click test" style="width: auto;height: auto;" data-image-key="1203128546749958738"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="component-testing-vs-e2e">Component testing vs E2E</h2>
+<ul>
+<li>components are like micro web applications</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="unit-tests-vs-e2e">Unit tests vs E2E</h2>
+<h3 id="unit-tests">Unit tests</h3>
+<ul>
+<li>focus on code</li>
+<li>short</li>
+<li>black box</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="unit-tests-vs-e2e">Unit tests vs E2E</h2>
+<h3 id="end-to-end-tests">end-to-end tests</h3>
+<ul>
+<li>focus on a feature</li>
+<li>long</li>
+<li>external effects</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="unit-tests-and-e2e">Unit tests AND E2E</h2>
+<ul>
+<li>focus on one thing</li>
+<li>gives you confidence</li>
+<li>runs locally and on CI</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="-component-testing">🏁 Component testing</h2>
+<p>Instead of visiting a page, you mount a component.
+Then you test it the same way as a full E2E test.</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="-component-testing-more-info">🏁 Component testing: more info</h2>
+<ul>
+<li><a href="https://github.com/bahmutov/cypress-react-unit-test" rel="noopener noreferrer" target="_blank">cypress-react-unit-test</a></li>
+<li><a href="https://on.cypress.io/plugins#component-testing" rel="noopener noreferrer" target="_blank">on.cypress.io/plugins#component-testing</a></li>
+<li><a href="https://github.com/bahmutov/calculator" rel="noopener noreferrer" target="_blank">github.com/bahmutov/calculator</a></li>
+<li>blog post <a href="https://www.cypress.io/blog/2018/04/02/sliding-down-the-testing-pyramid/" rel="noopener noreferrer" target="_blank">Sliding Down the Testing Pyramid</a></li>
+</ul>
+</section></section>
+            
+        </div>
+        
+
+<footer id="title-footer" class="footer-visible"><p id="notification" class="footer-fade"> </p></footer>
+
+
+    <div class="backgrounds"><div class="slide-background past" data-background-hash="whitenullnullnullnullnullnullnullnullnull" data-loaded="true" style="background: white; display: block;"><div class="slide-background-content"></div></div><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div></div><div class="progress" style="display: block;"><span style="width: 98.8235px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button><button class="navigate-right highlight" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down enabled highlight" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><a href="https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/17-component-testing#/1"><span class="slide-number-a">2</span><span class="slide-number-delimiter">/</span><span class="slide-number-b">18</span></a></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">☀️ Part 17: Component Testing
+📚 You will learn
+
+how to test React components in isolation
+
+</div></div>
+    
+    
+    <div class="gp-menu">
+      <div class="slide-menu-button">
+        
+        <a class="reveal" onclick="goHome(); return false;" title="Go Home" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-home" aria-hidden="true"> </i>
+        </a>
+        
+        
+        <a class="reveal" onclick="toggleMenu(); return false;" title="Slide Table-of-Contents, Key=M" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-bars" aria-hidden="true"> </i>
+        </a>
+        
+      </div>
+    <nav class="slide-menu slide-menu--left"><ol class="slide-menu-toolbar"><li data-button="0" class="toolbar-panel-button" data-panel="Slides"><i class="fa fa-list"></i></li><li id="close"><i class="fa fa-times"></i></li></ol><div data-panel="Slides" class="slide-menu-panel active-menu-panel"><div class="toc-title"><hr class="fade-away"></div><ul class="slide-menu-items"><li class="slide-menu-item no-title past" data-item="0" data-slide-h="0" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 0</span></li><li class="slide-menu-item active" data-item="1" data-slide-h="1" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">☀️ Part 17: Component Testing</span></li><li class="slide-menu-item-vertical future" data-item="2" data-slide-h="1" data-slide-v="1"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Component testing</span></li><li class="slide-menu-item-vertical future" data-item="3" data-slide-h="1" data-slide-v="2"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">💡 Idea</span></li><li class="slide-menu-item-vertical no-title future" data-item="4" data-slide-h="1" data-slide-v="3"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 4</span></li><li class="slide-menu-item-vertical no-title future" data-item="5" data-slide-h="1" data-slide-v="4"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 5</span></li><li class="slide-menu-item-vertical future" data-item="6" data-slide-h="1" data-slide-v="5"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">First component test</span></li><li class="slide-menu-item-vertical no-title future" data-item="7" data-slide-h="1" data-slide-v="6"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 7</span></li><li class="slide-menu-item-vertical future" data-item="8" data-slide-h="1" data-slide-v="7"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: first component test</span></li><li class="slide-menu-item-vertical no-title future" data-item="9" data-slide-h="1" data-slide-v="8"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 9</span></li><li class="slide-menu-item-vertical future" data-item="10" data-slide-h="1" data-slide-v="9"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: test on click</span></li><li class="slide-menu-item-vertical no-title future" data-item="11" data-slide-h="1" data-slide-v="10"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 11</span></li><li class="slide-menu-item-vertical future" data-item="12" data-slide-h="1" data-slide-v="11"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Component testing vs E2E</span></li><li class="slide-menu-item-vertical future" data-item="13" data-slide-h="1" data-slide-v="12"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Unit tests vs E2E</span></li><li class="slide-menu-item-vertical future" data-item="14" data-slide-h="1" data-slide-v="13"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Unit tests vs E2E</span></li><li class="slide-menu-item-vertical future" data-item="15" data-slide-h="1" data-slide-v="14"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Unit tests AND E2E</span></li><li class="slide-menu-item-vertical future" data-item="16" data-slide-h="1" data-slide-v="15"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">🏁 Component testing</span></li><li class="slide-menu-item-vertical future" data-item="17" data-slide-h="1" data-slide-v="16"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">🏁 Component testing: more info</span></li></ul></div></nav><div class="slide-menu-overlay"></div></div>
+    
+    
+    <script src="./Component testing_files/reveal.js"></script>
+    <script src="./Component testing_files/jquery.min.js"></script>
+    
+    
+    
+
+    <script>
+        Reveal.initialize({
+            
+            controls: true,
+            
+            controlsLayout: 'bottom-right',
+            progress: true,
+            embedded: true,
+            margin: 0.0,
+            
+            
+            showNotes: false,
+            transition: 'none',
+            backgroundTransition: 'none',
+            autoSlide: 0,
+            loop: false,
+            center: true,
+            rtl: false,
+            shuffle: false,
+            mouseWheel: false,
+            
+            controlsTutorial: true,
+            
+            
+            
+              slideNumber: 'c/t', // slideNumber: false,
+            
+            history: true,
+            
+            
+            menu: {
+              custom: [],
+              path : "/assets/libs/slides/plugin/menu",
+              themes : false,
+              transitions:  false,
+              markers: true,
+              sticky: true,
+              autoOpen: true
+            },
+            
+            
+            dependencies: [
+                { src: "/assets/libs/slides/plugin/markdown/marked.js",
+                  condition: function() {
+                    return !!document.querySelector( '[data-markdown]' );
+                  }},
+                { src: "/assets/libs/slides/plugin/markdown/markdown.js",
+                condition: function() {
+                  return !!document.querySelector( '[data-markdown]' );
+                }},
+                
+                { src:"/assets/libs/slides/plugin/menu/menu.js",
+                  async: true},
+                
+                
+                
+                
+                { src: '/assets/libs/highlight.js/9.15.8/highlight.js', async: true },
+                
+                { src: '/assets/libs/highlight.js/9.15.8/reveal-code-focus-30.js',
+                  async: true,
+                  callback: function() {
+                    RevealCodeFocus();
+                  }
+                },
+                
+                
+                
+                
+                
+            ]
+        });
+
+        Reveal.addEventListener('ready', function(evt) {
+
+          if(typeof twtter !== "undefined") {
+              twttr.widgets.load();
+          }
+
+          upgradeAnchors();
+          pushFootnoteNotification();
+
+          // Force refresh to workaround Reveal.js 3.8.0
+          // first render problem re. scrollHeight calc
+          // for slides with non-text (image) content.
+          setTimeout(Reveal.layout, 500);
+        });
+
+        
+        Reveal.addEventListener('menu-ready', function(evt) {
+            toggleMenuOff();
+        });
+        
+
+        Reveal.addEventListener('slidechanged', function(evt) {
+          /*
+          if (evt.indexh === 0 && evt.indexv === 0) {
+            pushHelpNotification();
+          } else {
+            pushFootnoteNotification();
+          }
+          */
+          pushFootnoteNotification();
+        });
+
+        Reveal.configure({
+            keyboard: {
+                88: function() { // bind "x" key to "select" code block content
+
+                    var currentSlide = Reveal.getCurrentSlide();
+                    var preBlock = $(currentSlide).find("pre");
+
+                    if(preBlock.length > 0) {
+
+                        if (window.getSelection) {
+                            var range = document.createRange();
+                            range.selectNodeContents(preBlock[0]);
+                            var selection = window.getSelection();
+                            selection.removeAllRanges();
+                            selection.addRange(range);
+                        }
+                    }
+                }
+            }
+        });
+
+        function goHome() {
+            window.location.href = "https://gitpitch.com";
+        }
+
+        function enterFullscreen() {
+            Reveal.triggerKey(70);
+        };
+
+        function enterOverview() {
+            Reveal.toggleOverview();
+        };
+
+        function enterBlackout() {
+            Reveal.togglePause();
+        };
+
+        function toggleHelp() {
+          Reveal.toggleHelp();
+        }
+
+        function enableEvents() {
+            Reveal.addEventListeners();
+        };
+
+        function disableEvents() {
+            Reveal.removeEventListeners();
+        };
+
+        function toggleMenuOff() {
+            if(RevealMenu && RevealMenu.isOpen()) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function toggleMenu() {
+            if(RevealMenu) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function upgradeAnchors() {
+            Array.from(document.getElementsByTagName('a')).forEach($link => {
+              if ($link.hostname !== window.location.hostname) {
+                $link.setAttribute('rel', 'noopener noreferrer');
+                $link.setAttribute('target', '_blank');
+              }
+            });
+        }
+
+    </script>
+
+    
+
+    
+
+<script>
+    function pushNotification(msg, fade) {
+      var footer = document.getElementById('title-footer')
+      var notification = document.getElementById('notification')
+      if(window.innerWidth < 700) {
+        footer.className = "footer-hidden";
+      } else {
+          footer.className = "footer-visible";
+          if(fade) {
+            notification.className = "footer-fade";
+            notification.innerHTML = msg;
+          } else {
+            notification.className = "footer-hard";
+            notification.innerHTML = msg;
+          }
+      }
+    };
+
+    function pushHelpNotification() {
+      if(window.innerWidth < 700)
+        pushNotification("<a href='#' onclick='RevealMenu.toggle()'>Menu</a> | <a href='#' onclick='enterFullscreen()'>Fullscreen</a> | <a href='#' onclick='enterOverview()'>Overview</a> | <a href='#' onclick='enterBlackout()'>Blackout</a> | <a href='#' onclick='RevealNotes.open()'>Speaker</a> | <a href='#' onclick='enterHelp()'>Help</a>");
+      else
+        pushNotification("Navigate : Space / Arrow Keys | <a href='#' onclick='RevealMenu.toggle()'>M</a> - Menu | <a href='#' onclick='enterFullscreen()'>F</a> - Fullscreen | <a href='#' onclick='enterOverview()'>O</a> - Overview | <a href='#' onclick='enterBlackout()'>B</a> - Blackout | <a href='#' onclick='RevealNotes.open()'>S</a> - Speaker | <a href='#' onclick='enterHelp()'>?</a> - Help");
+    }
+
+    function pushFootnoteNotification() {
+      
+        pushNotification(" ", true);
+      
+    }
+
+    function pushCodePresentingStepNotification(step, frags) {
+      // pushNotification("Code Presenting - Step " + step + " / " + frags, true);
+    }
+</script>
+
+
+
+
+
+</body></html>

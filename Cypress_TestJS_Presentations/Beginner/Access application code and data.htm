@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!-- saved from url=(0086)https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/06-app-data-store#/1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>GitPitch Markdown</title>
+    <meta name="description" content="Slide Decks for Tech Conferences, Training, Developer Advocates, and Educators">
+    <meta name="keywords" content="Markdown, Presentation, Slides, Developer">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <meta name="”robots”" content="”noindex,nofollow”">
+    
+    
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gitpitch">
+<meta name="twitter:title" content="GitPitch Markdown">
+<meta name="twitter:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta name="twitter:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+
+
+    
+
+<meta property="og:site_name" content="GitPitch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitPitch Markdown">
+<meta property="og:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta property="og:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+<meta property="og:url" content="https://gitpitch.com/cypress-io/testing-workshop-cypress/master?grs=github&amp;t=template&amp;p=slides%2F06-app-data-store">
+
+
+    
+
+<link rel="alternate" type="application/json+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F06-app-data-store&amp;format=json" title="GitPitch - Markdown Presentations for Everyone on Git">
+<link rel="alternate" type="text/xml+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F06-app-data-store&amp;format=xml" title="GitPitch - Markdown Presentations for Everyone on Git">
+
+
+    
+    
+    <link rel="apple-touch-icon" sizes="120x120" href="https://gitpitch.com/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gitpitch.com/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gitpitch.com/assets/img/favicon/favicon-16x16.png">
+    
+    
+    
+<link href="./Access application code and data_files/reveal.css" rel="stylesheet" type="text/css">
+
+<link href="./Access application code and data_files/moon.css" rel="stylesheet" type="text/css" id="theme">
+<link href="./Access application code and data_files/future.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Access application code and data_files/title-footer-mod.css" rel="stylesheet" type="text/css" id="theme">
+
+<link href="./Access application code and data_files/paper.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Access application code and data_files/atom-one-light.css" rel="stylesheet" type="text/css">
+<link href="./Access application code and data_files/octicons.css" rel="stylesheet" type="text/css">
+<link href="./Access application code and data_files/fa-all.min.css" rel="stylesheet" type="text/css">
+<link href="./Access application code and data_files/fa-v4-shims.min.css" rel="stylesheet" type="text/css">
+
+<link href="./Access application code and data_files/pitchcore.css" rel="stylesheet" type="text/css">
+
+
+
+
+<link href="./Access application code and data_files/pitch.css" rel="stylesheet" type="text/css">
+
+<link href="./Access application code and data_files/pitchmenu.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Access application code and data_files/menu.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Access application code and data_files/pitchbardark.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Access application code and data_files/pitchcode.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Access application code and data_files/css" rel="stylesheet">
+
+
+
+    
+    
+
+<style>
+.half-image img {
+  width: 40%;
+}
+
+</style>
+
+
+    <link href="./Access application code and data_files/pitchpost.css" rel="stylesheet" type="text/css">
+    
+
+    
+        
+            
+
+<script async="" src="./Access application code and data_files/analytics.js"></script><script async="" src="./Access application code and data_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-80973712-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+
+
+        
+        
+            
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-59606812-9', 'auto', 'gpu');
+  ga('gpu.send', 'pageview');
+  
+</script><script type="text/javascript" src="./Access application code and data_files/marked.js"></script><script type="text/javascript" src="./Access application code and data_files/markdown.js"></script><script type="text/javascript" src="./Access application code and data_files/menu.js"></script><script type="text/javascript" src="./Access application code and data_files/highlight.js"></script><script type="text/javascript" src="./Access application code and data_files/reveal-code-focus-30.js"></script>
+
+
+        
+    
+
+
+</head>
+<body>
+    
+
+
+    <div class="reveal none center has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="none">
+        <div class="slides" style="width: 960px; height: 700px; zoom: 1.13143;">
+            
+            <section data-charset="utf-8" style="top: 241.5px; display: block;" data-markdown="" data-markdown-parsed="true" data-background="white" class="has-light-background past" hidden="" aria-hidden="true"><!-- -->
+<div style="padding-top: 0px; font-size: 36px;" class="font-ubuntu-heavy text-pink text-bold">
+<p style="color: #5289F7; font-weight: bold;">GitPitch.com is shutting down.<br>This slide deck will no longer<br>be available from March 1, 2021. </p></div>
+</section><section data-charset="utf-8" style="top: 0px; display: block;" class="stack present"><section data-markdown="" data-markdown-parsed="true" style="top: 145.5px; display: block;" class="present"><h2 id="-part-6-application-data-store">☀️ Part 6: Application data store</h2>
+<h3 id="-you-will-learn">📚 You will learn</h3>
+<ul>
+<li>how to access the running application from test code</li>
+<li>how to stub a method in the application</li>
+<li>how to drive application by dispatching actions</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 225px; display: block;" hidden=""><ul>
+<li>keep <code>todomvc</code> app running</li>
+<li>open <code>cypress/integration/06-app-data-store/spec.js</code></li>
+<li>test that Vuex data store is working correctly</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 184px; display: block;" hidden=""><h2 id="application-object">Application object</h2>
+<pre><code class="hljs lang- pgsql"><span class="line"><span class="line-number"></span>// <span class="hljs-keyword">if</span> you want <span class="hljs-keyword">to</span> expose "app" globally <span class="hljs-keyword">only</span></span><span class="line"><span class="line-number"></span>// during <span class="hljs-keyword">end</span>-<span class="hljs-keyword">to</span>-<span class="hljs-keyword">end</span> tests you can guard it <span class="hljs-keyword">using</span> "window.Cypress" flag</span><span class="line"><span class="line-number"></span>// <span class="hljs-keyword">if</span> (<span class="hljs-keyword">window</span>.Cypress) {</span><span class="line"><span class="line-number"></span><span class="hljs-keyword">window</span>.app = app</span><span class="line"><span class="line-number"></span>// }</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-check-vuex-state">Todo: check Vuex state</h2>
+<pre><code class="hljs lang- reasonml"><span class="line"><span class="line-number"></span>it('adds items <span class="hljs-keyword">to</span> store',<span class="hljs-function"> <span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  add<span class="hljs-constructor">Item('<span class="hljs-params">something</span>')</span></span><span class="line"><span class="line-number"></span>  add<span class="hljs-constructor">Item('<span class="hljs-params">something</span> <span class="hljs-params">else</span>')</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// get application's window</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// then get app, $store, state, todos</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// it should have 2 items</span></span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p><img src="./Access application code and data_files/new-todo.png" title="" alt="Random id" class="Random id" style="width: auto;height: auto;" data-image-key="-26651335876967674"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="non-determinism">Non-determinism</h2>
+<ul>
+<li>random data in tests makes it very hard</li>
+<li>UUIDs, dates, etc</li>
+<li>Cypress includes XHR and method stubbing using <a href="http://sinonjs.org/" rel="noopener noreferrer" target="_blank">http://sinonjs.org/</a></li>
+<li><a href="https://on.cypress.io/stubs-spies-and-clocks" rel="noopener noreferrer" target="_blank">https://on.cypress.io/stubs-spies-and-clocks</a></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="questions">Questions</h2>
+<ul>
+<li>how does a new item get its id?</li>
+<li>can you override random id generator from DevTools?</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="iframed-contexts">Iframed contexts</h2>
+<p><img src="./Access application code and data_files/contexts.png" title="" alt="Contexts" class="Contexts" style="width: auto;height: auto;" data-image-key="-492785429794498993"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="application-under-test">Application under test</h2>
+<p><img src="./Access application code and data_files/app-in-window.png" title="" alt="Application under test" class="Application under test" style="width: auto;height: auto;" data-image-key="-3298578915417646838"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="stub-application-s-random-generator">Stub application's random generator</h2>
+<ul>
+<li>test "creates an item with id 1" in <code>06-app-data-store/spec.js</code></li>
+<li>get the application's context using <code>cy.window</code></li>
+<li>get application's <code>window.Math</code> object</li>
+<li>can you stub application's random generator?<ul>
+<li><strong>hint</strong> use <code>cy.stub</code></li>
+</ul>
+</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="confirm-spy-s-behavior">Confirm spy's behavior</h2>
+<ul>
+<li>test "creates an item with id using a stub"</li>
+<li>write a test that adds 1 item</li>
+<li>name spy with an alias <code>cy.spy(...).as('name')</code></li>
+<li>get the spy using the alias and confirm it was called once</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="application-data-store">Application data store</h2>
+<ul>
+<li>inspect in DevTools 'window.app' variable</li>
+<li>can you find the items in the data store as they are added?<ul>
+<li><strong>hint</strong> you might need 'JSON.parse(JSON.stringify(...))' to get a "simple" object</li>
+</ul>
+</li>
+</ul>
+<aside class="notes"><p>Our goal is to show that anything one can do from the DevTools can be done from the end-to-end tests using <code>cy.window</code> to get to the application's window. Application code can even expose some objects during testing using <code>if (window.Cypress) ...</code> conditions.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo">Todo</h2>
+<p>Write a test that:</p>
+<ul>
+<li>adds 2 todos</li>
+<li>gets the data store</li>
+<li>confirms the objects in the data store</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="advanced">Advanced</h2>
+<p>Write a test that:</p>
+<ul>
+<li>dispatches actions to the store to add items</li>
+<li>confirms new items are added to the DOM</li>
+</ul>
+<p>(see next slide)</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><pre><code class="hljs lang- stylus"><span class="line"><span class="line-number"></span><span class="hljs-function"><span class="hljs-title">it</span><span class="hljs-params">(<span class="hljs-string">'adds todos via app'</span>, ()</span></span> =&gt; {</span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// bypass the UI and call app's actions directly from the test</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// app.$store.dispatch('setNewTodo', &lt;desired text&gt;)</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// app.$store.dispatch('addTodo')</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// using https://on.cypress.io/invoke</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// bypass the UI and call app's actions directly from the test</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// app.$store.dispatch('setNewTodo', &lt;desired text&gt;)</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// app.$store.dispatch('addTodo')</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// and then check the UI</span></span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-test-edge-data-case">Todo: test edge data case</h2>
+<pre><code class="hljs lang- dart"><span class="line"><span class="line-number"></span>it(<span class="hljs-string">'handles todos with blank title'</span>, () =&gt; {</span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// add todo that the user cannot add via UI</span></span><span class="line"><span class="line-number"></span>  cy.<span class="hljs-built_in">window</span>()</span><span class="line"><span class="line-number"></span>    .its(<span class="hljs-string">'app.<span class="hljs-subst">$store</span>'</span>)</span><span class="line"><span class="line-number"></span>    .invoke(<span class="hljs-string">'dispatch'</span>, <span class="hljs-string">'setNewTodo'</span>, <span class="hljs-string">'  '</span>)</span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// app.$store.dispatch('addTodo')</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// confirm the UI</span></span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h3 id="-watch-out-for-stale-data">⚠️ Watch out for stale data</h3>
+<p>Note that the web application might NOT have updated the data right away. For example:</p>
+<pre><code class="hljs lang- stylus"><span class="line"><span class="line-number"></span><span class="hljs-function"><span class="hljs-title">getStore</span><span class="hljs-params">()</span></span>.then(store =&gt; {</span><span class="line"><span class="line-number"></span>  store.dispatch(<span class="hljs-string">'setNewTodo'</span>, <span class="hljs-string">'a new todo'</span>)</span><span class="line"><span class="line-number"></span>  store.dispatch(<span class="hljs-string">'addTodo'</span>)</span><span class="line"><span class="line-number"></span>  store.dispatch(<span class="hljs-string">'clearNewTodo'</span>)</span><span class="line"><span class="line-number"></span>})</span><span class="line"><span class="line-number"></span><span class="hljs-comment">// not necessarily has the new item right away</span></span><span class="line"><span class="line-number"></span><span class="hljs-function"><span class="hljs-title">getStore</span><span class="hljs-params">()</span></span>.its(<span class="hljs-string">'state'</span>)</span></code></pre>
+
+
+<aside class="notes"><p>In a flaky test <a href="https://github.com/cypress-io/cypress-example-recipes/issues/246" rel="noopener noreferrer" target="_blank">https://github.com/cypress-io/cypress-example-recipes/issues/246</a> the above code was calling <code>getStore().its('state').snapshot()</code> sometimes before and sometimes after updating the list of todos.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h3 id="-watch-out-for-stale-data">⚠️ Watch out for stale data</h3>
+<p><strong>Solution:</strong> confirm the data is ready before using it.</p>
+<pre><code class="hljs lang- pgsql"><span class="line"><span class="line-number"></span>// <span class="hljs-keyword">add</span> <span class="hljs-built_in">new</span> todo <span class="hljs-keyword">using</span> dispatch</span><span class="line"><span class="line-number"></span>// retry <span class="hljs-keyword">until</span> <span class="hljs-built_in">new</span> item <span class="hljs-keyword">is</span> <span class="hljs-keyword">in</span> the list</span><span class="line"><span class="line-number"></span>getStore()</span><span class="line"><span class="line-number"></span>  .its(<span class="hljs-string">'state.todos'</span>)</span><span class="line"><span class="line-number"></span>  .should(<span class="hljs-string">'have.length'</span>, <span class="hljs-number">1</span>)</span><span class="line"><span class="line-number"></span>// <span class="hljs-keyword">do</span> other checks</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="-app-access">🏁 App Access</h2>
+<ul>
+<li>when needed, you can access the application directly from the test</li>
+</ul>
+<p>Read also: <a href="https://www.cypress.io/blog/2018/11/14/testing-redux-store/" rel="noopener noreferrer" target="_blank">https://www.cypress.io/blog/2018/11/14/testing-redux-store/</a></p>
+</section></section>
+            
+        </div>
+        
+
+<footer id="title-footer" class="footer-visible"><p id="notification" class="footer-fade"> </p></footer>
+
+
+    <div class="backgrounds"><div class="slide-background past" data-background-hash="whitenullnullnullnullnullnullnullnullnull" data-loaded="true" style="background: white; display: block;"><div class="slide-background-content"></div></div><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div></div><div class="progress" style="display: block;"><span style="width: 88.4211px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button><button class="navigate-right highlight" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down enabled highlight" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><a href="https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/06-app-data-store#/1"><span class="slide-number-a">2</span><span class="slide-number-delimiter">/</span><span class="slide-number-b">20</span></a></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">☀️ Part 6: Application data store
+📚 You will learn
+
+how to access the running application from test code
+how to stub a method in the application
+how to drive application by dispatching actions
+
+</div></div>
+    
+    
+    <div class="gp-menu">
+      <div class="slide-menu-button">
+        
+        <a class="reveal" onclick="goHome(); return false;" title="Go Home" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-home" aria-hidden="true"> </i>
+        </a>
+        
+        
+        <a class="reveal" onclick="toggleMenu(); return false;" title="Slide Table-of-Contents, Key=M" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-bars" aria-hidden="true"> </i>
+        </a>
+        
+      </div>
+    <nav class="slide-menu slide-menu--left"><ol class="slide-menu-toolbar"><li data-button="0" class="toolbar-panel-button" data-panel="Slides"><i class="fa fa-list"></i></li><li id="close"><i class="fa fa-times"></i></li></ol><div data-panel="Slides" class="slide-menu-panel active-menu-panel"><div class="toc-title"><hr class="fade-away"></div><ul class="slide-menu-items"><li class="slide-menu-item no-title past" data-item="0" data-slide-h="0" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 0</span></li><li class="slide-menu-item active" data-item="1" data-slide-h="1" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">☀️ Part 6: Application data store</span></li><li class="slide-menu-item-vertical no-title future" data-item="2" data-slide-h="1" data-slide-v="1"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 2</span></li><li class="slide-menu-item-vertical future" data-item="3" data-slide-h="1" data-slide-v="2"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Application object</span></li><li class="slide-menu-item-vertical future" data-item="4" data-slide-h="1" data-slide-v="3"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: check Vuex state</span></li><li class="slide-menu-item-vertical no-title future" data-item="5" data-slide-h="1" data-slide-v="4"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 5</span></li><li class="slide-menu-item-vertical future" data-item="6" data-slide-h="1" data-slide-v="5"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Non-determinism</span></li><li class="slide-menu-item-vertical future" data-item="7" data-slide-h="1" data-slide-v="6"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Questions</span></li><li class="slide-menu-item-vertical future" data-item="8" data-slide-h="1" data-slide-v="7"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Iframed contexts</span></li><li class="slide-menu-item-vertical future" data-item="9" data-slide-h="1" data-slide-v="8"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Application under test</span></li><li class="slide-menu-item-vertical future" data-item="10" data-slide-h="1" data-slide-v="9"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Stub application's random generator</span></li><li class="slide-menu-item-vertical future" data-item="11" data-slide-h="1" data-slide-v="10"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Confirm spy's behavior</span></li><li class="slide-menu-item-vertical future" data-item="12" data-slide-h="1" data-slide-v="11"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Application data store</span></li><li class="slide-menu-item-vertical future" data-item="13" data-slide-h="1" data-slide-v="12"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo</span></li><li class="slide-menu-item-vertical future" data-item="14" data-slide-h="1" data-slide-v="13"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Advanced</span></li><li class="slide-menu-item-vertical no-title future" data-item="15" data-slide-h="1" data-slide-v="14"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 15</span></li><li class="slide-menu-item-vertical future" data-item="16" data-slide-h="1" data-slide-v="15"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: test edge data case</span></li><li class="slide-menu-item-vertical future" data-item="17" data-slide-h="1" data-slide-v="16"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">⚠️ Watch out for stale data</span></li><li class="slide-menu-item-vertical future" data-item="18" data-slide-h="1" data-slide-v="17"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">⚠️ Watch out for stale data</span></li><li class="slide-menu-item-vertical future" data-item="19" data-slide-h="1" data-slide-v="18"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">🏁 App Access</span></li></ul></div></nav><div class="slide-menu-overlay"></div></div>
+    
+    
+    <script src="./Access application code and data_files/reveal.js"></script>
+    <script src="./Access application code and data_files/jquery.min.js"></script>
+    
+    
+    
+
+    <script>
+        Reveal.initialize({
+            
+            controls: true,
+            
+            controlsLayout: 'bottom-right',
+            progress: true,
+            embedded: true,
+            margin: 0.0,
+            
+            
+            showNotes: false,
+            transition: 'none',
+            backgroundTransition: 'none',
+            autoSlide: 0,
+            loop: false,
+            center: true,
+            rtl: false,
+            shuffle: false,
+            mouseWheel: false,
+            
+            controlsTutorial: true,
+            
+            
+            
+              slideNumber: 'c/t', // slideNumber: false,
+            
+            history: true,
+            
+            
+            menu: {
+              custom: [],
+              path : "/assets/libs/slides/plugin/menu",
+              themes : false,
+              transitions:  false,
+              markers: true,
+              sticky: true,
+              autoOpen: true
+            },
+            
+            
+            dependencies: [
+                { src: "/assets/libs/slides/plugin/markdown/marked.js",
+                  condition: function() {
+                    return !!document.querySelector( '[data-markdown]' );
+                  }},
+                { src: "/assets/libs/slides/plugin/markdown/markdown.js",
+                condition: function() {
+                  return !!document.querySelector( '[data-markdown]' );
+                }},
+                
+                { src:"/assets/libs/slides/plugin/menu/menu.js",
+                  async: true},
+                
+                
+                
+                
+                { src: '/assets/libs/highlight.js/9.15.8/highlight.js', async: true },
+                
+                { src: '/assets/libs/highlight.js/9.15.8/reveal-code-focus-30.js',
+                  async: true,
+                  callback: function() {
+                    RevealCodeFocus();
+                  }
+                },
+                
+                
+                
+                
+                
+            ]
+        });
+
+        Reveal.addEventListener('ready', function(evt) {
+
+          if(typeof twtter !== "undefined") {
+              twttr.widgets.load();
+          }
+
+          upgradeAnchors();
+          pushFootnoteNotification();
+
+          // Force refresh to workaround Reveal.js 3.8.0
+          // first render problem re. scrollHeight calc
+          // for slides with non-text (image) content.
+          setTimeout(Reveal.layout, 500);
+        });
+
+        
+        Reveal.addEventListener('menu-ready', function(evt) {
+            toggleMenuOff();
+        });
+        
+
+        Reveal.addEventListener('slidechanged', function(evt) {
+          /*
+          if (evt.indexh === 0 && evt.indexv === 0) {
+            pushHelpNotification();
+          } else {
+            pushFootnoteNotification();
+          }
+          */
+          pushFootnoteNotification();
+        });
+
+        Reveal.configure({
+            keyboard: {
+                88: function() { // bind "x" key to "select" code block content
+
+                    var currentSlide = Reveal.getCurrentSlide();
+                    var preBlock = $(currentSlide).find("pre");
+
+                    if(preBlock.length > 0) {
+
+                        if (window.getSelection) {
+                            var range = document.createRange();
+                            range.selectNodeContents(preBlock[0]);
+                            var selection = window.getSelection();
+                            selection.removeAllRanges();
+                            selection.addRange(range);
+                        }
+                    }
+                }
+            }
+        });
+
+        function goHome() {
+            window.location.href = "https://gitpitch.com";
+        }
+
+        function enterFullscreen() {
+            Reveal.triggerKey(70);
+        };
+
+        function enterOverview() {
+            Reveal.toggleOverview();
+        };
+
+        function enterBlackout() {
+            Reveal.togglePause();
+        };
+
+        function toggleHelp() {
+          Reveal.toggleHelp();
+        }
+
+        function enableEvents() {
+            Reveal.addEventListeners();
+        };
+
+        function disableEvents() {
+            Reveal.removeEventListeners();
+        };
+
+        function toggleMenuOff() {
+            if(RevealMenu && RevealMenu.isOpen()) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function toggleMenu() {
+            if(RevealMenu) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function upgradeAnchors() {
+            Array.from(document.getElementsByTagName('a')).forEach($link => {
+              if ($link.hostname !== window.location.hostname) {
+                $link.setAttribute('rel', 'noopener noreferrer');
+                $link.setAttribute('target', '_blank');
+              }
+            });
+        }
+
+    </script>
+
+    
+
+    
+
+<script>
+    function pushNotification(msg, fade) {
+      var footer = document.getElementById('title-footer')
+      var notification = document.getElementById('notification')
+      if(window.innerWidth < 700) {
+        footer.className = "footer-hidden";
+      } else {
+          footer.className = "footer-visible";
+          if(fade) {
+            notification.className = "footer-fade";
+            notification.innerHTML = msg;
+          } else {
+            notification.className = "footer-hard";
+            notification.innerHTML = msg;
+          }
+      }
+    };
+
+    function pushHelpNotification() {
+      if(window.innerWidth < 700)
+        pushNotification("<a href='#' onclick='RevealMenu.toggle()'>Menu</a> | <a href='#' onclick='enterFullscreen()'>Fullscreen</a> | <a href='#' onclick='enterOverview()'>Overview</a> | <a href='#' onclick='enterBlackout()'>Blackout</a> | <a href='#' onclick='RevealNotes.open()'>Speaker</a> | <a href='#' onclick='enterHelp()'>Help</a>");
+      else
+        pushNotification("Navigate : Space / Arrow Keys | <a href='#' onclick='RevealMenu.toggle()'>M</a> - Menu | <a href='#' onclick='enterFullscreen()'>F</a> - Fullscreen | <a href='#' onclick='enterOverview()'>O</a> - Overview | <a href='#' onclick='enterBlackout()'>B</a> - Blackout | <a href='#' onclick='RevealNotes.open()'>S</a> - Speaker | <a href='#' onclick='enterHelp()'>?</a> - Help");
+    }
+
+    function pushFootnoteNotification() {
+      
+        pushNotification(" ", true);
+      
+    }
+
+    function pushCodePresentingStepNotification(step, frags) {
+      // pushNotification("Code Presenting - Step " + step + " / " + frags, true);
+    }
+</script>
+
+
+
+
+
+</body></html>

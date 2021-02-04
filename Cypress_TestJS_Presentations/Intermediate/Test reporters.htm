@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/09-reporters#/1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>GitPitch Markdown</title>
+    <meta name="description" content="Slide Decks for Tech Conferences, Training, Developer Advocates, and Educators">
+    <meta name="keywords" content="Markdown, Presentation, Slides, Developer">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <meta name="”robots”" content="”noindex,nofollow”">
+    
+    
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gitpitch">
+<meta name="twitter:title" content="GitPitch Markdown">
+<meta name="twitter:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta name="twitter:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+
+
+    
+
+<meta property="og:site_name" content="GitPitch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitPitch Markdown">
+<meta property="og:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta property="og:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+<meta property="og:url" content="https://gitpitch.com/cypress-io/testing-workshop-cypress/master?grs=github&amp;t=template&amp;p=slides%2F09-reporters">
+
+
+    
+
+<link rel="alternate" type="application/json+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F09-reporters&amp;format=json" title="GitPitch - Markdown Presentations for Everyone on Git">
+<link rel="alternate" type="text/xml+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F09-reporters&amp;format=xml" title="GitPitch - Markdown Presentations for Everyone on Git">
+
+
+    
+    
+    <link rel="apple-touch-icon" sizes="120x120" href="https://gitpitch.com/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gitpitch.com/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gitpitch.com/assets/img/favicon/favicon-16x16.png">
+    
+    
+    
+<link href="./Test reporters_files/reveal.css" rel="stylesheet" type="text/css">
+
+<link href="./Test reporters_files/moon.css" rel="stylesheet" type="text/css" id="theme">
+<link href="./Test reporters_files/future.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Test reporters_files/title-footer-mod.css" rel="stylesheet" type="text/css" id="theme">
+
+<link href="./Test reporters_files/paper.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Test reporters_files/atom-one-light.css" rel="stylesheet" type="text/css">
+<link href="./Test reporters_files/octicons.css" rel="stylesheet" type="text/css">
+<link href="./Test reporters_files/fa-all.min.css" rel="stylesheet" type="text/css">
+<link href="./Test reporters_files/fa-v4-shims.min.css" rel="stylesheet" type="text/css">
+
+<link href="./Test reporters_files/pitchcore.css" rel="stylesheet" type="text/css">
+
+
+
+
+<link href="./Test reporters_files/pitch.css" rel="stylesheet" type="text/css">
+
+<link href="./Test reporters_files/pitchmenu.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Test reporters_files/menu.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Test reporters_files/pitchbardark.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Test reporters_files/pitchcode.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Test reporters_files/css" rel="stylesheet">
+
+
+
+    
+    
+
+<style>
+.half-image img {
+  width: 40%;
+}
+
+</style>
+
+
+    <link href="./Test reporters_files/pitchpost.css" rel="stylesheet" type="text/css">
+    
+
+    
+        
+            
+
+<script async="" src="./Test reporters_files/analytics.js"></script><script async="" src="./Test reporters_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-80973712-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+
+
+        
+        
+            
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-59606812-9', 'auto', 'gpu');
+  ga('gpu.send', 'pageview');
+  
+</script><script type="text/javascript" src="./Test reporters_files/marked.js"></script><script type="text/javascript" src="./Test reporters_files/markdown.js"></script><script type="text/javascript" src="./Test reporters_files/menu.js"></script><script type="text/javascript" src="./Test reporters_files/highlight.js"></script><script type="text/javascript" src="./Test reporters_files/reveal-code-focus-30.js"></script>
+
+
+        
+    
+
+
+</head>
+<body>
+    
+
+
+    <div class="reveal none center has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="none" style="">
+        <div class="slides" style="width: 960px; height: 700px; zoom: 1.13143;">
+            
+            <section data-charset="utf-8" style="top: 241px; display: block;" data-markdown="" data-markdown-parsed="true" data-background="white" class="has-light-background past" hidden="" aria-hidden="true"><!-- -->
+<div style="padding-top: 0px; font-size: 36px;" class="font-ubuntu-heavy text-pink text-bold">
+<p style="color: #5289F7; font-weight: bold;">GitPitch.com is shutting down.<br>This slide deck will no longer<br>be available from March 1, 2021. </p></div>
+</section><section data-charset="utf-8" style="top: 0px; display: block;" class="stack present"><section data-markdown="" data-markdown-parsed="true" style="top: 145.5px; display: block;" class="present"><h2 id="-part-9-reporters">☀️ Part 9: Reporters</h2>
+<h3 id="-you-will-learn">📚 You will learn</h3>
+<ul>
+<li>built-in reporters</li>
+<li>generating multiple reports</li>
+<li>combining separate reports</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 279px; display: block;" hidden=""><ul>
+<li>Mocha's <a href="https://mochajs.org/#reporters" rel="noopener noreferrer" target="_blank">built-in reporters</a> come with Cypress</li>
+<li><a href="https://on.cypress.io/reporters" rel="noopener noreferrer" target="_blank">https://on.cypress.io/reporters</a></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 117.5px; display: block;" hidden=""><h2 id="todo-try-a-different-reporter">Todo: try a different reporter</h2>
+<p>There are <code>json</code>, <code>list</code>, <code>markdown</code>, etc, see <a href="https://mochajs.org/#reporters" rel="noopener noreferrer" target="_blank">https://mochajs.org/#reporters</a></p>
+<pre><code class="hljs lang- json"><span class="line"><span class="line-number"></span>{</span><span class="line"><span class="line-number"></span>  <span class="hljs-attr">"reporter"</span>: <span class="hljs-string">"list"</span></span><span class="line"><span class="line-number"></span>}</span></code></pre>
+
+
+<p>and run <code>npm test</code>.</p>
+<aside class="notes"><p>Each reporter changes the <code>STDOUT</code> output.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-use-built-in-junit-reporter">Todo: use built-in <code>junit</code> reporter</h2>
+<p>Bonus: direct output to a different file</p>
+<pre><code class="hljs lang- json"><span class="line"><span class="line-number"></span>{</span><span class="line"><span class="line-number"></span>  <span class="hljs-attr">"reporter"</span>: <span class="hljs-string">"junit"</span>,</span><span class="line"><span class="line-number"></span>  <span class="hljs-attr">"reporterOptions"</span>: {</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"mochaFile"</span>: <span class="hljs-string">"cypress/results/output.xml"</span></span><span class="line"><span class="line-number"></span>  }</span><span class="line"><span class="line-number"></span>}</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="question">Question</h2>
+<p>Are all test results in the saved output file?</p>
+<p><img src="./Test reporters_files/test-run.png" title="" alt="Run numbers" class="Run numbers" style="width: auto;height: auto;" data-image-key="3141965881891546280"></p>
+<p><img src="./Test reporters_files/junit-output.png" title="" alt="Report numbers" class="Report numbers" style="width: auto;height: auto;" data-image-key="-5723184695811651742"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-report-per-spec">Todo: report per spec</h2>
+<pre><code class="hljs lang- json"><span class="line"><span class="line-number"></span>{</span><span class="line"><span class="line-number"></span>  <span class="hljs-attr">"reporter"</span>: <span class="hljs-string">"junit"</span>,</span><span class="line"><span class="line-number"></span>  <span class="hljs-attr">"reporterOptions"</span>: {</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"mochaFile"</span>: <span class="hljs-string">"cypress/results/output-[hash].xml"</span>,</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"toConsole"</span>: <span class="hljs-literal">true</span></span><span class="line"><span class="line-number"></span>  }</span><span class="line"><span class="line-number"></span>}</span></code></pre>
+
+
+<aside class="notes"><p>Option <code>reporterOptions.toConsole = true</code> mirrors JUnit reports to <code>STDOUT</code>.
+Filename with <code>[hash]</code> will save individual report per spec. Remember to clean the output folder before running the tests like <code>rm cypress/results/* || true &amp;&amp; npm test</code>.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="mocha-multi-reporters">mocha-multi-reporters</h2>
+<p>I want to output <code>spec</code> to <code>STDOUT</code> <em>and</em> save <code>junit</code> reports. Use <a href="https://github.com/stanleyhlng/mocha-multi-reporters" rel="noopener noreferrer" target="_blank">mocha-multi-reporters</a> and install all peer dependencies.</p>
+<pre><code class="hljs lang- stylus"><span class="line"><span class="line-number"></span>npm <span class="hljs-selector-tag">i</span> -D mocha mocha-multi-reporters mocha-junit-reporter</span></code></pre>
+
+
+<pre><code class="hljs lang- json"><span class="line"><span class="line-number"></span>{</span><span class="line"><span class="line-number"></span>  <span class="hljs-attr">"reporter"</span>: <span class="hljs-string">"mocha-multi-reporters"</span>,</span><span class="line"><span class="line-number"></span>  <span class="hljs-attr">"reporterOptions"</span>: {</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"reporterEnabled"</span>: <span class="hljs-string">"spec, mocha-junit-reporter"</span>,</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"mochaJunitReporterReporterOptions"</span>: {</span><span class="line"><span class="line-number"></span>      <span class="hljs-attr">"mochaFile"</span>: <span class="hljs-string">"cypress/results/output-[hash].xml"</span></span><span class="line"><span class="line-number"></span>    }</span><span class="line"><span class="line-number"></span>  }</span><span class="line"><span class="line-number"></span>}</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="mochawesome">Mochawesome</h2>
+<p>Let's generate <a href="https://github.com/adamgruber/mochawesome" rel="noopener noreferrer" target="_blank">Mochawesome</a> individual JSON reports, merge them and then generate combined HTML report.</p>
+<pre><code class="hljs lang- stata"><span class="line"><span class="line-number"></span>npm i -<span class="hljs-keyword">D</span> mocha mochawesome \</span><span class="line"><span class="line-number"></span>  mochawesome-<span class="hljs-keyword">merge</span> mochawesome-<span class="hljs-keyword">report</span>-generator</span></code></pre>
+
+
+<pre><code class="hljs lang- json"><span class="line"><span class="line-number"></span>{</span><span class="line"><span class="line-number"></span>  <span class="hljs-attr">"reporter"</span>: <span class="hljs-string">"mochawesome"</span>,</span><span class="line"><span class="line-number"></span>  <span class="hljs-attr">"reporterOptions"</span>: {</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"reportDir"</span>: <span class="hljs-string">"cypress/results"</span>,</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"overwrite"</span>: <span class="hljs-literal">false</span>,</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"html"</span>: <span class="hljs-literal">false</span>,</span><span class="line"><span class="line-number"></span>    <span class="hljs-attr">"json"</span>: <span class="hljs-literal">true</span></span><span class="line"><span class="line-number"></span>  }</span><span class="line"><span class="line-number"></span>}</span></code></pre>
+
+
+<aside class="notes"><p>This should produce files in <code>cypress/results</code> like <code>mochawesome.json</code>, <code>mochawesome_001.json</code>, <code>mochawesome_002.json</code>. Then we need to merge them into a single JSON.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="merge-and-generate-html-report">Merge and generate HTML report</h2>
+<pre><code class="hljs lang- reasonml"><span class="line"><span class="line-number"></span><span class="hljs-constructor">$(<span class="hljs-params">npm</span> <span class="hljs-params">bin</span>)</span>/mochawesome-merge --reportDir cypress/results &gt; mochawesome.json</span><span class="line"><span class="line-number"></span><span class="hljs-constructor">$(<span class="hljs-params">npm</span> <span class="hljs-params">bin</span>)</span>/marge mochawesome.json</span></code></pre>
+
+
+<p>Uses <a href="https://github.com/adamgruber/mochawesome-report-generator" rel="noopener noreferrer" target="_blank">https://github.com/adamgruber/mochawesome-report-generator</a> - aka <code>marge</code></p>
+<aside class="notes"><p><code>$(npm bin)/marge</code> is the bin alias of <code>mochawesome-report-generator</code> package. This should save beautiful report <code>mochawesome-report/mochawesome.html</code>.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p><img src="./Test reporters_files/report.png" title="" alt="Mochawesome report" class="Mochawesome report" style="width: auto;height: auto;" data-image-key="-1468686138034521052"></p>
+</section></section>
+            
+        </div>
+        
+
+<footer id="title-footer" class="footer-visible"><p id="notification" class="footer-fade"> </p></footer>
+
+
+    <div class="backgrounds"><div class="slide-background past" data-background-hash="whitenullnullnullnullnullnullnullnullnull" data-loaded="true" style="background: white; display: block;"><div class="slide-background-content"></div></div><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div></div><div class="progress" style="display: block;"><span style="width: 168px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button><button class="navigate-right highlight" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down enabled highlight" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><a href="https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/09-reporters#/1"><span class="slide-number-a">2</span><span class="slide-number-delimiter">/</span><span class="slide-number-b">11</span></a></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">☀️ Part 9: Reporters
+📚 You will learn
+
+built-in reporters
+generating multiple reports
+combining separate reports
+
+</div></div>
+    
+    
+    <div class="gp-menu">
+      <div class="slide-menu-button">
+        
+        <a class="reveal" onclick="goHome(); return false;" title="Go Home" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-home" aria-hidden="true"> </i>
+        </a>
+        
+        
+        <a class="reveal" onclick="toggleMenu(); return false;" title="Slide Table-of-Contents, Key=M" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-bars" aria-hidden="true"> </i>
+        </a>
+        
+      </div>
+    <nav class="slide-menu slide-menu--left"><ol class="slide-menu-toolbar"><li data-button="0" class="toolbar-panel-button" data-panel="Slides"><i class="fa fa-list"></i></li><li id="close"><i class="fa fa-times"></i></li></ol><div data-panel="Slides" class="slide-menu-panel active-menu-panel"><div class="toc-title"><hr class="fade-away"></div><ul class="slide-menu-items"><li class="slide-menu-item no-title past" data-item="0" data-slide-h="0" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 0</span></li><li class="slide-menu-item active" data-item="1" data-slide-h="1" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">☀️ Part 9: Reporters</span></li><li class="slide-menu-item-vertical no-title future" data-item="2" data-slide-h="1" data-slide-v="1"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 2</span></li><li class="slide-menu-item-vertical future" data-item="3" data-slide-h="1" data-slide-v="2"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: try a different reporter</span></li><li class="slide-menu-item-vertical future" data-item="4" data-slide-h="1" data-slide-v="3"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: use built-in junit reporter</span></li><li class="slide-menu-item-vertical future" data-item="5" data-slide-h="1" data-slide-v="4"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Question</span></li><li class="slide-menu-item-vertical future" data-item="6" data-slide-h="1" data-slide-v="5"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: report per spec</span></li><li class="slide-menu-item-vertical future" data-item="7" data-slide-h="1" data-slide-v="6"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">mocha-multi-reporters</span></li><li class="slide-menu-item-vertical future" data-item="8" data-slide-h="1" data-slide-v="7"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Mochawesome</span></li><li class="slide-menu-item-vertical future" data-item="9" data-slide-h="1" data-slide-v="8"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Merge and generate HTML report</span></li><li class="slide-menu-item-vertical no-title future" data-item="10" data-slide-h="1" data-slide-v="9"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 10</span></li></ul></div></nav><div class="slide-menu-overlay"></div></div>
+    
+    
+    <script src="./Test reporters_files/reveal.js"></script>
+    <script src="./Test reporters_files/jquery.min.js"></script>
+    
+    
+    
+
+    <script>
+        Reveal.initialize({
+            
+            controls: true,
+            
+            controlsLayout: 'bottom-right',
+            progress: true,
+            embedded: true,
+            margin: 0.0,
+            
+            
+            showNotes: false,
+            transition: 'none',
+            backgroundTransition: 'none',
+            autoSlide: 0,
+            loop: false,
+            center: true,
+            rtl: false,
+            shuffle: false,
+            mouseWheel: false,
+            
+            controlsTutorial: true,
+            
+            
+            
+              slideNumber: 'c/t', // slideNumber: false,
+            
+            history: true,
+            
+            
+            menu: {
+              custom: [],
+              path : "/assets/libs/slides/plugin/menu",
+              themes : false,
+              transitions:  false,
+              markers: true,
+              sticky: true,
+              autoOpen: true
+            },
+            
+            
+            dependencies: [
+                { src: "/assets/libs/slides/plugin/markdown/marked.js",
+                  condition: function() {
+                    return !!document.querySelector( '[data-markdown]' );
+                  }},
+                { src: "/assets/libs/slides/plugin/markdown/markdown.js",
+                condition: function() {
+                  return !!document.querySelector( '[data-markdown]' );
+                }},
+                
+                { src:"/assets/libs/slides/plugin/menu/menu.js",
+                  async: true},
+                
+                
+                
+                
+                { src: '/assets/libs/highlight.js/9.15.8/highlight.js', async: true },
+                
+                { src: '/assets/libs/highlight.js/9.15.8/reveal-code-focus-30.js',
+                  async: true,
+                  callback: function() {
+                    RevealCodeFocus();
+                  }
+                },
+                
+                
+                
+                
+                
+            ]
+        });
+
+        Reveal.addEventListener('ready', function(evt) {
+
+          if(typeof twtter !== "undefined") {
+              twttr.widgets.load();
+          }
+
+          upgradeAnchors();
+          pushFootnoteNotification();
+
+          // Force refresh to workaround Reveal.js 3.8.0
+          // first render problem re. scrollHeight calc
+          // for slides with non-text (image) content.
+          setTimeout(Reveal.layout, 500);
+        });
+
+        
+        Reveal.addEventListener('menu-ready', function(evt) {
+            toggleMenuOff();
+        });
+        
+
+        Reveal.addEventListener('slidechanged', function(evt) {
+          /*
+          if (evt.indexh === 0 && evt.indexv === 0) {
+            pushHelpNotification();
+          } else {
+            pushFootnoteNotification();
+          }
+          */
+          pushFootnoteNotification();
+        });
+
+        Reveal.configure({
+            keyboard: {
+                88: function() { // bind "x" key to "select" code block content
+
+                    var currentSlide = Reveal.getCurrentSlide();
+                    var preBlock = $(currentSlide).find("pre");
+
+                    if(preBlock.length > 0) {
+
+                        if (window.getSelection) {
+                            var range = document.createRange();
+                            range.selectNodeContents(preBlock[0]);
+                            var selection = window.getSelection();
+                            selection.removeAllRanges();
+                            selection.addRange(range);
+                        }
+                    }
+                }
+            }
+        });
+
+        function goHome() {
+            window.location.href = "https://gitpitch.com";
+        }
+
+        function enterFullscreen() {
+            Reveal.triggerKey(70);
+        };
+
+        function enterOverview() {
+            Reveal.toggleOverview();
+        };
+
+        function enterBlackout() {
+            Reveal.togglePause();
+        };
+
+        function toggleHelp() {
+          Reveal.toggleHelp();
+        }
+
+        function enableEvents() {
+            Reveal.addEventListeners();
+        };
+
+        function disableEvents() {
+            Reveal.removeEventListeners();
+        };
+
+        function toggleMenuOff() {
+            if(RevealMenu && RevealMenu.isOpen()) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function toggleMenu() {
+            if(RevealMenu) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function upgradeAnchors() {
+            Array.from(document.getElementsByTagName('a')).forEach($link => {
+              if ($link.hostname !== window.location.hostname) {
+                $link.setAttribute('rel', 'noopener noreferrer');
+                $link.setAttribute('target', '_blank');
+              }
+            });
+        }
+
+    </script>
+
+    
+
+    
+
+<script>
+    function pushNotification(msg, fade) {
+      var footer = document.getElementById('title-footer')
+      var notification = document.getElementById('notification')
+      if(window.innerWidth < 700) {
+        footer.className = "footer-hidden";
+      } else {
+          footer.className = "footer-visible";
+          if(fade) {
+            notification.className = "footer-fade";
+            notification.innerHTML = msg;
+          } else {
+            notification.className = "footer-hard";
+            notification.innerHTML = msg;
+          }
+      }
+    };
+
+    function pushHelpNotification() {
+      if(window.innerWidth < 700)
+        pushNotification("<a href='#' onclick='RevealMenu.toggle()'>Menu</a> | <a href='#' onclick='enterFullscreen()'>Fullscreen</a> | <a href='#' onclick='enterOverview()'>Overview</a> | <a href='#' onclick='enterBlackout()'>Blackout</a> | <a href='#' onclick='RevealNotes.open()'>Speaker</a> | <a href='#' onclick='enterHelp()'>Help</a>");
+      else
+        pushNotification("Navigate : Space / Arrow Keys | <a href='#' onclick='RevealMenu.toggle()'>M</a> - Menu | <a href='#' onclick='enterFullscreen()'>F</a> - Fullscreen | <a href='#' onclick='enterOverview()'>O</a> - Overview | <a href='#' onclick='enterBlackout()'>B</a> - Blackout | <a href='#' onclick='RevealNotes.open()'>S</a> - Speaker | <a href='#' onclick='enterHelp()'>?</a> - Help");
+    }
+
+    function pushFootnoteNotification() {
+      
+        pushNotification(" ", true);
+      
+    }
+
+    function pushCodePresentingStepNotification(step, frags) {
+      // pushNotification("Code Presenting - Step " + step + " / " + frags, true);
+    }
+</script>
+
+
+
+
+
+</body></html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/13-app-actions#/1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>GitPitch Markdown</title>
+    <meta name="description" content="Slide Decks for Tech Conferences, Training, Developer Advocates, and Educators">
+    <meta name="keywords" content="Markdown, Presentation, Slides, Developer">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <meta name="”robots”" content="”noindex,nofollow”">
+    
+    
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gitpitch">
+<meta name="twitter:title" content="GitPitch Markdown">
+<meta name="twitter:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta name="twitter:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+
+
+    
+
+<meta property="og:site_name" content="GitPitch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitPitch Markdown">
+<meta property="og:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta property="og:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+<meta property="og:url" content="https://gitpitch.com/cypress-io/testing-workshop-cypress/master?grs=github&amp;t=template&amp;p=slides%2F13-app-actions">
+
+
+    
+
+<link rel="alternate" type="application/json+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F13-app-actions&amp;format=json" title="GitPitch - Markdown Presentations for Everyone on Git">
+<link rel="alternate" type="text/xml+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F13-app-actions&amp;format=xml" title="GitPitch - Markdown Presentations for Everyone on Git">
+
+
+    
+    
+    <link rel="apple-touch-icon" sizes="120x120" href="https://gitpitch.com/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gitpitch.com/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gitpitch.com/assets/img/favicon/favicon-16x16.png">
+    
+    
+    
+<link href="./Page Objects vs App Actions_files/reveal.css" rel="stylesheet" type="text/css">
+
+<link href="./Page Objects vs App Actions_files/moon.css" rel="stylesheet" type="text/css" id="theme">
+<link href="./Page Objects vs App Actions_files/future.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Page Objects vs App Actions_files/title-footer-mod.css" rel="stylesheet" type="text/css" id="theme">
+
+<link href="./Page Objects vs App Actions_files/paper.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Page Objects vs App Actions_files/atom-one-light.css" rel="stylesheet" type="text/css">
+<link href="./Page Objects vs App Actions_files/octicons.css" rel="stylesheet" type="text/css">
+<link href="./Page Objects vs App Actions_files/fa-all.min.css" rel="stylesheet" type="text/css">
+<link href="./Page Objects vs App Actions_files/fa-v4-shims.min.css" rel="stylesheet" type="text/css">
+
+<link href="./Page Objects vs App Actions_files/pitchcore.css" rel="stylesheet" type="text/css">
+
+
+
+
+<link href="./Page Objects vs App Actions_files/pitch.css" rel="stylesheet" type="text/css">
+
+<link href="./Page Objects vs App Actions_files/pitchmenu.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Page Objects vs App Actions_files/menu.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Page Objects vs App Actions_files/pitchbardark.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Page Objects vs App Actions_files/pitchcode.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Page Objects vs App Actions_files/css" rel="stylesheet">
+
+
+
+    
+    
+
+<style>
+.half-image img {
+  width: 40%;
+}
+
+</style>
+
+
+    <link href="./Page Objects vs App Actions_files/pitchpost.css" rel="stylesheet" type="text/css">
+    
+
+    
+        
+            
+
+<script async="" src="./Page Objects vs App Actions_files/analytics.js"></script><script async="" src="./Page Objects vs App Actions_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-80973712-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+
+
+        
+        
+            
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-59606812-9', 'auto', 'gpu');
+  ga('gpu.send', 'pageview');
+  
+</script><script type="text/javascript" src="./Page Objects vs App Actions_files/marked.js"></script><script type="text/javascript" src="./Page Objects vs App Actions_files/markdown.js"></script><script type="text/javascript" src="./Page Objects vs App Actions_files/menu.js"></script><script type="text/javascript" src="./Page Objects vs App Actions_files/highlight.js"></script><script type="text/javascript" src="./Page Objects vs App Actions_files/reveal-code-focus-30.js"></script>
+
+
+        
+    
+
+
+</head>
+<body>
+    
+
+
+    <div class="reveal none center has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="none" style="">
+        <div class="slides" style="width: 960px; height: 700px; zoom: 1.13143;">
+            
+            <section data-charset="utf-8" style="top: 241px; display: block;" data-markdown="" data-markdown-parsed="true" data-background="white" class="has-light-background past" hidden="" aria-hidden="true"><!-- -->
+<div style="padding-top: 0px; font-size: 36px;" class="font-ubuntu-heavy text-pink text-bold">
+<p style="color: #5289F7; font-weight: bold;">GitPitch.com is shutting down.<br>This slide deck will no longer<br>be available from March 1, 2021. </p></div>
+</section><section data-charset="utf-8" style="top: 0px; display: block;" class="stack present"><section data-markdown="" data-markdown-parsed="true" style="top: 145.5px; display: block;" class="present"><h2 id="-part-13-app-actions">☀️ Part 13: App Actions</h2>
+<h3 id="-you-will-learn">📚 You will learn</h3>
+<ul>
+<li>how to organize test code using Page Objects</li>
+<li>how to call into application directly from tests</li>
+<li>benefits of App Actions</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 192.5px; display: block;" hidden=""><h2 id="based-on">Based on</h2>
+<ul>
+<li>📝 blog <a href="https://www.cypress.io/blog/2019/01/03/stop-using-page-objects-and-start-using-app-actions/" rel="noopener noreferrer" target="_blank">Stop using Page Objects and Start using App Actions</a></li>
+<li>💻 code <a href="https://github.com/bahmutov/test-todomvc-using-app-actions" rel="noopener noreferrer" target="_blank">bahmutov/test-todomvc-using-app-actions</a></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 218.5px; display: block;" hidden=""><h2 id="how-do-we-organize-our-tests-">How do we organize our tests?</h2>
+<ul class="">
+<li class="fragment" data-fragment-index="0">👍 Cypress allows you to write a lot of E2E tests</li>
+<li class="fragment" data-fragment-index="1">👎 Cypress allows you to write a LOT of E2E tests</li>
+</ul>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="let-us-write-a-page-object">Let us write a Page Object</h2>
+<ul>
+<li>STOP 🛑 <code>todomvc</code> app, instead</li>
+</ul>
+<pre><code class="hljs lang- routeros"><span class="line"><span class="line-number"></span>npm <span class="hljs-builtin-name">run</span> start:react</span></code></pre>
+
+
+<p>Full React TodoMVC implementation with routing.</p>
+<aside class="notes"><p>We will be running a different implementation of TodoMVC at the same port. So stop previous app server and start the new app from the root folder using the above command.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><ul>
+<li>find Page Object in <code>cypress/integration/13-app-actions/todo-page-object.js</code></li>
+<li>open <code>cypress/integration/13-app-actions/using-po-spec.js</code></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-write-create-todos-test">Todo: write create todos test</h2>
+<p>use the page object methods</p>
+<pre><code class="hljs lang- stylus"><span class="line"><span class="line-number"></span><span class="hljs-function"><span class="hljs-title">beforeEach</span><span class="hljs-params">(()</span></span> =&gt; {</span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// visit the page</span></span><span class="line"><span class="line-number"></span>})</span><span class="line"><span class="line-number"></span>&nbsp;</span><span class="line"><span class="line-number"></span><span class="hljs-function"><span class="hljs-title">it</span><span class="hljs-params">(<span class="hljs-string">'creates 3 todos'</span>, ()</span></span> =&gt; {</span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// create default todos</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// and check that there are 3 of them</span></span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><pre><code class="hljs lang- moonscript"><span class="line"><span class="line-number"></span><span class="hljs-keyword">import</span> { todoPage } <span class="hljs-keyword">from</span> <span class="hljs-string">'../todo-page-object'</span></span><span class="line"><span class="line-number"></span>&nbsp;</span><span class="line"><span class="line-number"></span>beforeEach(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  todoPage.visit()</span><span class="line"><span class="line-number"></span>})</span><span class="line"><span class="line-number"></span>&nbsp;</span><span class="line"><span class="line-number"></span>it(<span class="hljs-string">'creates 3 todos'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  todoPage.createTodos()</span><span class="line"><span class="line-number"></span>  const todos = todoPage.todos()</span><span class="line"><span class="line-number"></span>  todos.should(<span class="hljs-string">'have.length'</span>, <span class="hljs-number">3</span>)</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+<aside class="notes"><p>The object-oriented wrapper and imperative style in the code.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-write-toggle-test">Todo: write toggle test</h2>
+<pre><code class="hljs lang- moonscript"><span class="line"><span class="line-number"></span>// cypress/integration/<span class="hljs-number">13</span>-app-actions/<span class="hljs-keyword">using</span>-po-spec.js</span><span class="line"><span class="line-number"></span>context(<span class="hljs-string">'toggles items'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  beforeEach(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>    // what should you <span class="hljs-keyword">do</span> before each test?</span><span class="line"><span class="line-number"></span>  })</span><span class="line"><span class="line-number"></span>&nbsp;</span><span class="line"><span class="line-number"></span>  it(<span class="hljs-string">'completes second item'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>    // toggle <span class="hljs-number">1</span> item</span><span class="line"><span class="line-number"></span>    // check <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">names</span> <span class="hljs-title">for</span> <span class="hljs-title">all</span> 3 <span class="hljs-title">items</span></span></span><span class="line"><span class="line-number"></span>  })</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p><img src="./Page Objects vs App Actions_files/toggle.png" title="" alt="Toggle test" class="Toggle test" style="width: auto;height: auto;" data-image-key="-5788645767046375575"></p>
+<aside class="notes"><p>Our goal is to use todo page instance to create todos, then toggle one of them (again using the page object), then confirm class names like <code>todoPage.todos(0).should('not.have.class', 'completed')</code>.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><pre><code class="hljs lang- lisp"><span class="line"><span class="line-number"></span>beforeEach(() =&gt; {</span><span class="line"><span class="line-number"></span>  todoPage.createTodos()</span><span class="line"><span class="line-number"></span>})</span><span class="line"><span class="line-number"></span>it('completes second item', () =&gt; {</span><span class="line"><span class="line-number"></span>  todoPage.toggle(<span class="hljs-number">1</span>)</span><span class="line"><span class="line-number"></span>  todoPage.todos(<span class="hljs-number">0</span>).should('not.have.class', 'completed')</span><span class="line"><span class="line-number"></span>  todoPage.todos(<span class="hljs-number">1</span>).should('have.class', 'completed')</span><span class="line"><span class="line-number"></span>  todoPage.todos(<span class="hljs-number">2</span>).should('not.have.class', 'completed')</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>You can implement Page Objects using classes, custom commands or simple functions.</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="my-problems-with-the-page-object">My problems with the Page Object</h2>
+<ul class="">
+<li class="fragment" data-fragment-index="0">goes through the page DOM (slow)</li>
+<li class="fragment" data-fragment-index="1">adds extra layer of code on top of unstable DOM</li>
+<li class="fragment" data-fragment-index="2">duplicates code already in the app</li>
+</ul>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""></section></section><section data-charset="utf-8" style="top: 177.5px; display: block;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future"><p>Page Objects</p>
+<p>~ ~ ~ ~ ~ ~ ~ ~ ~</p>
+<p> very loose</p>
+<p>HTML UI</p>
+</section><section data-charset="utf-8" style="top: 0px; display: block;" hidden="" aria-hidden="true" class="stack future"><section data-markdown="" data-markdown-parsed="true" style="top: 284px; display: block;"><p>Application code</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;"><h2 id="code-overhead">Code overhead</h2>
+<ul class="">
+<li class="fragment" data-fragment-index="0">What methods do you have in the Page Object?</li>
+<li class="fragment" data-fragment-index="1">What methods do you see in <code>todomvc-react/js/todoModel.js</code>?</li>
+</ul>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;"><pre><code class="hljs lang- javascript"><span class="line"><span class="line-number"></span><span class="hljs-comment">// app.jsx</span></span><span class="line"><span class="line-number"></span><span class="hljs-keyword">var</span> model = <span class="hljs-keyword">new</span> app.TodoModel(<span class="hljs-string">'react-todos'</span>)</span><span class="line"><span class="line-number"></span><span class="hljs-keyword">if</span> (<span class="hljs-built_in">window</span>.Cypress) {</span><span class="line"><span class="line-number"></span>  <span class="hljs-built_in">window</span>.model = model</span><span class="line"><span class="line-number"></span>}</span></code></pre>
+
+
+<h2 id="todo-access-model-from-devtools-console">Todo: access <code>model</code> from DevTools console</h2>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;"><h2 id="todo-create-a-todo-from-devtools-console">Todo: create a todo from DevTools console</h2>
+<p>and toggle an item</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;"><blockquote>
+<p>💡 Cypress can do anything you can do from the DevTools console</p>
+</blockquote>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;"><h2 id="todo-start-a-new-file-spec-js-">Todo: start a new file <code>spec.js</code></h2>
+<ul>
+<li>gets the <code>window.model</code> instance</li>
+<li>invokes <code>addTodo</code> to add several todos</li>
+</ul>
+<p><strong>tip:</strong> use <a href="https://on.cypress.io/invoke" rel="noopener noreferrer" target="_blank"><code>cy.invoke</code></a></p>
+<aside class="notes"><p>Look up and improve <code>addTodo</code> method in <code>js/todoModel.js</code> if necessary</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;"><h2 id="todo-write-a-test-for-routing">Todo: write a test for routing</h2>
+<ul>
+<li>set up initial todos using app action <code>addTodo</code></li>
+<li>toggle an item or two</li>
+<li>check if each view shows correct number of items</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;"><h2 id="more-tests">More tests</h2>
+<p>Open and run <code>cypress/integration/13-app-actions/po-full-spec.js</code>. It has tests for</p>
+<ul>
+<li>adding todos</li>
+<li>editing</li>
+<li>toggling</li>
+<li>routing</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;"><p>Look at the group of tests for "New Todo". They all go through the DOM</p>
+<p>Look at the group of tests for "Routing"</p>
+<pre><code class="hljs lang- javascript"><span class="line"><span class="line-number"></span>context(<span class="hljs-string">'Routing'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{</span><span class="line"><span class="line-number"></span>  beforeEach(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{</span><span class="line"><span class="line-number"></span>    todoPage.createTodos()</span><span class="line"><span class="line-number"></span>  })</span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// routing tests</span></span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;"><p>Most of the Page Object method calls in this spec are to create initial data or change some data (like <code>toggle</code>) - same actions as in <code>todoModel.js</code></p>
+<ul>
+<li>Are these tests faster than before? Why?</li>
+<li>Are these tests coupled to the app's model or to the DOM?</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;"><h2 id="app-actions-rules">App actions rules</h2>
+<ul class="">
+<li class="fragment" data-fragment-index="0">when testing feature X - the test goes through UI for feature X</li>
+<li class="fragment" data-fragment-index="1">when testing feature Y - the test uses app action to do X</li>
+</ul>
+
+
+<aside class="notes"><p>You still cover all page features, you just don't cover them multiple times.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;"><h2 id="focused-errors">Focused errors</h2>
+<h3 id="in-todomvc-react-js-todoitem-jsx-">In <code>todomvc-react/js/todoItem.jsx</code></h3>
+<p>Comment out line in the render function</p>
+<pre><code class="hljs lang- ini"><span class="line"><span class="line-number"></span><span class="hljs-attr">onChange</span>={this.props.<span class="hljs-literal">on</span>Toggle}</span></code></pre>
+
+
+<p>Which tests have failed?</p>
+<aside class="notes"><p>Only the tests for marking items as completed should fail, because the rest goes through the model to toggle an item.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;"><h2 id="-app-actions-vs-page-objects">🏁 App actions vs Page Objects</h2>
+<ul class="">
+<li class="fragment" data-fragment-index="0">Page Objects write an extra layer of code</li>
+<li class="fragment" data-fragment-index="1">App actions are a client of the application's model</li>
+<li class="fragment" data-fragment-index="2">App actions take shortcuts for faster tests</li>
+</ul>
+
+
+<aside class="notes"><p>The extra layer of code in Page Objects is built on top of the DOM and events, which are not machine-linted. This layer also does not benefit the user, and just slows down the tests.</p>
+</aside></section></section>
+            
+        </div>
+        
+
+<footer id="title-footer" class="footer-visible"><p id="notification" class="footer-fade"> </p></footer>
+
+
+    <div class="backgrounds"><div class="slide-background past" data-background-hash="whitenullnullnullnullnullnullnullnullnull" data-loaded="true" style="background: white; display: block;"><div class="slide-background-content"></div></div><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background stack future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div></div><div class="progress" style="display: block;"><span style="width: 62.2222px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button><button class="navigate-right highlight enabled" aria-label="next slide"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down enabled highlight" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><a href="https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/13-app-actions#/1"><span class="slide-number-a">2</span><span class="slide-number-delimiter">/</span><span class="slide-number-b">28</span></a></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">☀️ Part 13: App Actions
+📚 You will learn
+
+how to organize test code using Page Objects
+how to call into application directly from tests
+benefits of App Actions
+
+</div></div>
+    
+    
+    <div class="gp-menu">
+      <div class="slide-menu-button">
+        
+        <a class="reveal" onclick="goHome(); return false;" title="Go Home" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-home" aria-hidden="true"> </i>
+        </a>
+        
+        
+        <a class="reveal" onclick="toggleMenu(); return false;" title="Slide Table-of-Contents, Key=M" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-bars" aria-hidden="true"> </i>
+        </a>
+        
+      </div>
+    <nav class="slide-menu slide-menu--left"><ol class="slide-menu-toolbar"><li data-button="0" class="toolbar-panel-button" data-panel="Slides"><i class="fa fa-list"></i></li><li id="close"><i class="fa fa-times"></i></li></ol><div data-panel="Slides" class="slide-menu-panel active-menu-panel"><div class="toc-title"><hr class="fade-away"></div><ul class="slide-menu-items"><li class="slide-menu-item no-title past" data-item="0" data-slide-h="0" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 0</span></li><li class="slide-menu-item active" data-item="1" data-slide-h="1" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">☀️ Part 13: App Actions</span></li><li class="slide-menu-item-vertical future" data-item="2" data-slide-h="1" data-slide-v="1"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Based on</span></li><li class="slide-menu-item-vertical future" data-item="3" data-slide-h="1" data-slide-v="2"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">How do we organize our tests?</span></li><li class="slide-menu-item-vertical future" data-item="4" data-slide-h="1" data-slide-v="3"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Let us write a Page Object</span></li><li class="slide-menu-item-vertical no-title future" data-item="5" data-slide-h="1" data-slide-v="4"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 5</span></li><li class="slide-menu-item-vertical future" data-item="6" data-slide-h="1" data-slide-v="5"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: write create todos test</span></li><li class="slide-menu-item-vertical no-title future" data-item="7" data-slide-h="1" data-slide-v="6"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 7</span></li><li class="slide-menu-item-vertical future" data-item="8" data-slide-h="1" data-slide-v="7"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: write toggle test</span></li><li class="slide-menu-item-vertical no-title future" data-item="9" data-slide-h="1" data-slide-v="8"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 9</span></li><li class="slide-menu-item-vertical no-title future" data-item="10" data-slide-h="1" data-slide-v="9"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 10</span></li><li class="slide-menu-item-vertical no-title future" data-item="11" data-slide-h="1" data-slide-v="10"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 11</span></li><li class="slide-menu-item-vertical future" data-item="12" data-slide-h="1" data-slide-v="11"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">My problems with the Page Object</span></li><li class="slide-menu-item-vertical no-title future" data-item="13" data-slide-h="1" data-slide-v="12"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 13</span></li><li class="slide-menu-item no-title future" data-item="14" data-slide-h="2" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 14</span></li><li class="slide-menu-item no-title future" data-item="15" data-slide-h="3" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 15</span></li><li class="slide-menu-item-vertical future" data-item="16" data-slide-h="3" data-slide-v="1"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Code overhead</span></li><li class="slide-menu-item-vertical future" data-item="17" data-slide-h="3" data-slide-v="2"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: access model from DevTools console</span></li><li class="slide-menu-item-vertical future" data-item="18" data-slide-h="3" data-slide-v="3"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: create a todo from DevTools console</span></li><li class="slide-menu-item-vertical no-title future" data-item="19" data-slide-h="3" data-slide-v="4"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 19</span></li><li class="slide-menu-item-vertical future" data-item="20" data-slide-h="3" data-slide-v="5"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: start a new file spec.js</span></li><li class="slide-menu-item-vertical future" data-item="21" data-slide-h="3" data-slide-v="6"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: write a test for routing</span></li><li class="slide-menu-item-vertical future" data-item="22" data-slide-h="3" data-slide-v="7"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">More tests</span></li><li class="slide-menu-item-vertical no-title future" data-item="23" data-slide-h="3" data-slide-v="8"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 23</span></li><li class="slide-menu-item-vertical no-title future" data-item="24" data-slide-h="3" data-slide-v="9"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 24</span></li><li class="slide-menu-item-vertical future" data-item="25" data-slide-h="3" data-slide-v="10"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">App actions rules</span></li><li class="slide-menu-item-vertical future" data-item="26" data-slide-h="3" data-slide-v="11"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Focused errors</span></li><li class="slide-menu-item-vertical future" data-item="27" data-slide-h="3" data-slide-v="12"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">🏁 App actions vs Page Objects</span></li></ul></div></nav><div class="slide-menu-overlay"></div></div>
+    
+    
+    <script src="./Page Objects vs App Actions_files/reveal.js"></script>
+    <script src="./Page Objects vs App Actions_files/jquery.min.js"></script>
+    
+    
+    
+
+    <script>
+        Reveal.initialize({
+            
+            controls: true,
+            
+            controlsLayout: 'bottom-right',
+            progress: true,
+            embedded: true,
+            margin: 0.0,
+            
+            
+            showNotes: false,
+            transition: 'none',
+            backgroundTransition: 'none',
+            autoSlide: 0,
+            loop: false,
+            center: true,
+            rtl: false,
+            shuffle: false,
+            mouseWheel: false,
+            
+            controlsTutorial: true,
+            
+            
+            
+              slideNumber: 'c/t', // slideNumber: false,
+            
+            history: true,
+            
+            
+            menu: {
+              custom: [],
+              path : "/assets/libs/slides/plugin/menu",
+              themes : false,
+              transitions:  false,
+              markers: true,
+              sticky: true,
+              autoOpen: true
+            },
+            
+            
+            dependencies: [
+                { src: "/assets/libs/slides/plugin/markdown/marked.js",
+                  condition: function() {
+                    return !!document.querySelector( '[data-markdown]' );
+                  }},
+                { src: "/assets/libs/slides/plugin/markdown/markdown.js",
+                condition: function() {
+                  return !!document.querySelector( '[data-markdown]' );
+                }},
+                
+                { src:"/assets/libs/slides/plugin/menu/menu.js",
+                  async: true},
+                
+                
+                
+                
+                { src: '/assets/libs/highlight.js/9.15.8/highlight.js', async: true },
+                
+                { src: '/assets/libs/highlight.js/9.15.8/reveal-code-focus-30.js',
+                  async: true,
+                  callback: function() {
+                    RevealCodeFocus();
+                  }
+                },
+                
+                
+                
+                
+                
+            ]
+        });
+
+        Reveal.addEventListener('ready', function(evt) {
+
+          if(typeof twtter !== "undefined") {
+              twttr.widgets.load();
+          }
+
+          upgradeAnchors();
+          pushFootnoteNotification();
+
+          // Force refresh to workaround Reveal.js 3.8.0
+          // first render problem re. scrollHeight calc
+          // for slides with non-text (image) content.
+          setTimeout(Reveal.layout, 500);
+        });
+
+        
+        Reveal.addEventListener('menu-ready', function(evt) {
+            toggleMenuOff();
+        });
+        
+
+        Reveal.addEventListener('slidechanged', function(evt) {
+          /*
+          if (evt.indexh === 0 && evt.indexv === 0) {
+            pushHelpNotification();
+          } else {
+            pushFootnoteNotification();
+          }
+          */
+          pushFootnoteNotification();
+        });
+
+        Reveal.configure({
+            keyboard: {
+                88: function() { // bind "x" key to "select" code block content
+
+                    var currentSlide = Reveal.getCurrentSlide();
+                    var preBlock = $(currentSlide).find("pre");
+
+                    if(preBlock.length > 0) {
+
+                        if (window.getSelection) {
+                            var range = document.createRange();
+                            range.selectNodeContents(preBlock[0]);
+                            var selection = window.getSelection();
+                            selection.removeAllRanges();
+                            selection.addRange(range);
+                        }
+                    }
+                }
+            }
+        });
+
+        function goHome() {
+            window.location.href = "https://gitpitch.com";
+        }
+
+        function enterFullscreen() {
+            Reveal.triggerKey(70);
+        };
+
+        function enterOverview() {
+            Reveal.toggleOverview();
+        };
+
+        function enterBlackout() {
+            Reveal.togglePause();
+        };
+
+        function toggleHelp() {
+          Reveal.toggleHelp();
+        }
+
+        function enableEvents() {
+            Reveal.addEventListeners();
+        };
+
+        function disableEvents() {
+            Reveal.removeEventListeners();
+        };
+
+        function toggleMenuOff() {
+            if(RevealMenu && RevealMenu.isOpen()) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function toggleMenu() {
+            if(RevealMenu) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function upgradeAnchors() {
+            Array.from(document.getElementsByTagName('a')).forEach($link => {
+              if ($link.hostname !== window.location.hostname) {
+                $link.setAttribute('rel', 'noopener noreferrer');
+                $link.setAttribute('target', '_blank');
+              }
+            });
+        }
+
+    </script>
+
+    
+
+    
+
+<script>
+    function pushNotification(msg, fade) {
+      var footer = document.getElementById('title-footer')
+      var notification = document.getElementById('notification')
+      if(window.innerWidth < 700) {
+        footer.className = "footer-hidden";
+      } else {
+          footer.className = "footer-visible";
+          if(fade) {
+            notification.className = "footer-fade";
+            notification.innerHTML = msg;
+          } else {
+            notification.className = "footer-hard";
+            notification.innerHTML = msg;
+          }
+      }
+    };
+
+    function pushHelpNotification() {
+      if(window.innerWidth < 700)
+        pushNotification("<a href='#' onclick='RevealMenu.toggle()'>Menu</a> | <a href='#' onclick='enterFullscreen()'>Fullscreen</a> | <a href='#' onclick='enterOverview()'>Overview</a> | <a href='#' onclick='enterBlackout()'>Blackout</a> | <a href='#' onclick='RevealNotes.open()'>Speaker</a> | <a href='#' onclick='enterHelp()'>Help</a>");
+      else
+        pushNotification("Navigate : Space / Arrow Keys | <a href='#' onclick='RevealMenu.toggle()'>M</a> - Menu | <a href='#' onclick='enterFullscreen()'>F</a> - Fullscreen | <a href='#' onclick='enterOverview()'>O</a> - Overview | <a href='#' onclick='enterBlackout()'>B</a> - Blackout | <a href='#' onclick='RevealNotes.open()'>S</a> - Speaker | <a href='#' onclick='enterHelp()'>?</a> - Help");
+    }
+
+    function pushFootnoteNotification() {
+      
+        pushNotification(" ", true);
+      
+    }
+
+    function pushCodePresentingStepNotification(step, frags) {
+      // pushNotification("Code Presenting - Step " + step + " / " + frags, true);
+    }
+</script>
+
+
+
+
+
+</body></html>

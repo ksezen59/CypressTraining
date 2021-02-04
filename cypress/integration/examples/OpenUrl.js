@@ -16,6 +16,10 @@ describe('My Second Test Suit', function () {
         )
 
 
+
+        
+
+
         cy.url().should('not.contain', 'AutomationPractice')
 
 

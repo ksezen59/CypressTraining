@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/intro#/1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>GitPitch Markdown</title>
+    <meta name="description" content="Slide Decks for Tech Conferences, Training, Developer Advocates, and Educators">
+    <meta name="keywords" content="Markdown, Presentation, Slides, Developer">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <meta name="”robots”" content="”noindex,nofollow”">
+    
+    
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gitpitch">
+<meta name="twitter:title" content="GitPitch Markdown">
+<meta name="twitter:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta name="twitter:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+
+
+    
+
+<meta property="og:site_name" content="GitPitch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitPitch Markdown">
+<meta property="og:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta property="og:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+<meta property="og:url" content="https://gitpitch.com/cypress-io/testing-workshop-cypress/master?grs=github&amp;t=template&amp;p=slides%2Fintro">
+
+
+    
+
+<link rel="alternate" type="application/json+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252Fintro&amp;format=json" title="GitPitch - Markdown Presentations for Everyone on Git">
+<link rel="alternate" type="text/xml+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252Fintro&amp;format=xml" title="GitPitch - Markdown Presentations for Everyone on Git">
+
+
+    
+    
+    <link rel="apple-touch-icon" sizes="120x120" href="https://gitpitch.com/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gitpitch.com/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gitpitch.com/assets/img/favicon/favicon-16x16.png">
+    
+    
+    
+<link href="./Introduction, TodoMVC application_files/reveal.css" rel="stylesheet" type="text/css">
+
+<link href="./Introduction, TodoMVC application_files/moon.css" rel="stylesheet" type="text/css" id="theme">
+<link href="./Introduction, TodoMVC application_files/future.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Introduction, TodoMVC application_files/title-footer-mod.css" rel="stylesheet" type="text/css" id="theme">
+
+<link href="./Introduction, TodoMVC application_files/paper.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Introduction, TodoMVC application_files/atom-one-light.css" rel="stylesheet" type="text/css">
+<link href="./Introduction, TodoMVC application_files/octicons.css" rel="stylesheet" type="text/css">
+<link href="./Introduction, TodoMVC application_files/fa-all.min.css" rel="stylesheet" type="text/css">
+<link href="./Introduction, TodoMVC application_files/fa-v4-shims.min.css" rel="stylesheet" type="text/css">
+
+<link href="./Introduction, TodoMVC application_files/pitchcore.css" rel="stylesheet" type="text/css">
+
+
+
+
+<link href="./Introduction, TodoMVC application_files/pitch.css" rel="stylesheet" type="text/css">
+
+<link href="./Introduction, TodoMVC application_files/pitchmenu.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Introduction, TodoMVC application_files/menu.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Introduction, TodoMVC application_files/pitchbardark.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Introduction, TodoMVC application_files/pitchcode.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Introduction, TodoMVC application_files/css" rel="stylesheet">
+
+
+
+    
+    
+
+<style>
+.half-image img {
+  width: 40%;
+}
+
+</style>
+
+
+    <link href="./Introduction, TodoMVC application_files/pitchpost.css" rel="stylesheet" type="text/css">
+    
+
+    
+        
+            
+
+<script async="" src="./Introduction, TodoMVC application_files/analytics.js"></script><script async="" src="./Introduction, TodoMVC application_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-80973712-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+
+
+        
+        
+            
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-59606812-9', 'auto', 'gpu');
+  ga('gpu.send', 'pageview');
+  
+</script><script type="text/javascript" src="./Introduction, TodoMVC application_files/marked.js"></script><script type="text/javascript" src="./Introduction, TodoMVC application_files/markdown.js"></script><script type="text/javascript" src="./Introduction, TodoMVC application_files/menu.js"></script><script type="text/javascript" src="./Introduction, TodoMVC application_files/highlight.js"></script><script type="text/javascript" src="./Introduction, TodoMVC application_files/reveal-code-focus-30.js"></script>
+
+
+        
+    
+
+
+</head>
+<body>
+    
+
+
+    <div class="reveal none center has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="none" style="">
+        <div class="slides" style="width: 960px; height: 700px; zoom: 1.13143;">
+            
+            <section data-charset="utf-8" style="top: 241.5px; display: block;" data-markdown="" data-markdown-parsed="true" data-background="white" class="has-light-background past" hidden="" aria-hidden="true"><!-- -->
+<div style="padding-top: 0px; font-size: 36px;" class="font-ubuntu-heavy text-pink text-bold">
+<p style="color: #5289F7; font-weight: bold;">GitPitch.com is shutting down.<br>This slide deck will no longer<br>be available from March 1, 2021. </p></div>
+</section><section data-charset="utf-8" style="top: 0px; display: block;" class="stack present"><section data-markdown="" data-markdown-parsed="true" style="top: 101.5px; display: block;" class="present"><h1 id="gleb-bahmutov-phd">Gleb Bahmutov, PhD</h1>
+<ul>
+<li>Distinguished Engineer at Cypress</li>
+<li>gleb (at) cypress.io</li>
+<li><a href="https://twitter.com/bahmutov" rel="noopener noreferrer" target="_blank">@bahmutov</a></li>
+<li><a href="https://glebbahmutov.com/blog/tags/cypress/" rel="noopener noreferrer" target="_blank">https://glebbahmutov.com/blog/tags/cypress/</a></li>
+<li><a href="https://www.youtube.com/glebbahmutov" rel="noopener noreferrer" target="_blank">https://www.youtube.com/glebbahmutov</a></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 80.5px; display: block;" hidden=""><h2 id="what-we-are-going-to-cover-1-3">What we are going to cover 1/3</h2>
+<p>As long as ⏳ permits</p>
+<ul>
+<li>example TodoMVC<ul>
+<li>web app, data store, REST calls</li>
+</ul>
+</li>
+<li>basic page load test</li>
+<li>selector playground</li>
+<li>resetting state</li>
+<li>XHR spying and stubbing, fixtures</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 80.5px; display: block;" hidden=""><h2 id="what-we-are-going-to-cover-2-3">What we are going to cover 2/3</h2>
+<p>As long as ⏳ permits</p>
+<ul>
+<li>CI and Cypress dashboard</li>
+<li>test reporters</li>
+<li>configuration and environment variables</li>
+<li>retry-ability</li>
+<li>debugging</li>
+<li>visual testing</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="what-we-are-going-to-cover-3-3">What we are going to cover 3/3</h2>
+<p>As long as ⏳ permits</p>
+<ul>
+<li>page objects vs app actions</li>
+<li>fixtures and backend</li>
+<li>preprocessors</li>
+<li>component testing</li>
+<li>plugins</li>
+<li>code coverage</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="time-">Time 🕰</h2>
+<ul>
+<li>total workshop duration 3 - 9 hours, depending on the included sections</li>
+<li>short breaks, lunch</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>Please: if you have experience with Cypress.io, help others during the workshop 🙏</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="how-learning-works">How learning works</h2>
+<ol>
+<li>I explain and show</li>
+<li>We do together</li>
+<li>You do and I help</li>
+</ol>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="requirements">Requirements</h2>
+<p>You will need:</p>
+<ul>
+<li><code>git</code> to clone this repo</li>
+<li>Node v10+ to install dependencies</li>
+<li>Node v12 recommended</li>
+</ul>
+<pre><code class="hljs lang- properties"><span class="line"><span class="line-number"></span><span class="hljs-attr">git</span> <span class="hljs-string">clone &lt;repo url&gt;</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">cd</span> <span class="hljs-string">testing-workshop-cypress</span></span><span class="line"><span class="line-number"></span><span class="hljs-attr">npm</span> <span class="hljs-string">install</span></span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="repo-organization">Repo organization</h2>
+<ul>
+<li><code>/todomvc</code> is a web application we are going to test</li>
+<li>all tests are in <code>cypress/integration</code> folder<ul>
+<li>there are subfolders for exercises<ul>
+<li><code>01-basic</code></li>
+<li><code>02-adding-items</code></li>
+<li><code>03-selector-playground</code></li>
+<li><code>04-reset-state</code></li>
+<li>etc</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>keep application <code>todomvc</code> running!</li>
+</ul>
+<aside class="notes"><p>We are going to keep the app running, while switching from spec to spec for each part.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="-todomvc-"><code>todomvc</code></h2>
+<p>Let us look at the application.</p>
+<ul>
+<li><code>cd todomvc</code></li>
+<li><code>npm start</code></li>
+<li><code>open localhost:3000</code></li>
+</ul>
+<p><strong>important</strong> keep application running through the entire workshop!</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>It is a regular TodoMVC application.</p>
+<p><img src="./Introduction, TodoMVC application_files/todomvc.png" title="" alt="TodoMVC" class="TodoMVC" style="width: auto;height: auto;" data-image-key="-1726367572714938498"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>If you have Vue DevTools plugin</p>
+<p><img src="./Introduction, TodoMVC application_files/vue-devtools.png" title="" alt="With Vue DevTools" class="With Vue DevTools" style="width: auto;height: auto;" data-image-key="8346994326362555566"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>Look at XHR when using the app</p>
+<p><img src="./Introduction, TodoMVC application_files/network.png" title="" alt="Network" class="Network" style="width: auto;height: auto;" data-image-key="8282927731988439050"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>Look at <code>todomvc/index.html</code> - main app DOM structure</p>
+<p><img src="./Introduction, TodoMVC application_files/DOM.png" title="" alt="DOM" class="DOM" style="width: auto;height: auto;" data-image-key="-5223791426959812074"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>Look at <code>todomvc/app.js</code></p>
+<p><img src="./Introduction, TodoMVC application_files/app.png" title="" alt="Application" class="Application" style="width: auto;height: auto;" data-image-key="-5970766777911054674"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="questions">Questions</h2>
+<ul class="">
+<li class="fragment" data-fragment-index="0">what happens when you add a new Todo item?</li>
+<li class="fragment" data-fragment-index="1">how does it get to the server?</li>
+<li class="fragment" data-fragment-index="2">where does the server save it?</li>
+<li class="fragment" data-fragment-index="3">what happens on start up?</li>
+</ul>
+
+
+<aside class="notes"><p>The students should open DevTools and look at XHR requests that go between the web application and the server. Also the students should find <code>todomvc/data.json</code> file with saved items.</p>
+</aside></section></section><section data-charset="utf-8" style="top: 0px; display: block;" hidden="" aria-hidden="true" class="stack future"><section data-markdown="" data-markdown-parsed="true" data-background-image="https://gitpitch.com/pitchme/cdn/github/cypress-io/testing-workshop-cypress/master/1882732B48BEC26F24949525C35F0A93ADBE1608F056B3D096B1497BA9B49E5AAF8BE639589B8704EE5E4EA2B0F7472EA98BEFCF9FC901539F5566E99AFC7110F8B5C5E044AF142E75EF8813E788CAFEC0C37EBE92EECC4C567764E44E6C8176D34CF1E72E2FA081//slides/intro/img/vue-vuex-rest.png" data-background-size="contain" data-background-position="center" data-background=" " data-background-repeat=" " data-background-transition="none" style="top: 329.5px; display: block;"><!-- -->
+<aside class="notes"><p>This app has been coded and described in this blog post <a href="https://www.cypress.io/blog/2017/11/28/testing-vue-web-application-with-vuex-data-store-and-rest-backend/" rel="noopener noreferrer" target="_blank">https://www.cypress.io/blog/2017/11/28/testing-vue-web-application-with-vuex-data-store-and-rest-backend/</a></p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 172px; display: block;"><p>This app has been coded and described in this blog post <a href="https://www.cypress.io/blog/2017/11/28/testing-vue-web-application-with-vuex-data-store-and-rest-backend/" rel="noopener noreferrer" target="_blank">https://www.cypress.io/blog/2017/11/28/testing-vue-web-application-with-vuex-data-store-and-rest-backend/</a></p>
+<p>➡️ Pick the <a href="https://github.com/cypress-io/testing-workshop-cypress#content-" rel="noopener noreferrer" target="_blank">next section</a></p>
+</section></section>
+            
+        </div>
+        
+
+<footer id="title-footer" class="footer-visible"><p id="notification" class="footer-fade"> </p></footer>
+
+
+    <div class="backgrounds"><div class="slide-background past" data-background-hash="whitenullnullnullnullnullnullnullnullnull" data-loaded="true" style="background: white; display: block;"><div class="slide-background-content"></div></div><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-background-hash=" containhttps://gitpitch.com/pitchme/cdn/github/cypress-io/testing-workshop-cypress/master/1882732B48BEC26F24949525C35F0A93ADBE1608F056B3D096B1497BA9B49E5AAF8BE639589B8704EE5E4EA2B0F7472EA98BEFCF9FC901539F5566E99AFC7110F8B5C5E044AF142E75EF8813E788CAFEC0C37EBE92EECC4C567764E44E6C8176D34CF1E72E2FA081//slides/intro/img/vue-vuex-rest.pngnullnullnull centernonenull" data-background-size="contain" data-background-transition="none" data-loaded="true" style="display: block;"><div class="slide-background-content" style="background-size: contain; background-position: center center; background-image: url(&quot;https://gitpitch.com/pitchme/cdn/github/cypress-io/testing-workshop-cypress/master/1882732B48BEC26F24949525C35F0A93ADBE1608F056B3D096B1497BA9B49E5AAF8BE639589B8704EE5E4EA2B0F7472EA98BEFCF9FC901539F5566E99AFC7110F8B5C5E044AF142E75EF8813E788CAFEC0C37EBE92EECC4C567764E44E6C8176D34CF1E72E2FA081//slides/intro/img/vue-vuex-rest.png&quot;);"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div></div></div><div class="progress" style="display: block;"><span style="width: 93.3333px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button><button class="navigate-right highlight enabled" aria-label="next slide"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down enabled highlight" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><a href="https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/intro#/1"><span class="slide-number-a">2</span><span class="slide-number-delimiter">/</span><span class="slide-number-b">19</span></a></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Gleb Bahmutov, PhD
+
+Distinguished Engineer at Cypress
+gleb (at) cypress.io
+@bahmutov
+https://glebbahmutov.com/blog/tags/cypress/
+https://www.youtube.com/glebbahmutov
+
+</div></div>
+    
+    
+    <div class="gp-menu">
+      <div class="slide-menu-button">
+        
+        <a class="reveal" onclick="goHome(); return false;" title="Go Home" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-home" aria-hidden="true"> </i>
+        </a>
+        
+        
+        <a class="reveal" onclick="toggleMenu(); return false;" title="Slide Table-of-Contents, Key=M" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-bars" aria-hidden="true"> </i>
+        </a>
+        
+      </div>
+    <nav class="slide-menu slide-menu--left"><ol class="slide-menu-toolbar"><li data-button="0" class="toolbar-panel-button" data-panel="Slides"><i class="fa fa-list"></i></li><li id="close"><i class="fa fa-times"></i></li></ol><div data-panel="Slides" class="slide-menu-panel active-menu-panel"><div class="toc-title"><hr class="fade-away"></div><ul class="slide-menu-items"><li class="slide-menu-item no-title past" data-item="0" data-slide-h="0" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 0</span></li><li class="slide-menu-item active" data-item="1" data-slide-h="1" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Gleb Bahmutov, PhD</span></li><li class="slide-menu-item-vertical future" data-item="2" data-slide-h="1" data-slide-v="1"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">What we are going to cover 1/3</span></li><li class="slide-menu-item-vertical future" data-item="3" data-slide-h="1" data-slide-v="2"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">What we are going to cover 2/3</span></li><li class="slide-menu-item-vertical future" data-item="4" data-slide-h="1" data-slide-v="3"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">What we are going to cover 3/3</span></li><li class="slide-menu-item-vertical future" data-item="5" data-slide-h="1" data-slide-v="4"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Time 🕰</span></li><li class="slide-menu-item-vertical no-title future" data-item="6" data-slide-h="1" data-slide-v="5"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 6</span></li><li class="slide-menu-item-vertical future" data-item="7" data-slide-h="1" data-slide-v="6"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">How learning works</span></li><li class="slide-menu-item-vertical future" data-item="8" data-slide-h="1" data-slide-v="7"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Requirements</span></li><li class="slide-menu-item-vertical future" data-item="9" data-slide-h="1" data-slide-v="8"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Repo organization</span></li><li class="slide-menu-item-vertical future" data-item="10" data-slide-h="1" data-slide-v="9"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">todomvc</span></li><li class="slide-menu-item-vertical no-title future" data-item="11" data-slide-h="1" data-slide-v="10"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 11</span></li><li class="slide-menu-item-vertical no-title future" data-item="12" data-slide-h="1" data-slide-v="11"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 12</span></li><li class="slide-menu-item-vertical no-title future" data-item="13" data-slide-h="1" data-slide-v="12"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 13</span></li><li class="slide-menu-item-vertical no-title future" data-item="14" data-slide-h="1" data-slide-v="13"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 14</span></li><li class="slide-menu-item-vertical no-title future" data-item="15" data-slide-h="1" data-slide-v="14"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 15</span></li><li class="slide-menu-item-vertical future" data-item="16" data-slide-h="1" data-slide-v="15"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Questions</span></li><li class="slide-menu-item no-title future" data-item="17" data-slide-h="2" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 17</span></li><li class="slide-menu-item-vertical no-title future" data-item="18" data-slide-h="2" data-slide-v="1"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 18</span></li></ul></div></nav><div class="slide-menu-overlay"></div></div>
+    
+    
+    <script src="./Introduction, TodoMVC application_files/reveal.js"></script>
+    <script src="./Introduction, TodoMVC application_files/jquery.min.js"></script>
+    
+    
+    
+
+    <script>
+        Reveal.initialize({
+            
+            controls: true,
+            
+            controlsLayout: 'bottom-right',
+            progress: true,
+            embedded: true,
+            margin: 0.0,
+            
+            
+            showNotes: false,
+            transition: 'none',
+            backgroundTransition: 'none',
+            autoSlide: 0,
+            loop: false,
+            center: true,
+            rtl: false,
+            shuffle: false,
+            mouseWheel: false,
+            
+            controlsTutorial: true,
+            
+            
+            
+              slideNumber: 'c/t', // slideNumber: false,
+            
+            history: true,
+            
+            
+            menu: {
+              custom: [],
+              path : "/assets/libs/slides/plugin/menu",
+              themes : false,
+              transitions:  false,
+              markers: true,
+              sticky: true,
+              autoOpen: true
+            },
+            
+            
+            dependencies: [
+                { src: "/assets/libs/slides/plugin/markdown/marked.js",
+                  condition: function() {
+                    return !!document.querySelector( '[data-markdown]' );
+                  }},
+                { src: "/assets/libs/slides/plugin/markdown/markdown.js",
+                condition: function() {
+                  return !!document.querySelector( '[data-markdown]' );
+                }},
+                
+                { src:"/assets/libs/slides/plugin/menu/menu.js",
+                  async: true},
+                
+                
+                
+                
+                { src: '/assets/libs/highlight.js/9.15.8/highlight.js', async: true },
+                
+                { src: '/assets/libs/highlight.js/9.15.8/reveal-code-focus-30.js',
+                  async: true,
+                  callback: function() {
+                    RevealCodeFocus();
+                  }
+                },
+                
+                
+                
+                
+                
+            ]
+        });
+
+        Reveal.addEventListener('ready', function(evt) {
+
+          if(typeof twtter !== "undefined") {
+              twttr.widgets.load();
+          }
+
+          upgradeAnchors();
+          pushFootnoteNotification();
+
+          // Force refresh to workaround Reveal.js 3.8.0
+          // first render problem re. scrollHeight calc
+          // for slides with non-text (image) content.
+          setTimeout(Reveal.layout, 500);
+        });
+
+        
+        Reveal.addEventListener('menu-ready', function(evt) {
+            toggleMenuOff();
+        });
+        
+
+        Reveal.addEventListener('slidechanged', function(evt) {
+          /*
+          if (evt.indexh === 0 && evt.indexv === 0) {
+            pushHelpNotification();
+          } else {
+            pushFootnoteNotification();
+          }
+          */
+          pushFootnoteNotification();
+        });
+
+        Reveal.configure({
+            keyboard: {
+                88: function() { // bind "x" key to "select" code block content
+
+                    var currentSlide = Reveal.getCurrentSlide();
+                    var preBlock = $(currentSlide).find("pre");
+
+                    if(preBlock.length > 0) {
+
+                        if (window.getSelection) {
+                            var range = document.createRange();
+                            range.selectNodeContents(preBlock[0]);
+                            var selection = window.getSelection();
+                            selection.removeAllRanges();
+                            selection.addRange(range);
+                        }
+                    }
+                }
+            }
+        });
+
+        function goHome() {
+            window.location.href = "https://gitpitch.com";
+        }
+
+        function enterFullscreen() {
+            Reveal.triggerKey(70);
+        };
+
+        function enterOverview() {
+            Reveal.toggleOverview();
+        };
+
+        function enterBlackout() {
+            Reveal.togglePause();
+        };
+
+        function toggleHelp() {
+          Reveal.toggleHelp();
+        }
+
+        function enableEvents() {
+            Reveal.addEventListeners();
+        };
+
+        function disableEvents() {
+            Reveal.removeEventListeners();
+        };
+
+        function toggleMenuOff() {
+            if(RevealMenu && RevealMenu.isOpen()) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function toggleMenu() {
+            if(RevealMenu) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function upgradeAnchors() {
+            Array.from(document.getElementsByTagName('a')).forEach($link => {
+              if ($link.hostname !== window.location.hostname) {
+                $link.setAttribute('rel', 'noopener noreferrer');
+                $link.setAttribute('target', '_blank');
+              }
+            });
+        }
+
+    </script>
+
+    
+
+    
+
+<script>
+    function pushNotification(msg, fade) {
+      var footer = document.getElementById('title-footer')
+      var notification = document.getElementById('notification')
+      if(window.innerWidth < 700) {
+        footer.className = "footer-hidden";
+      } else {
+          footer.className = "footer-visible";
+          if(fade) {
+            notification.className = "footer-fade";
+            notification.innerHTML = msg;
+          } else {
+            notification.className = "footer-hard";
+            notification.innerHTML = msg;
+          }
+      }
+    };
+
+    function pushHelpNotification() {
+      if(window.innerWidth < 700)
+        pushNotification("<a href='#' onclick='RevealMenu.toggle()'>Menu</a> | <a href='#' onclick='enterFullscreen()'>Fullscreen</a> | <a href='#' onclick='enterOverview()'>Overview</a> | <a href='#' onclick='enterBlackout()'>Blackout</a> | <a href='#' onclick='RevealNotes.open()'>Speaker</a> | <a href='#' onclick='enterHelp()'>Help</a>");
+      else
+        pushNotification("Navigate : Space / Arrow Keys | <a href='#' onclick='RevealMenu.toggle()'>M</a> - Menu | <a href='#' onclick='enterFullscreen()'>F</a> - Fullscreen | <a href='#' onclick='enterOverview()'>O</a> - Overview | <a href='#' onclick='enterBlackout()'>B</a> - Blackout | <a href='#' onclick='RevealNotes.open()'>S</a> - Speaker | <a href='#' onclick='enterHelp()'>?</a> - Help");
+    }
+
+    function pushFootnoteNotification() {
+      
+        pushNotification(" ", true);
+      
+    }
+
+    function pushCodePresentingStepNotification(step, frags) {
+      // pushNotification("Code Presenting - Step " + step + " / " + frags, true);
+    }
+</script>
+
+
+
+
+
+</body></html>

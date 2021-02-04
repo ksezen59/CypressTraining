@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Montserrat Heavy';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/montserrat-heavy.woff2') format('woff2'),
+       url('/assets/fonts/montserrat-heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Ubuntu Heavy';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/ubuntu-heavy.woff2') format('woff2'),
+       url('/assets/fonts/ubuntu-heavy.woff') format('woff');
+}
+
+.font-montserrat-heavy { font-family: "Montserrat Heavy" !important; }
+.font-ubuntu-heavy { font-family: "Ubuntu Heavy" !important; }

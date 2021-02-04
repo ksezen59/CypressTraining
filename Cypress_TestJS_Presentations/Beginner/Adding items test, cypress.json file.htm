@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/02-adding-items#/1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>GitPitch Markdown</title>
+    <meta name="description" content="Slide Decks for Tech Conferences, Training, Developer Advocates, and Educators">
+    <meta name="keywords" content="Markdown, Presentation, Slides, Developer">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <meta name="”robots”" content="”noindex,nofollow”">
+    
+    
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gitpitch">
+<meta name="twitter:title" content="GitPitch Markdown">
+<meta name="twitter:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta name="twitter:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+
+
+    
+
+<meta property="og:site_name" content="GitPitch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitPitch Markdown">
+<meta property="og:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta property="og:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+<meta property="og:url" content="https://gitpitch.com/cypress-io/testing-workshop-cypress/master?grs=github&amp;t=template&amp;p=slides%2F02-adding-items">
+
+
+    
+
+<link rel="alternate" type="application/json+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F02-adding-items&amp;format=json" title="GitPitch - Markdown Presentations for Everyone on Git">
+<link rel="alternate" type="text/xml+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F02-adding-items&amp;format=xml" title="GitPitch - Markdown Presentations for Everyone on Git">
+
+
+    
+    
+    <link rel="apple-touch-icon" sizes="120x120" href="https://gitpitch.com/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gitpitch.com/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gitpitch.com/assets/img/favicon/favicon-16x16.png">
+    
+    
+    
+<link href="./Adding items test, cypress.json file_files/reveal.css" rel="stylesheet" type="text/css">
+
+<link href="./Adding items test, cypress.json file_files/moon.css" rel="stylesheet" type="text/css" id="theme">
+<link href="./Adding items test, cypress.json file_files/future.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Adding items test, cypress.json file_files/title-footer-mod.css" rel="stylesheet" type="text/css" id="theme">
+
+<link href="./Adding items test, cypress.json file_files/paper.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Adding items test, cypress.json file_files/atom-one-light.css" rel="stylesheet" type="text/css">
+<link href="./Adding items test, cypress.json file_files/octicons.css" rel="stylesheet" type="text/css">
+<link href="./Adding items test, cypress.json file_files/fa-all.min.css" rel="stylesheet" type="text/css">
+<link href="./Adding items test, cypress.json file_files/fa-v4-shims.min.css" rel="stylesheet" type="text/css">
+
+<link href="./Adding items test, cypress.json file_files/pitchcore.css" rel="stylesheet" type="text/css">
+
+
+
+
+<link href="./Adding items test, cypress.json file_files/pitch.css" rel="stylesheet" type="text/css">
+
+<link href="./Adding items test, cypress.json file_files/pitchmenu.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Adding items test, cypress.json file_files/menu.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Adding items test, cypress.json file_files/pitchbardark.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Adding items test, cypress.json file_files/pitchcode.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Adding items test, cypress.json file_files/css" rel="stylesheet">
+
+
+
+    
+    
+
+<style>
+.half-image img {
+  width: 40%;
+}
+
+</style>
+
+
+    <link href="./Adding items test, cypress.json file_files/pitchpost.css" rel="stylesheet" type="text/css">
+    
+
+    
+        
+            
+
+<script async="" src="./Adding items test, cypress.json file_files/analytics.js"></script><script async="" src="./Adding items test, cypress.json file_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-80973712-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+
+
+        
+        
+            
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-59606812-9', 'auto', 'gpu');
+  ga('gpu.send', 'pageview');
+  
+</script><script type="text/javascript" src="./Adding items test, cypress.json file_files/marked.js"></script><script type="text/javascript" src="./Adding items test, cypress.json file_files/markdown.js"></script><script type="text/javascript" src="./Adding items test, cypress.json file_files/menu.js"></script><script type="text/javascript" src="./Adding items test, cypress.json file_files/highlight.js"></script><script type="text/javascript" src="./Adding items test, cypress.json file_files/reveal-code-focus-30.js"></script>
+
+
+        
+    
+
+
+</head>
+<body>
+    
+
+
+    <div class="reveal none center has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="none" style="">
+        <div class="slides" style="width: 960px; height: 700px; zoom: 1.13143;">
+            
+            <section data-charset="utf-8" style="top: 241px; display: block;" data-markdown="" data-markdown-parsed="true" data-background="white" class="has-light-background past" hidden="" aria-hidden="true"><!-- -->
+<div style="padding-top: 0px; font-size: 36px;" class="font-ubuntu-heavy text-pink text-bold">
+<p style="color: #5289F7; font-weight: bold;">GitPitch.com is shutting down.<br>This slide deck will no longer<br>be available from March 1, 2021. </p></div>
+</section><section data-charset="utf-8" style="top: 0px; display: block;" class="stack present"><section data-markdown="" data-markdown-parsed="true" style="top: 171px; display: block;" class="present"><h2 id="-part-2-adding-items-tests">☀️ Part 2: Adding items tests</h2>
+<h3 id="-you-will-learn">📚 You will learn</h3>
+<ul>
+<li>common commands for working with elements</li>
+<li>organizing test code using Mocha hooks</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 218.5px; display: block;" hidden=""><h2 id="what-kind-of-tests-">What kind of tests?</h2>
+<ul>
+<li>discussion: what would you test in the TodoMVC app?</li>
+</ul>
+<aside class="notes"><p>Longer tests, adding items then deleting one for example. Adding items via GUI and observing communication with the server. Adding items then reloading the page.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 223.5px; display: block;" hidden=""><ul>
+<li>keep <code>todomvc</code> app running</li>
+<li>open <code>cypress/integration/02-adding-items/spec.js</code> in your text editor</li>
+<li>click file <code>02-adding-items/spec.js</code> in Cypress</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="-todo-items">⚠️ Todo items</h2>
+<p><strong>Note:</strong> the tests we are about to write are NOT resetting the previously added Todo items. Delete the Todo items before each test manually.</p>
+<p>We will reset the previously saved Todo items in section "4 Reset State".</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><pre><code class="hljs lang- vim"><span class="line"><span class="line-number"></span>it.<span class="hljs-keyword">only</span>(<span class="hljs-string">'adds two items'</span>, () =&gt; {</span><span class="line"><span class="line-number"></span>  // <span class="hljs-built_in">repeat</span> twice</span><span class="line"><span class="line-number"></span>  //    <span class="hljs-built_in">get</span> the <span class="hljs-built_in">input</span> field</span><span class="line"><span class="line-number"></span>  //    <span class="hljs-built_in">type</span> text <span class="hljs-built_in">and</span> <span class="hljs-string">"enter"</span></span><span class="line"><span class="line-number"></span>  //    assert that the <span class="hljs-keyword">new</span> Todo item</span><span class="line"><span class="line-number"></span>  //    <span class="hljs-built_in">has</span> been added added <span class="hljs-keyword">to</span> the <span class="hljs-keyword">list</span></span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+<p><strong>tip</strong> use <code>cy.get</code>, <code>cy.type</code>, <code>cy.contains</code>, <code>cy.click</code>, remember <code>https://on.cypress.io/&lt;command&gt;</code></p>
+<aside class="notes"><p>Draw distinction between commands and assertions, show how commands can be chained,
+each continues to work with the subject of the previous command. Assertions do
+not change the subject.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-mark-first-item-completed">Todo: mark first item completed</h2>
+<pre><code class="hljs lang- stylus"><span class="line"><span class="line-number"></span><span class="hljs-function"><span class="hljs-title">it</span><span class="hljs-params">(<span class="hljs-string">'can mark an item as completed'</span>, ()</span></span> =&gt; {</span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// adds a few items</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// marks the first item as completed</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// confirms the first item has the expected completed class</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// confirms the other items are still incomplete</span></span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="refactor-code-1-3">Refactor code 1/3</h2>
+<ul>
+<li>visit the page before each test</li>
+</ul>
+<aside class="notes"><p>Avoid duplicate <code>cy.visit('localhost:3000')</code> command at the start of each test.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="refactor-code-2-3">Refactor code 2/3</h2>
+<ul>
+<li>move the url into <code>cypress.json</code></li>
+</ul>
+<p><strong>tip</strong> look at <a href="https://on.cypress.io/configuration" rel="noopener noreferrer" target="_blank">https://on.cypress.io/configuration</a></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="refactor-code-3-3">Refactor code 3/3</h2>
+<ul>
+<li>make a helper function to add todo item</li>
+</ul>
+<p><strong>tip</strong> it is just JavaScript</p>
+<aside class="notes"><p>Move <code>addItem</code> function into a separate file and import from the spec file. It is just JavaScript, and Cypress bundles each spec file, so utilities can have <code>cy...</code> commands too!</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-delete-an-item">Todo: delete an item</h2>
+<pre><code class="hljs lang- stylus"><span class="line"><span class="line-number"></span><span class="hljs-function"><span class="hljs-title">it</span><span class="hljs-params">(<span class="hljs-string">'can delete an item'</span>, ()</span></span> =&gt; {</span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// adds a few items</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// deletes the first item</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// use force: true because we don't want to hover</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// confirm the deleted item is gone from the dom</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// confirm the other item still exists</span></span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo">Todo</h2>
+<pre><code class="hljs lang- pgsql"><span class="line"><span class="line-number"></span>it(<span class="hljs-string">'adds item with random text'</span>, () =&gt; {</span><span class="line"><span class="line-number"></span>  // use a helper <span class="hljs-keyword">function</span> <span class="hljs-keyword">with</span> Math.random()</span><span class="line"><span class="line-number"></span>  // <span class="hljs-keyword">or</span> Cypress._.random() <span class="hljs-keyword">to</span> generate <span class="hljs-keyword">unique</span> <span class="hljs-type">text</span> label</span><span class="line"><span class="line-number"></span>  // <span class="hljs-keyword">add</span> such item</span><span class="line"><span class="line-number"></span>  // <span class="hljs-keyword">and</span> make sure it <span class="hljs-keyword">is</span> visible <span class="hljs-keyword">and</span> does <span class="hljs-keyword">not</span> have <span class="hljs-keyword">class</span> "completed"</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="-pro-tips">💡 Pro tips</h2>
+<ul>
+<li>resize the viewport in <code>cypress.json</code></li>
+<li>set up IntelliSense in <code>cypress.json</code> using <a href="https://on.cypress.io/intelligent-code-completion" rel="noopener noreferrer" target="_blank">https://on.cypress.io/intelligent-code-completion</a></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="adding-blank-item">Adding blank item</h2>
+<p>The application does not allow adding items with blank titles. What happens when the user does it? Hint: open DevTools console.</p>
+<h3 id="todo">Todo</h3>
+<p>Fill the test <code>does not allow adding blank todos</code>.</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="bonus">Bonus</h2>
+<p>Unit tests vs end-to-end tests</p>
+<h3 id="unit-tests">Unit tests</h3>
+<pre><code class="hljs lang- moonscript"><span class="line"><span class="line-number"></span><span class="hljs-keyword">import</span> add <span class="hljs-keyword">from</span> <span class="hljs-string">'./add'</span></span><span class="line"><span class="line-number"></span>test(<span class="hljs-string">'add'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  expect(add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)).toBe(<span class="hljs-number">5</span>)</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+<ul>
+<li>arrange - action - assertion</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h3 id="end-to-end-tests">End-to-end tests</h3>
+<pre><code class="hljs lang- sqf"><span class="line"><span class="line-number"></span>const <span class="hljs-built_in">addItem</span> = <span class="hljs-built_in">text</span> =&gt; {</span><span class="line"><span class="line-number"></span>  cy.get(<span class="hljs-string">'.new-todo'</span>).<span class="hljs-built_in">type</span>(`${<span class="hljs-built_in">text</span>}{enter}`)</span><span class="line"><span class="line-number"></span>}</span><span class="line"><span class="line-number"></span>it(<span class="hljs-string">'can mark items as completed'</span>, () =&gt; {</span><span class="line"><span class="line-number"></span>  const ITEM_SELECTOR = <span class="hljs-string">'li.todo'</span></span><span class="line"><span class="line-number"></span>  <span class="hljs-built_in">addItem</span>(<span class="hljs-string">'simple'</span>)</span><span class="line"><span class="line-number"></span>  <span class="hljs-built_in">addItem</span>(<span class="hljs-string">'difficult'</span>)</span><span class="line"><span class="line-number"></span>  cy.contains(ITEM_SELECTOR, <span class="hljs-string">'simple'</span>).should(<span class="hljs-string">'exist'</span>)</span><span class="line"><span class="line-number"></span>    .<span class="hljs-built_in">find</span>(<span class="hljs-string">'input[type="checkbox"]'</span>).check()</span><span class="line"><span class="line-number"></span>  <span class="hljs-comment">// have to force click because the button does not appear unless we hover</span></span><span class="line"><span class="line-number"></span>  cy.contains(ITEM_SELECTOR, <span class="hljs-string">'simple'</span>).<span class="hljs-built_in">find</span>(<span class="hljs-string">'.destroy'</span>).click({ force: <span class="hljs-literal">true</span> })</span><span class="line"><span class="line-number"></span>  cy.contains(ITEM_SELECTOR, <span class="hljs-string">'simple'</span>).should(<span class="hljs-string">'not.exist'</span>)</span><span class="line"><span class="line-number"></span>  cy.get(ITEM_SELECTOR).should(<span class="hljs-string">'have.length'</span>, <span class="hljs-number">1</span>)</span><span class="line"><span class="line-number"></span>  cy.contains(ITEM_SELECTOR, <span class="hljs-string">'difficult'</span>).should(<span class="hljs-string">'be.visible'</span>)</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+<ul>
+<li><strong>tip</strong> check out <code>cy.pause</code> command</li>
+</ul>
+<aside class="notes"><p>Revisit the discussion about what kind of tests one should write. E2E tests can cover a lot of features in a single test, and that is a recommended practice. If a test fails, it is easy to debug it, and see how the application looks during each step.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h3 id="unit-vs-e2e">Unit vs E2E</h3>
+<ul>
+<li>if you are describing how code works: unit test</li>
+<li>if you are describing how code is used by the user: end-to-end test</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h3 id="bonus">Bonus</h3>
+<ul>
+<li>Core concepts <a href="https://on.cypress.io/writing-and-organizing-tests" rel="noopener noreferrer" target="_blank">https://on.cypress.io/writing-and-organizing-tests</a></li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>Organize tests using folder structure and spec files</p>
+<pre><code class="hljs lang- stylus"><span class="line"><span class="line-number"></span>cypress/integration/</span><span class="line"><span class="line-number"></span>  featureA/</span><span class="line"><span class="line-number"></span>    first-spec<span class="hljs-selector-class">.js</span></span><span class="line"><span class="line-number"></span>    second-spec<span class="hljs-selector-class">.js</span></span><span class="line"><span class="line-number"></span>  featureB/</span><span class="line"><span class="line-number"></span>    another-spec<span class="hljs-selector-class">.js</span></span><span class="line"><span class="line-number"></span>    errors-spec<span class="hljs-selector-class">.js</span></span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>Organize tests inside a spec using Mocha functions</p>
+<pre><code class="hljs lang- coffeescript"><span class="line"><span class="line-number"></span>describe(<span class="hljs-string">'Feature A'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  beforeEach(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {})</span><span class="line"><span class="line-number"></span>&nbsp;</span><span class="line"><span class="line-number"></span>  it(<span class="hljs-string">'works'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {})</span><span class="line"><span class="line-number"></span>&nbsp;</span><span class="line"><span class="line-number"></span>  it(<span class="hljs-string">'handles error'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {})</span><span class="line"><span class="line-number"></span>&nbsp;</span><span class="line"><span class="line-number"></span>  <span class="hljs-regexp">//</span> context <span class="hljs-keyword">is</span> alias <span class="hljs-keyword">of</span> describe</span><span class="line"><span class="line-number"></span>  context(<span class="hljs-string">'in special case'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>    it(<span class="hljs-string">'starts correctly'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {})</span><span class="line"><span class="line-number"></span>&nbsp;</span><span class="line"><span class="line-number"></span>    it(<span class="hljs-string">'works'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {})</span><span class="line"><span class="line-number"></span>  })</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="-write-your-tests-like-a-user">🏁 Write your tests like a user</h2>
+<ul>
+<li>go through UI</li>
+<li>validate the application after actions</li>
+</ul>
+<p>➡️ Pick the <a href="https://github.com/cypress-io/testing-workshop-cypress#content-" rel="noopener noreferrer" target="_blank">next section</a></p>
+</section></section>
+            
+        </div>
+        
+
+<footer id="title-footer" class="footer-visible"><p id="notification" class="footer-fade"> </p></footer>
+
+
+    <div class="backgrounds"><div class="slide-background past" data-background-hash="whitenullnullnullnullnullnullnullnullnull" data-loaded="true" style="background: white; display: block;"><div class="slide-background-content"></div></div><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div></div><div class="progress" style="display: block;"><span style="width: 84px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button><button class="navigate-right highlight" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down enabled highlight" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><a href="https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/02-adding-items#/1"><span class="slide-number-a">2</span><span class="slide-number-delimiter">/</span><span class="slide-number-b">21</span></a></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">☀️ Part 2: Adding items tests
+📚 You will learn
+
+common commands for working with elements
+organizing test code using Mocha hooks
+
+</div></div>
+    
+    
+    <div class="gp-menu">
+      <div class="slide-menu-button">
+        
+        <a class="reveal" onclick="goHome(); return false;" title="Go Home" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-home" aria-hidden="true"> </i>
+        </a>
+        
+        
+        <a class="reveal" onclick="toggleMenu(); return false;" title="Slide Table-of-Contents, Key=M" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-bars" aria-hidden="true"> </i>
+        </a>
+        
+      </div>
+    <nav class="slide-menu slide-menu--left"><ol class="slide-menu-toolbar"><li data-button="0" class="toolbar-panel-button" data-panel="Slides"><i class="fa fa-list"></i></li><li id="close"><i class="fa fa-times"></i></li></ol><div data-panel="Slides" class="slide-menu-panel active-menu-panel"><div class="toc-title"><hr class="fade-away"></div><ul class="slide-menu-items"><li class="slide-menu-item no-title past" data-item="0" data-slide-h="0" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 0</span></li><li class="slide-menu-item active" data-item="1" data-slide-h="1" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">☀️ Part 2: Adding items tests</span></li><li class="slide-menu-item-vertical future" data-item="2" data-slide-h="1" data-slide-v="1"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">What kind of tests?</span></li><li class="slide-menu-item-vertical no-title future" data-item="3" data-slide-h="1" data-slide-v="2"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 3</span></li><li class="slide-menu-item-vertical future" data-item="4" data-slide-h="1" data-slide-v="3"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">⚠️ Todo items</span></li><li class="slide-menu-item-vertical no-title future" data-item="5" data-slide-h="1" data-slide-v="4"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 5</span></li><li class="slide-menu-item-vertical future" data-item="6" data-slide-h="1" data-slide-v="5"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: mark first item completed</span></li><li class="slide-menu-item-vertical future" data-item="7" data-slide-h="1" data-slide-v="6"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Refactor code 1/3</span></li><li class="slide-menu-item-vertical future" data-item="8" data-slide-h="1" data-slide-v="7"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Refactor code 2/3</span></li><li class="slide-menu-item-vertical future" data-item="9" data-slide-h="1" data-slide-v="8"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Refactor code 3/3</span></li><li class="slide-menu-item-vertical future" data-item="10" data-slide-h="1" data-slide-v="9"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo: delete an item</span></li><li class="slide-menu-item-vertical future" data-item="11" data-slide-h="1" data-slide-v="10"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Todo</span></li><li class="slide-menu-item-vertical future" data-item="12" data-slide-h="1" data-slide-v="11"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">💡 Pro tips</span></li><li class="slide-menu-item-vertical future" data-item="13" data-slide-h="1" data-slide-v="12"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Adding blank item</span></li><li class="slide-menu-item-vertical future" data-item="14" data-slide-h="1" data-slide-v="13"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Bonus</span></li><li class="slide-menu-item-vertical future" data-item="15" data-slide-h="1" data-slide-v="14"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">End-to-end tests</span></li><li class="slide-menu-item-vertical future" data-item="16" data-slide-h="1" data-slide-v="15"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Unit vs E2E</span></li><li class="slide-menu-item-vertical future" data-item="17" data-slide-h="1" data-slide-v="16"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Bonus</span></li><li class="slide-menu-item-vertical no-title future" data-item="18" data-slide-h="1" data-slide-v="17"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 18</span></li><li class="slide-menu-item-vertical no-title future" data-item="19" data-slide-h="1" data-slide-v="18"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 19</span></li><li class="slide-menu-item-vertical future" data-item="20" data-slide-h="1" data-slide-v="19"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">🏁 Write your tests like a user</span></li></ul></div></nav><div class="slide-menu-overlay"></div></div>
+    
+    
+    <script src="./Adding items test, cypress.json file_files/reveal.js"></script>
+    <script src="./Adding items test, cypress.json file_files/jquery.min.js"></script>
+    
+    
+    
+
+    <script>
+        Reveal.initialize({
+            
+            controls: true,
+            
+            controlsLayout: 'bottom-right',
+            progress: true,
+            embedded: true,
+            margin: 0.0,
+            
+            
+            showNotes: false,
+            transition: 'none',
+            backgroundTransition: 'none',
+            autoSlide: 0,
+            loop: false,
+            center: true,
+            rtl: false,
+            shuffle: false,
+            mouseWheel: false,
+            
+            controlsTutorial: true,
+            
+            
+            
+              slideNumber: 'c/t', // slideNumber: false,
+            
+            history: true,
+            
+            
+            menu: {
+              custom: [],
+              path : "/assets/libs/slides/plugin/menu",
+              themes : false,
+              transitions:  false,
+              markers: true,
+              sticky: true,
+              autoOpen: true
+            },
+            
+            
+            dependencies: [
+                { src: "/assets/libs/slides/plugin/markdown/marked.js",
+                  condition: function() {
+                    return !!document.querySelector( '[data-markdown]' );
+                  }},
+                { src: "/assets/libs/slides/plugin/markdown/markdown.js",
+                condition: function() {
+                  return !!document.querySelector( '[data-markdown]' );
+                }},
+                
+                { src:"/assets/libs/slides/plugin/menu/menu.js",
+                  async: true},
+                
+                
+                
+                
+                { src: '/assets/libs/highlight.js/9.15.8/highlight.js', async: true },
+                
+                { src: '/assets/libs/highlight.js/9.15.8/reveal-code-focus-30.js',
+                  async: true,
+                  callback: function() {
+                    RevealCodeFocus();
+                  }
+                },
+                
+                
+                
+                
+                
+            ]
+        });
+
+        Reveal.addEventListener('ready', function(evt) {
+
+          if(typeof twtter !== "undefined") {
+              twttr.widgets.load();
+          }
+
+          upgradeAnchors();
+          pushFootnoteNotification();
+
+          // Force refresh to workaround Reveal.js 3.8.0
+          // first render problem re. scrollHeight calc
+          // for slides with non-text (image) content.
+          setTimeout(Reveal.layout, 500);
+        });
+
+        
+        Reveal.addEventListener('menu-ready', function(evt) {
+            toggleMenuOff();
+        });
+        
+
+        Reveal.addEventListener('slidechanged', function(evt) {
+          /*
+          if (evt.indexh === 0 && evt.indexv === 0) {
+            pushHelpNotification();
+          } else {
+            pushFootnoteNotification();
+          }
+          */
+          pushFootnoteNotification();
+        });
+
+        Reveal.configure({
+            keyboard: {
+                88: function() { // bind "x" key to "select" code block content
+
+                    var currentSlide = Reveal.getCurrentSlide();
+                    var preBlock = $(currentSlide).find("pre");
+
+                    if(preBlock.length > 0) {
+
+                        if (window.getSelection) {
+                            var range = document.createRange();
+                            range.selectNodeContents(preBlock[0]);
+                            var selection = window.getSelection();
+                            selection.removeAllRanges();
+                            selection.addRange(range);
+                        }
+                    }
+                }
+            }
+        });
+
+        function goHome() {
+            window.location.href = "https://gitpitch.com";
+        }
+
+        function enterFullscreen() {
+            Reveal.triggerKey(70);
+        };
+
+        function enterOverview() {
+            Reveal.toggleOverview();
+        };
+
+        function enterBlackout() {
+            Reveal.togglePause();
+        };
+
+        function toggleHelp() {
+          Reveal.toggleHelp();
+        }
+
+        function enableEvents() {
+            Reveal.addEventListeners();
+        };
+
+        function disableEvents() {
+            Reveal.removeEventListeners();
+        };
+
+        function toggleMenuOff() {
+            if(RevealMenu && RevealMenu.isOpen()) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function toggleMenu() {
+            if(RevealMenu) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function upgradeAnchors() {
+            Array.from(document.getElementsByTagName('a')).forEach($link => {
+              if ($link.hostname !== window.location.hostname) {
+                $link.setAttribute('rel', 'noopener noreferrer');
+                $link.setAttribute('target', '_blank');
+              }
+            });
+        }
+
+    </script>
+
+    
+
+    
+
+<script>
+    function pushNotification(msg, fade) {
+      var footer = document.getElementById('title-footer')
+      var notification = document.getElementById('notification')
+      if(window.innerWidth < 700) {
+        footer.className = "footer-hidden";
+      } else {
+          footer.className = "footer-visible";
+          if(fade) {
+            notification.className = "footer-fade";
+            notification.innerHTML = msg;
+          } else {
+            notification.className = "footer-hard";
+            notification.innerHTML = msg;
+          }
+      }
+    };
+
+    function pushHelpNotification() {
+      if(window.innerWidth < 700)
+        pushNotification("<a href='#' onclick='RevealMenu.toggle()'>Menu</a> | <a href='#' onclick='enterFullscreen()'>Fullscreen</a> | <a href='#' onclick='enterOverview()'>Overview</a> | <a href='#' onclick='enterBlackout()'>Blackout</a> | <a href='#' onclick='RevealNotes.open()'>Speaker</a> | <a href='#' onclick='enterHelp()'>Help</a>");
+      else
+        pushNotification("Navigate : Space / Arrow Keys | <a href='#' onclick='RevealMenu.toggle()'>M</a> - Menu | <a href='#' onclick='enterFullscreen()'>F</a> - Fullscreen | <a href='#' onclick='enterOverview()'>O</a> - Overview | <a href='#' onclick='enterBlackout()'>B</a> - Blackout | <a href='#' onclick='RevealNotes.open()'>S</a> - Speaker | <a href='#' onclick='enterHelp()'>?</a> - Help");
+    }
+
+    function pushFootnoteNotification() {
+      
+        pushNotification(" ", true);
+      
+    }
+
+    function pushCodePresentingStepNotification(step, frags) {
+      // pushNotification("Code Presenting - Step " + step + " / " + frags, true);
+    }
+</script>
+
+
+
+
+
+</body></html>

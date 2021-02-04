@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<!-- saved from url=(0083)https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/04-reset-state#/1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>GitPitch Markdown</title>
+    <meta name="description" content="Slide Decks for Tech Conferences, Training, Developer Advocates, and Educators">
+    <meta name="keywords" content="Markdown, Presentation, Slides, Developer">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <meta name="”robots”" content="”noindex,nofollow”">
+    
+    
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@gitpitch">
+<meta name="twitter:title" content="GitPitch Markdown">
+<meta name="twitter:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta name="twitter:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+
+
+    
+
+<meta property="og:site_name" content="GitPitch">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GitPitch Markdown">
+<meta property="og:description" content="The perfect slide deck solution for Tech Conferences, Training, Developer Advocates, and Educators.">
+<meta property="og:image" content="https://gitpitch.com/assets/img/gitpitch-40-splash.png">
+<meta property="og:url" content="https://gitpitch.com/cypress-io/testing-workshop-cypress/master?grs=github&amp;t=template&amp;p=slides%2F04-reset-state">
+
+
+    
+
+<link rel="alternate" type="application/json+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F04-reset-state&amp;format=json" title="GitPitch - Markdown Presentations for Everyone on Git">
+<link rel="alternate" type="text/xml+oembed" href="https://gitpitch.com/pitchme/oembed?url=https%3A%2F%2Fgitpitch.com%2Fcypress-io%2Ftesting-workshop-cypress%2Fmaster%3Fgrs%3Dgithub%26t%3Dtemplate%26p%3Dslides%252F04-reset-state&amp;format=xml" title="GitPitch - Markdown Presentations for Everyone on Git">
+
+
+    
+    
+    <link rel="apple-touch-icon" sizes="120x120" href="https://gitpitch.com/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://gitpitch.com/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://gitpitch.com/assets/img/favicon/favicon-16x16.png">
+    
+    
+    
+<link href="./Reset database using cy.request_files/reveal.css" rel="stylesheet" type="text/css">
+
+<link href="./Reset database using cy.request_files/moon.css" rel="stylesheet" type="text/css" id="theme">
+<link href="./Reset database using cy.request_files/future.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Reset database using cy.request_files/title-footer-mod.css" rel="stylesheet" type="text/css" id="theme">
+
+<link href="./Reset database using cy.request_files/paper.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Reset database using cy.request_files/atom-one-light.css" rel="stylesheet" type="text/css">
+<link href="./Reset database using cy.request_files/octicons.css" rel="stylesheet" type="text/css">
+<link href="./Reset database using cy.request_files/fa-all.min.css" rel="stylesheet" type="text/css">
+<link href="./Reset database using cy.request_files/fa-v4-shims.min.css" rel="stylesheet" type="text/css">
+
+<link href="./Reset database using cy.request_files/pitchcore.css" rel="stylesheet" type="text/css">
+
+
+
+
+<link href="./Reset database using cy.request_files/pitch.css" rel="stylesheet" type="text/css">
+
+<link href="./Reset database using cy.request_files/pitchmenu.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Reset database using cy.request_files/menu.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Reset database using cy.request_files/pitchbardark.css" rel="stylesheet" type="text/css">
+
+
+<link href="./Reset database using cy.request_files/pitchcode.css" rel="stylesheet" type="text/css">
+
+
+
+<link href="./Reset database using cy.request_files/css" rel="stylesheet">
+
+
+
+    
+    
+
+<style>
+.half-image img {
+  width: 40%;
+}
+
+</style>
+
+
+    <link href="./Reset database using cy.request_files/pitchpost.css" rel="stylesheet" type="text/css">
+    
+
+    
+        
+            
+
+<script async="" src="./Reset database using cy.request_files/analytics.js"></script><script async="" src="./Reset database using cy.request_files/analytics.js"></script><script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-80973712-1', 'auto');
+  ga('send', 'pageview');
+  
+</script>
+
+
+        
+        
+            
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-59606812-9', 'auto', 'gpu');
+  ga('gpu.send', 'pageview');
+  
+</script><script type="text/javascript" src="./Reset database using cy.request_files/marked.js"></script><script type="text/javascript" src="./Reset database using cy.request_files/markdown.js"></script><script type="text/javascript" src="./Reset database using cy.request_files/menu.js"></script><script type="text/javascript" src="./Reset database using cy.request_files/highlight.js"></script><script type="text/javascript" src="./Reset database using cy.request_files/reveal-code-focus-30.js"></script>
+
+
+        
+    
+
+
+</head>
+<body>
+    
+
+
+    <div class="reveal none center has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="none" style="">
+        <div class="slides" style="width: 960px; height: 700px; zoom: 1.13143;">
+            
+            <section data-charset="utf-8" style="top: 241px; display: block;" data-markdown="" data-markdown-parsed="true" data-background="white" class="has-light-background past" hidden="" aria-hidden="true"><!-- -->
+<div style="padding-top: 0px; font-size: 36px;" class="font-ubuntu-heavy text-pink text-bold">
+<p style="color: #5289F7; font-weight: bold;">GitPitch.com is shutting down.<br>This slide deck will no longer<br>be available from March 1, 2021. </p></div>
+</section><section data-charset="utf-8" style="top: 0px; display: block;" class="stack present"><section data-markdown="" data-markdown-parsed="true" style="top: 146px; display: block;" class="present"><h2 id="-part-4-reset-state-data">☀️ Part 4: Reset state data</h2>
+<h3 id="-you-will-learn">📚 You will learn</h3>
+<ul>
+<li>how one test can affect another test by leaving its data behind</li>
+<li>when and how to reset state during testing</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 225px; display: block;" hidden=""><ul>
+<li>keep <code>todomvc</code> app running</li>
+<li>open <code>cypress/integration/04-reset-state/spec.js</code></li>
+<li>if you reload the test it starts failing 😕</li>
+</ul>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 66.5px; display: block;" hidden=""><p><img src="./Reset database using cy.request_files/passing-test.png" title="" alt="First test run" class="First test run" style="width: auto;height: auto;" data-image-key="-7205066942780317112"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p><img src="./Reset database using cy.request_files/failing-test.png" title="" alt="Second test run" class="Second test run" style="width: auto;height: auto;" data-image-key="-630418516240085051"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p><img src="./Reset database using cy.request_files/inspect-first-get-todos.png" title="" alt="Inspect first XHR call" class="Inspect first XHR call" style="width: auto;height: auto;" data-image-key="-4175503735816328216"></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><pre><code class="hljs lang- typescript"><span class="line"><span class="line-number"></span>beforeEach(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  cy.visit(<span class="hljs-string">'/'</span>)</span><span class="line"><span class="line-number"></span>})</span><span class="line"><span class="line-number"></span><span class="hljs-keyword">const</span> addItem = <span class="hljs-function"><span class="hljs-params">text</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  cy.get(<span class="hljs-string">'.new-todo'</span>).type(<span class="hljs-string">`<span class="hljs-subst">${text}</span>{enter}`</span>)</span><span class="line"><span class="line-number"></span>}</span><span class="line"><span class="line-number"></span>it(<span class="hljs-string">'adds two items'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  addItem(<span class="hljs-string">'first item'</span>)</span><span class="line"><span class="line-number"></span>  addItem(<span class="hljs-string">'second item'</span>)</span><span class="line"><span class="line-number"></span>  cy.get(<span class="hljs-string">'li.todo'</span>).should(<span class="hljs-string">'have.length'</span>, <span class="hljs-number">2</span>)</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="questions">Questions</h2>
+<ul>
+<li>how to reset the database?<ul>
+<li><strong>tip</strong> we are using <a href="https://github.com/bahmutov/json-server-reset#readme" rel="noopener noreferrer" target="_blank">json-server-reset</a> middleware</li>
+<li>try to reset it from command line</li>
+</ul>
+</li>
+</ul>
+<pre><code class="hljs lang- groovy"><span class="line"><span class="line-number"></span>$ http <span class="hljs-string">POST :</span><span class="hljs-number">3000</span>/reset <span class="hljs-string">todos:</span>=[]</span></code></pre>
+
+
+<aside class="notes"><p>I am using httpie to easily send the empty list to reset the database.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><ul>
+<li>how to make an arbitrary cross-domain XHR request from Cypress?</li>
+<li>reset the database before each test<ul>
+<li>modify <code>04-reset-state/spec.js</code> to make XHR call to reset the database</li>
+<li>before or after <code>cy.visit</code>?</li>
+</ul>
+</li>
+</ul>
+<aside class="notes"><p>Students should modify <code>cypress/integration/04-reset-state/spec.js</code> and make the request to reset the database before each test using <code>cy.request</code>.</p>
+<p>The answer to this and other TODO assignments are in <a href="https://gitpitch.com/cypress/integration/04-reset-state/answer.js">cypress/integration/04-reset-state/answer.js</a> file.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="using-cy-writefile">Using cy.writeFile</h2>
+<pre><code class="hljs lang- sql"><span class="line"><span class="line-number"></span>"<span class="hljs-keyword">start</span><span class="hljs-string">": "</span><span class="hljs-keyword">json</span>-<span class="hljs-keyword">server</span> <span class="hljs-comment">--static . --watch data.json"</span></span></code></pre>
+
+
+<p>If we overwrite <code>todomvc/data.json</code> and reload the web app we should see new data</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-use-cy-writefile-to-reset-todos">TODO: use cy.writeFile to reset todos</h2>
+<pre><code class="hljs lang- moonscript"><span class="line"><span class="line-number"></span>describe(<span class="hljs-string">'reset data using cy.writeFile'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  beforeEach(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>    // TODO write file <span class="hljs-string">"todomvc/data.json"</span> with stringified todos object</span><span class="line"><span class="line-number"></span>    cy.visit(<span class="hljs-string">'/'</span>)</span><span class="line"><span class="line-number"></span>  })</span><span class="line"><span class="line-number"></span>  ...</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+<p>See <a href="https://on.cypress.io/writefile" rel="noopener noreferrer" target="_blank"><code>cy.writeFile</code></a></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><p>Make sure you are writing the right file.</p>
+<p><img src="./Reset database using cy.request_files/write-file-path.png" title="" alt="See the file path written" class="See the file path written" style="width: auto;height: auto;" data-image-key="-8611083659315069358"></p>
+<aside class="notes"><p>Most common mistake is using file path relative to the spec file, should be relative to the project's root folder.</p>
+</aside></section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="using-cy-task">Using cy.task</h2>
+<p>You can execute Node code during browser tests by calling <a href="https://on.cypress.io/task" rel="noopener noreferrer" target="_blank"><code>cy.task</code></a></p>
+<pre><code class="hljs lang- coffeescript"><span class="line"><span class="line-number"></span><span class="hljs-regexp">//</span> cypress/plugins/index.js</span><span class="line"><span class="line-number"></span><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-params">(<span class="hljs-literal">on</span>, config)</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  <span class="hljs-literal">on</span>(<span class="hljs-string">'task'</span>, {</span><span class="line"><span class="line-number"></span>    hello(name) {</span><span class="line"><span class="line-number"></span>      <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Hello'</span>, name)</span><span class="line"><span class="line-number"></span>      <span class="hljs-keyword">return</span> <span class="hljs-literal">null</span> <span class="hljs-regexp">//</span> <span class="hljs-keyword">or</span> Promise</span><span class="line"><span class="line-number"></span>    }</span><span class="line"><span class="line-number"></span>  })</span><span class="line"><span class="line-number"></span>}</span><span class="line"><span class="line-number"></span><span class="hljs-regexp">//</span> cypress/integration/spec.js</span><span class="line"><span class="line-number"></span>cy.task(<span class="hljs-string">'hello'</span>, <span class="hljs-string">'World'</span>)</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-reset-data-using-cy-task">TODO reset data using cy.task</h2>
+<p>Find "resetData" task in cypress/plugins/index.js</p>
+<pre><code class="hljs lang- moonscript"><span class="line"><span class="line-number"></span>describe(<span class="hljs-string">'reset data using a task'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>  beforeEach(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {</span><span class="line"><span class="line-number"></span>    // call the task <span class="hljs-string">"resetData"</span></span><span class="line"><span class="line-number"></span>    cy.visit(<span class="hljs-string">'/'</span>)</span><span class="line"><span class="line-number"></span>  })</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-set-data-using-cy-task">TODO set data using cy.task</h2>
+<p>Pass an object when calling <code>cy.task('resetData')</code></p>
+<pre><code class="hljs lang- smali"><span class="line"><span class="line-number"></span>it('sets data to complex object right away', () =&gt; {</span><span class="line"><span class="line-number"></span>  cy.task('resetData', /* object*/)</span><span class="line"><span class="line-number"></span>  cy.visit('/')</span><span class="line"><span class="line-number"></span>  //<span class="hljs-built_in"> check </span>what is rendered</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="todo-set-data-from-fixture">TODO set data from fixture</h2>
+<p>Pass an object when calling <code>cy.task('resetData')</code></p>
+<pre><code class="hljs lang- smali"><span class="line"><span class="line-number"></span>it('sets data using fixture', () =&gt; {</span><span class="line"><span class="line-number"></span>  // load todos from <span class="hljs-string">"cypress/fixtures/two-items.json"</span></span><span class="line"><span class="line-number"></span>  //<span class="hljs-built_in"> and </span>the call the task to set todos</span><span class="line"><span class="line-number"></span>  cy.visit('/')</span><span class="line"><span class="line-number"></span>  //<span class="hljs-built_in"> check </span>what is rendered</span><span class="line"><span class="line-number"></span>})</span></code></pre>
+
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" aria-hidden="true" style="top: 350px; display: none;" hidden=""><h2 id="best-practices">Best practices</h2>
+<ul>
+<li>reset state before each test<ul>
+<li>in our <a href="https://on.cypress.io/best-practices" rel="noopener noreferrer" target="_blank">Best practices guide</a></li>
+</ul>
+</li>
+<li>use <a href="https://on.cypress.io/request" rel="noopener noreferrer" target="_blank"><code>cy.request</code></a>, <a href="https://on.cypress.io/exec" rel="noopener noreferrer" target="_blank"><code>cy.exec</code></a>, <a href="https://on.cypress.io/task" rel="noopener noreferrer" target="_blank"><code>cy.task</code></a></li>
+<li>watch presentation "Cypress: beyond the Hello World test" <a href="https://slides.com/bahmutov/cypress-beyond-the-hello-world" rel="noopener noreferrer" target="_blank">https://slides.com/bahmutov/cypress-beyond-the-hello-world</a></li>
+</ul>
+</section></section>
+            
+        </div>
+        
+
+<footer id="title-footer" class="footer-visible"><p id="notification" class="footer-fade"> </p></footer>
+
+
+    <div class="backgrounds"><div class="slide-background past" data-background-hash="whitenullnullnullnullnullnullnullnullnull" data-loaded="true" style="background: white; display: block;"><div class="slide-background-content"></div></div><div class="slide-background stack present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div><div class="slide-background present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;"><div class="slide-background-content"></div></div></div></div><div class="progress" style="display: block;"><span style="width: 105px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button><button class="navigate-right highlight" aria-label="next slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down enabled highlight" aria-label="below slide"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><a href="https://gitpitch.com/cypress-io/testing-workshop-cypress?p=slides/04-reset-state#/1"><span class="slide-number-a">2</span><span class="slide-number-delimiter">/</span><span class="slide-number-b">17</span></a></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">☀️ Part 4: Reset state data
+📚 You will learn
+
+how one test can affect another test by leaving its data behind
+when and how to reset state during testing
+
+</div></div>
+    
+    
+    <div class="gp-menu">
+      <div class="slide-menu-button">
+        
+        <a class="reveal" onclick="goHome(); return false;" title="Go Home" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-home" aria-hidden="true"> </i>
+        </a>
+        
+        
+        <a class="reveal" onclick="toggleMenu(); return false;" title="Slide Table-of-Contents, Key=M" rel="noopener noreferrer" target="_blank">
+          <i class="gp-menu-bars fa fa-bars" aria-hidden="true"> </i>
+        </a>
+        
+      </div>
+    <nav class="slide-menu slide-menu--left"><ol class="slide-menu-toolbar"><li data-button="0" class="toolbar-panel-button" data-panel="Slides"><i class="fa fa-list"></i></li><li id="close"><i class="fa fa-times"></i></li></ol><div data-panel="Slides" class="slide-menu-panel active-menu-panel"><div class="toc-title"><hr class="fade-away"></div><ul class="slide-menu-items"><li class="slide-menu-item no-title past" data-item="0" data-slide-h="0" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 0</span></li><li class="slide-menu-item active" data-item="1" data-slide-h="1" data-slide-v="0"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">☀️ Part 4: Reset state data</span></li><li class="slide-menu-item-vertical no-title future" data-item="2" data-slide-h="1" data-slide-v="1"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 2</span></li><li class="slide-menu-item-vertical no-title future" data-item="3" data-slide-h="1" data-slide-v="2"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 3</span></li><li class="slide-menu-item-vertical no-title future" data-item="4" data-slide-h="1" data-slide-v="3"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 4</span></li><li class="slide-menu-item-vertical no-title future" data-item="5" data-slide-h="1" data-slide-v="4"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 5</span></li><li class="slide-menu-item-vertical no-title future" data-item="6" data-slide-h="1" data-slide-v="5"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 6</span></li><li class="slide-menu-item-vertical future" data-item="7" data-slide-h="1" data-slide-v="6"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Questions</span></li><li class="slide-menu-item-vertical no-title future" data-item="8" data-slide-h="1" data-slide-v="7"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 8</span></li><li class="slide-menu-item-vertical future" data-item="9" data-slide-h="1" data-slide-v="8"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Using cy.writeFile</span></li><li class="slide-menu-item-vertical future" data-item="10" data-slide-h="1" data-slide-v="9"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">TODO: use cy.writeFile to reset todos</span></li><li class="slide-menu-item-vertical no-title future" data-item="11" data-slide-h="1" data-slide-v="10"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Slide 11</span></li><li class="slide-menu-item-vertical future" data-item="12" data-slide-h="1" data-slide-v="11"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Using cy.task</span></li><li class="slide-menu-item-vertical future" data-item="13" data-slide-h="1" data-slide-v="12"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">TODO reset data using cy.task</span></li><li class="slide-menu-item-vertical future" data-item="14" data-slide-h="1" data-slide-v="13"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">TODO set data using cy.task</span></li><li class="slide-menu-item-vertical future" data-item="15" data-slide-h="1" data-slide-v="14"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">TODO set data from fixture</span></li><li class="slide-menu-item-vertical future" data-item="16" data-slide-h="1" data-slide-v="15"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Best practices</span></li></ul></div></nav><div class="slide-menu-overlay"></div></div>
+    
+    
+    <script src="./Reset database using cy.request_files/reveal.js"></script>
+    <script src="./Reset database using cy.request_files/jquery.min.js"></script>
+    
+    
+    
+
+    <script>
+        Reveal.initialize({
+            
+            controls: true,
+            
+            controlsLayout: 'bottom-right',
+            progress: true,
+            embedded: true,
+            margin: 0.0,
+            
+            
+            showNotes: false,
+            transition: 'none',
+            backgroundTransition: 'none',
+            autoSlide: 0,
+            loop: false,
+            center: true,
+            rtl: false,
+            shuffle: false,
+            mouseWheel: false,
+            
+            controlsTutorial: true,
+            
+            
+            
+              slideNumber: 'c/t', // slideNumber: false,
+            
+            history: true,
+            
+            
+            menu: {
+              custom: [],
+              path : "/assets/libs/slides/plugin/menu",
+              themes : false,
+              transitions:  false,
+              markers: true,
+              sticky: true,
+              autoOpen: true
+            },
+            
+            
+            dependencies: [
+                { src: "/assets/libs/slides/plugin/markdown/marked.js",
+                  condition: function() {
+                    return !!document.querySelector( '[data-markdown]' );
+                  }},
+                { src: "/assets/libs/slides/plugin/markdown/markdown.js",
+                condition: function() {
+                  return !!document.querySelector( '[data-markdown]' );
+                }},
+                
+                { src:"/assets/libs/slides/plugin/menu/menu.js",
+                  async: true},
+                
+                
+                
+                
+                { src: '/assets/libs/highlight.js/9.15.8/highlight.js', async: true },
+                
+                { src: '/assets/libs/highlight.js/9.15.8/reveal-code-focus-30.js',
+                  async: true,
+                  callback: function() {
+                    RevealCodeFocus();
+                  }
+                },
+                
+                
+                
+                
+                
+            ]
+        });
+
+        Reveal.addEventListener('ready', function(evt) {
+
+          if(typeof twtter !== "undefined") {
+              twttr.widgets.load();
+          }
+
+          upgradeAnchors();
+          pushFootnoteNotification();
+
+          // Force refresh to workaround Reveal.js 3.8.0
+          // first render problem re. scrollHeight calc
+          // for slides with non-text (image) content.
+          setTimeout(Reveal.layout, 500);
+        });
+
+        
+        Reveal.addEventListener('menu-ready', function(evt) {
+            toggleMenuOff();
+        });
+        
+
+        Reveal.addEventListener('slidechanged', function(evt) {
+          /*
+          if (evt.indexh === 0 && evt.indexv === 0) {
+            pushHelpNotification();
+          } else {
+            pushFootnoteNotification();
+          }
+          */
+          pushFootnoteNotification();
+        });
+
+        Reveal.configure({
+            keyboard: {
+                88: function() { // bind "x" key to "select" code block content
+
+                    var currentSlide = Reveal.getCurrentSlide();
+                    var preBlock = $(currentSlide).find("pre");
+
+                    if(preBlock.length > 0) {
+
+                        if (window.getSelection) {
+                            var range = document.createRange();
+                            range.selectNodeContents(preBlock[0]);
+                            var selection = window.getSelection();
+                            selection.removeAllRanges();
+                            selection.addRange(range);
+                        }
+                    }
+                }
+            }
+        });
+
+        function goHome() {
+            window.location.href = "https://gitpitch.com";
+        }
+
+        function enterFullscreen() {
+            Reveal.triggerKey(70);
+        };
+
+        function enterOverview() {
+            Reveal.toggleOverview();
+        };
+
+        function enterBlackout() {
+            Reveal.togglePause();
+        };
+
+        function toggleHelp() {
+          Reveal.toggleHelp();
+        }
+
+        function enableEvents() {
+            Reveal.addEventListeners();
+        };
+
+        function disableEvents() {
+            Reveal.removeEventListeners();
+        };
+
+        function toggleMenuOff() {
+            if(RevealMenu && RevealMenu.isOpen()) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function toggleMenu() {
+            if(RevealMenu) {
+                RevealMenu.toggle();
+            }
+        }
+
+        function upgradeAnchors() {
+            Array.from(document.getElementsByTagName('a')).forEach($link => {
+              if ($link.hostname !== window.location.hostname) {
+                $link.setAttribute('rel', 'noopener noreferrer');
+                $link.setAttribute('target', '_blank');
+              }
+            });
+        }
+
+    </script>
+
+    
+
+    
+
+<script>
+    function pushNotification(msg, fade) {
+      var footer = document.getElementById('title-footer')
+      var notification = document.getElementById('notification')
+      if(window.innerWidth < 700) {
+        footer.className = "footer-hidden";
+      } else {
+          footer.className = "footer-visible";
+          if(fade) {
+            notification.className = "footer-fade";
+            notification.innerHTML = msg;
+          } else {
+            notification.className = "footer-hard";
+            notification.innerHTML = msg;
+          }
+      }
+    };
+
+    function pushHelpNotification() {
+      if(window.innerWidth < 700)
+        pushNotification("<a href='#' onclick='RevealMenu.toggle()'>Menu</a> | <a href='#' onclick='enterFullscreen()'>Fullscreen</a> | <a href='#' onclick='enterOverview()'>Overview</a> | <a href='#' onclick='enterBlackout()'>Blackout</a> | <a href='#' onclick='RevealNotes.open()'>Speaker</a> | <a href='#' onclick='enterHelp()'>Help</a>");
+      else
+        pushNotification("Navigate : Space / Arrow Keys | <a href='#' onclick='RevealMenu.toggle()'>M</a> - Menu | <a href='#' onclick='enterFullscreen()'>F</a> - Fullscreen | <a href='#' onclick='enterOverview()'>O</a> - Overview | <a href='#' onclick='enterBlackout()'>B</a> - Blackout | <a href='#' onclick='RevealNotes.open()'>S</a> - Speaker | <a href='#' onclick='enterHelp()'>?</a> - Help");
+    }
+
+    function pushFootnoteNotification() {
+      
+        pushNotification(" ", true);
+      
+    }
+
+    function pushCodePresentingStepNotification(step, frags) {
+      // pushNotification("Code Presenting - Step " + step + " / " + frags, true);
+    }
+</script>
+
+
+
+
+
+</body></html>
